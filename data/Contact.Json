@@ -1,0 +1,83 @@
+[
+    {
+      "name": "Direction Générale",
+      "address": "38, Lotissement Pons Kouba – Alger",
+      "phone": "+213 (0) 23 70 17 27",
+      "email": "dg@verital.dz",
+      "website": "www.verital.dz",
+      "fax": null
+    },
+    {
+      "name": "Direction Commerciale",
+      "address": "38, Lotissement Pons Kouba – Alger",
+      "phone": "+213 (0)770 90 72 58",
+      "email": "direction.commerciale@verital.dz",
+      "website": null,
+      "fax": null
+    },
+    {
+      "name": "Division Contrôle Qualité",
+      "address": "38, Lotissement Pons Kouba – Alger",
+      "phone": "+213 (0)770 12 64 25",
+      "email": "controlequalite@verital.dz",
+      "website": null,
+      "fax": null
+    },
+    {
+      "name": "Division Annaba",
+      "address": "01, rue Krim Madani - Annaba",
+      "phone": "+213 (0)77012 63 74",
+      "fax": "+213 (0) 3880 29 22",
+      "email": "divisionannaba@verital.dz",
+      "website": null
+    },
+    {
+      "name": "Division Bejaia",
+      "address": "Boulevard de la liberté, Résidence Nabila Djahnine - Bejaia",
+      "phone": "+213 (0)770 25 28 36",
+      "fax": "+213 (0) 34 17 76 21",
+      "email": "divisionBejaia@verital.dz",
+      "website": null
+    },
+    {
+      "name": "Division Oran",
+      "address": "18, rue Boughiri Khelifa – Oran Ex. Avenue d’Arcole Gambetta, Oran",
+      "phone": "+213 (0)770 12 64 20",
+      "fax": ["+213 (0) 41 80 12 38", "+213 (0) 41 80 12 37"],
+      "email": "divisionOran@verital.dz",
+      "website": null
+    },
+    {
+      "name": "Division Hassi Messaoud",
+      "address": "40, Cité Ibn Badis – Hassi Messaoud - Ouargla",
+      "phone": "+213 (0)770 25 28 37",
+      "fax": "+213 (0) 29 79 23 46",
+      "email": "divisionhassi@verital.dz",
+      "website": null
+    },
+    {
+      "name": "Division Transports Ferroviaires et Guidés",
+      "address": "38, Lotissement Pons Kouba – Alger",
+      "phone": "+213 (0)770 12 63 73",
+      "fax": "+213 (0) 23 70 17 28",
+      "email": "dtg.verital@verital.dz",
+      "website": null
+    },
+    {
+      "name": "Division Industrie",
+      "address": "Cité SERBAT BAT F9 GARIDI 1 - Kouba – Alger",
+      "phone": "+213 (0)770 93 57 73",
+      "email": "Divisionindustrie@verital.dz",
+      "website": null,
+      "fax": null
+    },
+    {
+      "name": "Division Aéronautique",
+      "address": "Aéroport Houari Boumediène Zone Technique – Alger",
+      "phone": ["+213 (0)77012 63 89", "+213 (0)770 12 64 13"],
+      "fax": "+213 (0) 23 70 17 28",
+      "email": "Divisionaeronautique@verital.dz",
+      "website": null
+    }
+  ]
+  

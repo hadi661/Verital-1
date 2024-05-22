@@ -1,0 +1,90 @@
+<%- include ('partials/header.ejs')%>
+<!-- Start team Area -->
+<div id="team" class="our-team-area area-padding">
+  <div class="container">
+    
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="section-headline text-center">
+          <a href="/team" target="_blank"> <!-- Ensure this href is /team -->
+            <h2>Notre équipe spéciale</h2>
+          </a>
+        </div>
+        <div class="row">
+            <% topTeamMembers.forEach(teamMember => { %>
+                <div class="col-md-3 col-sm-3 col-xs-12">
+                  <div class="single-team-member">
+                    <div class="team-img">
+                      <a href="#" target="_blank">
+                        <img src="<%= teamMember.image %>" alt="">
+                      </a>
+                      <div class="team-social-icon text-center">
+                        <ul>
+                          <li>
+                            <a href="<%= teamMember.socialMedia.facebook %>" target="_blank">
+                              <i class="fa fa-facebook"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="<%= teamMember.socialMedia.twitter %>" target="_blank">
+                              <i class="fa fa-twitter"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="<%= teamMember.socialMedia.instagram %>" target="_blank">
+                              <i class="fa fa-instagram"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="team-content text-center">
+                      <h6><%= teamMember.name %></h6>
+                      <p><%= teamMember.position %></p>
+                    </div>
+                  </div>
+                </div>
+            <% }); %>
+        </div>
+
+        <!-- Render all team members -->
+        <div class="row">
+            <% allTeamMembers.forEach(teamMember => { %>
+                <div class="col-md-3 col-sm-3 col-xs-12">
+                  <div class="single-team-member">
+                    <div class="team-img">
+                      <a href="#" target="_blank">
+                        <img src="<%= teamMember.image %>" alt="">
+                      </a>
+                      <div class="team-social-icon text-center">
+                        <ul>
+                          <li>
+                            <a href="<%= teamMember.socialMedia.facebook %>" target="_blank">
+                              <i class="fa fa-facebook"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="<%= teamMember.socialMedia.twitter %>" target="_blank">
+                              <i class="fa fa-twitter"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="<%= teamMember.socialMedia.instagram %>" target="_blank">
+                              <i class="fa fa-instagram"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="team-content text-center">
+                      <h6><%= teamMember.name %></h6>
+                      <p><%= teamMember.position %></p>
+                    </div>
+                  </div>
+                </div>
+                            <% }); %>
+        </div>
+    </div>
+</div> </div>
+<%- include ('partials/footer.ejs')%>
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+<%- include ('partials/lib.ejs')%>

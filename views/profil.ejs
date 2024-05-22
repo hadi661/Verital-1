@@ -1,0 +1,35 @@
+<%- include('partials/CEO') %>
+<%- include('partials/about') %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profil</title>
+</head>
+<body>
+    <h1>Profil List</h1>
+    <% profils.forEach(profil => { %>
+        <div>
+            <h2>CEO Section</h2>
+            <h3>Title: <%= profil.CEO.title %></h3>
+            <p>Content: <%= profil.CEO.content %></p>
+            <% profil.CEO.images.forEach(image => { %>
+                <img src="<%= image %>" alt="CEO Image">
+            <% }) %>
+            <% profil.CEO.videos.forEach(video => { %>
+                <video src="<%= video %>" controls></video>
+            <% }) %>
+        </div>
+        <div>
+            <h2>About Section</h2>
+            <h3>Title: <%= profil.about.title %></h3>
+            <p>Content: <%= profil.about.content %></p>
+            <% profil.about.images.forEach(image => { %>
+                <img src="<%= image %>" alt="About Image">
+            <% }) %>
+            <% profil.about.videos.forEach(video => { %>
+                <video src="<%= video %>" controls></video>
+            <% }) %>
+        </div>
+    <% }) %>
+</body>
+</html>

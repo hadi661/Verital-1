@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "663c9acd57878069899fe7fa"
+  },
+  "title": "Audit",
+  "description": "Real-time handling of any situation and Propose areas for progress with the Assessment of the durability and adaptability of your installations Regulatory compliance..."
+},
+{
+  "_id": {
+    "$oid": "663c9acd57878069899fe7fb"
+  },
+  "title": "Certification",
+  "description": "Certification is the basis of the excellence of our services provided in terms of expertise in order to maintain relationships of trust, proximity with our clients, manage risks and stimulate performance..."
+},
+{
+  "_id": {
+    "$oid": "663c9acd57878069899fe7fc"
+  },
+  "title": "INSPECTION",
+  "description": "Linspection consiste à vérifier sur place quun produit, un actif ou un système répond aux critères spécifiés Linspection consiste à vérifier sur place qu un produit, un actif ou un système répond aux critères spécifiés..."
+},
+{
+  "_id": {
+    "$oid": "663c9acd57878069899fe7fd"
+  },
+  "title": "CONSULTATION",
+  "description": "Consultation personnalisée et recommandations dune organisation composée dexperts hautement qualifiés pour aider les entreprises à répondre aux exigences réglementaires."
+}]

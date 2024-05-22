@@ -1,0 +1,91 @@
+.navbar-nav {
+    direction: rtl;
+  }
+  
+  .navbar-nav > li {
+    float: right;
+  }
+  
+  .align-right {
+    text-align: right;
+  }
+  
+  div#services {
+    background-image: linear-gradient(to bottom right, #c8edf3, #8dcccb), url('../img/bk1.png'); /* Background gradient and image */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-blend-mode: darken; /* Blend the gradient with the image */
+    color: #fff; /* Text color */
+    padding: 20px; /* Padding for content inside div */
+    margin: 10px; /* Margin around the div */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  }
+  
+  /* Center align text */
+  div#services h2, div#services p {
+    text-align: center;
+  }
+  
+  
+  div#Divisions {
+    background-image: linear-gradient(to bottom right, #c8edf3, #8dcccb), url('../img/bk1.png'); /* Background gradient and image */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-blend-mode: darken; /* Blend the gradient with the image */
+    color: #fff; /* Text color */
+    padding: 20px; /* Padding for content inside div */
+    margin: 10px; /* Margin around the div */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  }
+  
+  /* Center align text */
+  div#Divisions h2, div#Divisions p {
+    text-align: center;
+  }
+  
+  div#CEO {
+    background-image: url('../img/bk1.png'); /* Background image */
+    color: #fff; /* Text color */
+    padding: 20px; /* Padding for content inside div */
+    margin: 10px; /* Margin around the div */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  }
+  
+  /* Center align text */
+  div#CEO h2, div#CEO p {
+    text-align: center;
+  }
+  div#about {
+    background-image: url('../img/bk1.png'); /* Background image */
+    color: #fff; /* Text color */
+    padding: 20px; /* Padding for content inside div */
+    margin: 10px; /* Margin around the div */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  }
+  
+  div#team {
+    background-image: url('../img/bk1.png'); /* Background image */
+    color: #fff; /* Text color */
+    padding: 20px; /* Padding for content inside div */
+    margin: 10px; /* Margin around the div */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  }
+  div#blog {
+    background-image: url('../img/bk1.png'); /* Background image */
+    color: #fff; /* Text color */
+    padding: 20px; /* Padding for content inside div */
+    margin: 10px; /* Margin around the div */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  }
+  div#Suscrive {
+    background-image: url('../img/bk1.png'); /* Background image */
+    color: #fff; /* Text color */
+    padding: 20px; /* Padding for content inside div */
+    margin: 10px; /* Margin around the div */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  }

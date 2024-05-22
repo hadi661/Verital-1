@@ -1,0 +1,233 @@
+
+<!-- Include Header -->
+<%- include ('partials/header.ejs')%>
+
+<!-- Loop through divisions -->
+<% divisions.forEach(division => { %>
+  <% if (division && division.name && division.title && division.description && division.services && division.image) { %>
+    <div id="<%= division.name %>" class="slider-area">
+      <div class="header-bg4 page-area">
+        <div class="home-overly"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="slider-content text-center">
+                <div class="header-bottom">
+                  <div class="layer2 wow zoomIn" data-wow-duration="1s" data-wow-delay=".4s">
+                    <h1 class="title2"><%= division.title %></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END Header -->
+      <div class="blog-page area-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="page-head-blog">
+                <div class="single-blog-page">
+                  <!-- search option start -->
+                  <form action="#">
+                    <div class="search-option">
+                      <input type="text" placeholder="Search...">
+                      <button class="button" type="submit">
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </div>
+                  </form>
+                  <!-- search option end -->
+                </div>
+                <div class="single-blog-page">
+                  <!-- recent start -->
+                  <div class="left-blog">
+                    <h4> Our services</h4>
+                    <div class="recent-post">
+                      <!-- start single post -->
+                      <% division.services.forEach(service => { %>
+                        <div class="recent-single-post">
+                          <div class="post-img">
+                            <a href="<%= division.name %>.html">
+                              <img src="<%= service.image || 'img/default.png' %>" alt="<%= service.name %>">
+                            </a>
+                          </div>
+                          <div class="pst-content">
+                            <p><a href="<%= division.name %>.html"><%= service.name %></a></p>
+                          </div>
+                        </div>
+                      <% }) %>
+                      <!-- End single post -->
+                    </div>
+                  </div>
+                  <!-- recent end -->
+                </div>
+              </div>
+            </div>
+            <!-- End left sidebar -->
+            <!-- Start single blog -->
+            <div class="col-md-8 col-sm-8 col-xs-12">
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <div class="single-blog">
+                    <div class="single-blog-img">
+                      <a href="<%= division.name %>.html">
+                        <img src="<%= division.image %>" alt="<%= division.name %> Image">
+                      </a>
+                    </div>
+                    <div class="blog-meta">
+                      <span class="comments-type"></span>
+                    </div>
+                    <div class="blog-text">
+                      <h4>
+                        <a href="<%= division.name %>.html"><%= division.title %></a>
+                      </h4>
+                      <p>
+                        <%= division.description %>
+                      </p>
+                    </div>
+                    <span>
+                      <a href="<%= division.name %>.html" class="ready-btn">Read more</a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End single blog -->
+          </div>
+        </div>
+      </div>
+    </div>
+  <% } else { %>
+    <!-- Handle missing or incomplete division object -->
+    <p>Division data is missing or incomplete.</p>
+  <% } %>
+<% }) %>
+  <!-- End Divisions Content -->
+
+ <!-- Start Suscrive Area -->
+ <div id="Suscrive" class="section-headline text-center">
+  <h2>Approuvé par les plus grandes marques</h2>
+</div>
+<div class="slider-container">
+<div class="slider">
+<div class="slide">
+<img src="img/1/1.png" alt="" />
+<img src="img/1/2.png" alt="" />
+<img src="img/1/24-225x202.png" alt="" />
+<img src="img/1/25-240x202.png" alt="" />
+<img src="img/1/27-231x202.png" alt="" />
+<img src="img/1/29-225x202.png" alt="" />
+<img src="img/1/30-320x202.png" alt="" />
+<img src="img/client/1.png" alt="" />
+<img src="img/client/3.png" alt="" />
+<img src="img/client/4.png" alt="" /> <!-- Duplicate the first image to create a loop -->
+<img src="img/1/1.png" alt="" />
+</div>
+</div>
+</div>
+
+
+<!-- End Suscrive Area -->
+<!-- Start contact Area -->
+<div id="contact" class="contact-area">
+<div class="contact-inner area-padding">
+<div class="contact-overly"></div>
+<div class="container ">
+<div class="row">
+<div class="col-md-12 col-sm-12 col-xs-12">
+<div class="section-headline text-center">
+  <h2>Contactez-nous</h2>
+</div>
+</div>
+</div>
+<div class="row">
+<!-- Start contact icon column -->
+<div class="col-md-4 col-sm-4 col-xs-12">
+<div class="contact-icon text-center">
+  <div class="single-icon">
+    <i class="fa fa-mobile"></i>
+    <a href="tel:+21323701727"><P>Appelez-nous au +213 (0) 23 70 17 27</P></a>
+    <p>
+      Fax: +213 (0) 23 70 17 28<br>
+      <span>Dimanche-jeudi (8h-16h)</span>
+    </p>
+  </div>
+</div>
+</div>
+<!-- Start contact icon column -->
+<div class="col-md-4 col-sm-4 col-xs-12">
+<div class="contact-icon text-center">
+  <div class="single-icon">
+    <i class="fa fa-envelope-o"></i>
+    <a href="mailto:dg@verital.dz"> <p>dg@verital.dz</p></a>
+    <p>
+      <a href="https://www.verital.dz " target="_blank"><p> Web:  www.verital.dz </p></a>
+     
+    
+  </div>
+</div>
+</div>
+<!-- Start contact icon column -->
+<div class="col-md-4 col-sm-4 col-xs-12">
+<div class="contact-icon text-center">
+  <div class="single-icon">
+    <i class="fa fa-map-marker"></i>
+    <a href="https://www.google.com/maps/search/38,+Lotissement+Pons+Kouba,+Alger" target="_blank"><p>
+      38, Lotissement Pons<br>
+      <span>Kouba – Alger</span>
+    </p></a>
+
+    
+  </div>
+</div>
+</div>
+</div>
+<div class="row">
+
+<!-- Start Google Map -->
+<div class="col-md-6 col-sm-6 col-xs-12">
+<!-- Start Map -->
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21888.55382199453!2d3.0606491!3d36.7146951!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fad0afd9463ab%3A0xa88e2f6cd6697730!2sVERITAL%20-%20Direction%20G%C3%A9n%C3%A9rale!5e1!3m2!1sen!2sdz!4v1714042568588!5m2!1sen!2sdz" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<!-- End Map -->
+</div>
+<!-- End Google Map -->
+
+<!-- Start  contact -->
+<div class="col-md-6 col-sm-6 col-xs-12">
+<div class="form contact-form">
+  <div id="sendmessage">Votre message a été envoyé. Merci!</div>
+  <div id="errormessage"></div>
+  <form action="" method="post" role="form" class="contactForm">
+    <div class="form-group">
+      <input type="text" name="name" class="form-control" id="name" placeholder="votre nom" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+      <div class="validation"></div>
+    </div>
+    <div class="form-group">
+      <input type="email" class="form-control" name="email" id="email" placeholder="votre Email" data-rule="email" data-msg="Please enter a valid email" />
+      <div class="validation"></div>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" name="subject" id="subject" placeholder="Sujet" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+      <div class="validation"></div>
+    </div>
+    <div class="form-group">
+      <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="S'il te plaît, écris quelque chose pour nous" placeholder="Message"></textarea>
+      <div class="validation"></div>
+    </div>
+    <div class="text-center"><button type="submit">Envoyer message</button></div>
+  </form>
+</div>
+</div>
+<!-- End Left contact -->
+</div>
+</div>
+</div>
+</div>
+<!-- End Contact Area -->
+<%- include ('partials/footer.ejs')%>
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<%- include ('partials/lib.ejs')%>
