@@ -1,219 +1,237 @@
-[
-  {
-    "_id": {
-      "$oid": "663ca4f50306e469d53e2883"
-    },
-    "title": "DIVISION AÉRONAUTIQUE",
-    "description": "The Aéronautique Division ensures the safety, airworthiness, and compliance of aircraft through rigorous assessments and monitoring.",
-    "services": [
-      {
-        "name": "Surveillance de navigabilité",
-        "description": "Continuous monitoring to ensure aircraft remain airworthy and compliant with aviation standards.",
-        "image": "img/about/99.png"
-      },
-      {
-        "name": "Evaluation de la sécurité",
-        "description": "Comprehensive safety evaluations to identify and mitigate potential risks in aviation operations.",
-        "image": "img/about/33.jpg"
-      },
-      {
-        "name": "Enquête sur les accidents et incidents graves.",
-        "description": "Thorough investigations of accidents and serious incidents to enhance safety and prevent future occurrences.",
-        "image": "img/about/22.jpg"
-      },
-      {
-        "name": "Les contrôles SANAA SAFAA",
-        "description": "Detailed checks under the SANAA SAFAA program to ensure compliance with international aviation safety standards.",
-        "image": "img/slider/aero.png"
-      }
-    ],
-    "image": "img/divisions/aero.png",
-    "name": "Aero"
+[ {
+  "_id": {
+    "$oid": "663ca4f50306e469d53e2883"
   },
-  {
-    "_id": {
-      "$oid": "663ca4f50306e469d53e2884"
+  "description": "The Aéronautique Division ensures the safety, airworthiness, and compliance of aircraft through rigorous assessments and monitoring.",
+  "image": ["img/slider/aero.png"],
+  "name": "Aero",
+  "services": [
+    {
+      "name": "Surveillance de navigabilité",
+      "description": "Continuous monitoring to ensure aircraft remain airworthy and compliant with aviation standards.",
+      "image": ["img/about/99.png"]
     },
-    "title": "Marine",
-    "description": "The Marine Division focuses on the safety and regulatory compliance of maritime vessels through comprehensive inspections and monitoring.",
-    "services": [
-      {
-        "name": "Regulatory visits and inspections linked to IMO conventions (SOLAS, MARPOL)",
-        "description": "Regular visits and inspections to ensure vessels comply with SOLAS and MARPOL conventions.",
-        "image": "img/1/m1.jpg"
-      },
-      {
-        "name": "Monitoring of new constructions",
-        "description": "Continuous monitoring of new maritime constructions to ensure adherence to safety standards.",
-        "image": "img/1/m2.png"
-      },
-      {
-        "name": "Special, intermediate, annual, periodic, and occasional visits.",
-        "description": "Scheduled and unscheduled visits to assess and ensure vessel safety and compliance.",
-        "image": "img/1/m3.jpg"
-      },
-      {
-        "name": "Assistive techniques",
-        "description": "Utilization of advanced techniques to assist in the inspection and maintenance of maritime vessels.",
-        "image": "img/1/m4.jpg"
-      }
-    ],
-    "image": "img/1/m5.jpg",
-    "name": "MARINE"
+    {
+      "name": "Evaluation de la sécurité",
+      "description": "Comprehensive safety evaluations to identify and mitigate potential risks in aviation operations.",
+      "image": ["img/about/33.jpg"]
+    },
+    {
+      "name": "Enquête sur les accidents et incidents graves.",
+      "description": "Thorough investigations of accidents and serious incidents to enhance safety and prevent future occurrences.",
+      "image": ["img/about/22.jpg"]
+    },
+    {
+      "name": "Les contrôles SANAA SAFAA",
+      "description": "Detailed checks under the SANAA SAFAA program to ensure compliance with international aviation safety standards.",
+      "image": ["img/slider/aero.png"]
+    }
+  ],
+  "title": "DIVISION AÉRONAUTIQUE",
+  "icon": ["fa-send"],
+  "background_images": ["img/about/1.jpg", "img/icons/Aeronautical-Engineering.jpg"]
+},
+{
+  "_id": {
+    "$oid": "663ca4f50306e469d53e2884"
   },
-  {
-    "_id": {
-      "$oid": "663ca4f50306e469d53e2885"
+  "description": "The Marine Division focuses on the safety and regulatory compliance of maritime vessels through comprehensive inspections and monitoring.",
+  "image": "img/1/m5.jpg",
+  "name": "MARINE",
+  "services": [
+    {
+      "name": "Regulatory visits and inspections linked to IMO conventions (SOLAS, MARPOL)",
+      "description": "Regular visits and inspections to ensure vessels comply with SOLAS and MARPOL conventions.",
+      "image": "img/1/m1.jpg"
     },
-    "title": "Quality Control",
-    "description": "The Quality Control Division ensures that products and processes meet the highest standards through rigorous inspection and verification.",
-    "services": [
-      {
-        "name": "Surveillance and auditing",
-        "description": "Ongoing monitoring and auditing to ensure compliance with quality standards.",
-        "image": "img/1/q1.jpg"
-      },
-      {
-        "name": "Testing and verification",
-        "description": "Thorough testing and verification processes to confirm quality and reliability.",
-        "image": "img/1/q2.jpg"
-      },
-      {
-        "name": "Certification services",
-        "description": "Issuance of certifications to verify that products meet established quality standards.",
-        "image": "img/1/q3.jpg"
-      },
-      {
-        "name": "Quality improvement consulting",
-        "description": "Expert consulting services to help organizations improve their quality control practices.",
-        "image": "img/1/q4.jpg"
-      }
-    ],
-    "image": "img/1/q5.jpg",
-    "name": "CONTRÔLE DE QUALITÉ"
+    {
+      "name": "Monitoring of new constructions",
+      "description": "Continuous monitoring of new maritime constructions to ensure adherence to safety standards.",
+      "image": "img/1/m2.png"
+    },
+    {
+      "name": "Special, intermediate, annual, periodic, and occasional visits.",
+      "description": "Scheduled and unscheduled visits to assess and ensure vessel safety and compliance.",
+      "image": "img/1/m3.jpg"
+    },
+    {
+      "name": "Assistive techniques",
+      "description": "Utilization of advanced techniques to assist in the inspection and maintenance of maritime vessels.",
+      "image": "img/1/m4.jpg"
+    }
+  ],
+  "title": "Marine",
+  "icon": "fa-ship",
+  "backgroundImageUrl": "fa-default-icon",
+  "background_images": "img/about/2.jpg"
+},
+{
+  "_id": {
+    "$oid": "663ca4f50306e469d53e2885"
   },
-  {
-    "_id": {
-      "$oid": "663ca4f50306e469d53e2886"
+  "description": "The Quality Control Division ensures that products and processes meet the highest standards through rigorous inspection and verification.",
+  "image": "img/1/q5.jpg",
+  "name": "CONTRÔLE DE QUALITÉ",
+  "services": [
+    {
+      "name": "Surveillance and auditing",
+      "description": "Ongoing monitoring and auditing to ensure compliance with quality standards.",
+      "image": "img/1/q1.jpg"
     },
-    "title": "Industrial Inspection",
-    "description": "The Industrial Inspection Division ensures the safety and efficiency of industrial facilities through regular inspections and maintenance planning.",
-    "services": [
-      {
-        "name": "Routine inspections",
-        "description": "Regular inspections to ensure industrial facilities meet safety and operational standards.",
-        "image": "img/1/i1.jpg"
-      },
-      {
-        "name": "Safety audits",
-        "description": "Comprehensive safety audits to identify potential hazards and implement corrective actions.",
-        "image": "img/1/i2.jpg"
-      },
-      {
-        "name": "Maintenance planning",
-        "description": "Strategic maintenance planning to prevent equipment failures and ensure operational efficiency.",
-        "image": "img/1/i3.jpg"
-      },
-      {
-        "name": "Emergency response",
-        "description": "Preparedness and response strategies for industrial emergencies to minimize impact and ensure safety.",
-        "image": "img/1/i4.jpg"
-      }
-    ],
-    "image": "img/1/i5.jpg",
-    "name": "INDUSTRIE"
+    {
+      "name": "Testing and verification",
+      "description": "Thorough testing and verification processes to confirm quality and reliability.",
+      "image": "img/1/q2.jpg"
+    },
+    {
+      "name": "Certification services",
+      "description": "Issuance of certifications to verify that products meet established quality standards.",
+      "image": "img/1/q3.jpg"
+    },
+    {
+      "name": "Quality improvement consulting",
+      "description": "Expert consulting services to help organizations improve their quality control practices.",
+      "image": "img/1/q4.jpg"
+    }
+  ],
+  "title": "Quality Control",
+  "icon": "fa-search",
+  "backgroundImageUrl": "img/Aeronautical.jpg",
+  "background_images": "img/1/QQ.jpg"
+},
+{
+  "_id": {
+    "$oid": "663ca4f50306e469d53e2886"
   },
-  {
-    "_id": {
-      "$oid": "663ca4f50306e469d53e2887"
+  "description": "The Industrial Inspection Division ensures the safety and efficiency of industrial facilities through regular inspections and maintenance planning.",
+  "image": "img/1/i5.jpg",
+  "name": "INDUSTRIE",
+  "services": [
+    {
+      "name": "Routine inspections",
+      "description": "Regular inspections to ensure industrial facilities meet safety and operational standards.",
+      "image": "img/1/i1.jpg"
     },
-    "title": "Rail and Guided Transport",
-    "description": "The Rail and Guided Transport Division is dedicated to ensuring the safety and efficiency of rail and guided transport systems through meticulous inspections and audits.",
-    "services": [
-      {
-        "name": "Safety inspections",
-        "description": "Regular safety inspections to ensure the safe operation of rail and guided transport systems.",
-        "image": "img/1/r1.jpg"
-      },
-      {
-        "name": "Operational audits",
-        "description": "Audits to assess the efficiency and safety of transport operations.",
-        "image": "img/1/r2.jpg"
-      },
-      {
-        "name": "System maintenance",
-        "description": "Comprehensive maintenance services to ensure the reliability and safety of transport systems.",
-        "image": "img/1/r3.jpg"
-      },
-      {
-        "name": "Incident investigation",
-        "description": "Detailed investigations of incidents to improve safety and prevent future occurrences.",
-        "image": "img/1/r4.jpg"
-      }
-    ],
-    "image": "img/1/r5.jpg",
-    "name": "TRANSPORT FERROVIAIRE ET GUIDE"
+    {
+      "name": "Safety audits",
+      "description": "Comprehensive safety audits to identify potential hazards and implement corrective actions.",
+      "image": "img/1/i2.jpg"
+    },
+    {
+      "name": "Maintenance planning",
+      "description": "Strategic maintenance planning to prevent equipment failures and ensure operational efficiency.",
+      "image": "img/1/i3.jpg"
+    },
+    {
+      "name": "Emergency response",
+      "description": "Preparedness and response strategies for industrial emergencies to minimize impact and ensure safety.",
+      "image": "img/1/i4.jpg"
+    }
+  ],
+  "title": "Industrial Inspection",
+  "icon": "fa-industry",
+  "backgroundImageUrl": "fa-default-icon",
+  "background_images": "img/1/ii.jpg"
+},
+{
+  "_id": {
+    "$oid": "663ca4f50306e469d53e2887"
   },
-  {
-    "_id": {
-      "$oid": "663ca4f50306e469d53e2888"
+  "description": "The Rail and Guided Transport Division is dedicated to ensuring the safety and efficiency of rail and guided transport systems through meticulous inspections and audits.",
+  "image": "img/1/r5.jpg",
+  "name": "TRANSPORT FERROVIAIRE ET GUIDE",
+  "services": [
+    {
+      "name": "Safety inspections",
+      "description": "Regular safety inspections to ensure the safe operation of rail and guided transport systems.",
+      "image": "img/1/r1.jpg"
     },
-    "title": "Containers Control & Verification DIVISION",
-    "description": "The Containers Control & Verification Division is tasked with ensuring the safety and compliance of container operations through inspections and monitoring.",
-    "services": [
-      {
-        "name": "Regulatory visits and inspections linked to IMO conventions (SOLAS, MARPOL)",
-        "description": "Ensuring container operations comply with SOLAS and MARPOL regulations through regular inspections.",
-        "image": "img/1/i5.jpg"
-      },
-      {
-        "name": "Monitoring of new constructions",
-        "description": "Overseeing the construction of new container facilities to ensure they meet safety standards.",
-        "image": "img/1/i3.jpg"
-      },
-      {
-        "name": "Special, intermediate, annual, periodic, and occasional visits.",
-        "description": "Conducting various types of visits to ensure continuous compliance and safety.",
-        "image": "img/1/i4.jpg"
-      },
-      {
-        "name": "Assistive techniques",
-        "description": "Employing advanced techniques to assist in the inspection and verification of containers.",
-        "image": "img/1/i6.jpg"
-      }
-    ],
-    "image": "img/slider/s4.jpg",
-    "name": "CONTROLE ET VERIFICATION DES CONTENEURS"
+    {
+      "name": "Operational audits",
+      "description": "Audits to assess the efficiency and safety of transport operations.",
+      "image": "img/1/r2.jpg"
+    },
+    {
+      "name": "System maintenance",
+      "description": "Comprehensive maintenance services to ensure the reliability and safety of transport systems.",
+      "image": "img/1/r3.jpg"
+    },
+    {
+      "name": "Incident investigation",
+      "description": "Detailed investigations of incidents to improve safety and prevent future occurrences.",
+      "image": "img/1/r4.jpg"
+    }
+  ],
+  "title": "Rail and Guided Transport",
+  "icon": "fa-train",
+  "backgroundImageUrl": "fa-default-icon",
+  "background_images": "img/slider/s1.png"
+},
+{
+  "_id": {
+    "$oid": "663ca4f50306e469d53e2888"
   },
-  {
-    "_id": {
-      "$oid": "663ca4f50306e469d53e2889"
+  "description": "The Containers Control & Verification Division is tasked with ensuring the safety and compliance of container operations through inspections and monitoring.",
+  "image": "img/slider/s4.jpg",
+  "name": "CONTROLE ET VERIFICATION DES CONTENEURS",
+  "services": [
+    {
+      "name": "Regulatory visits and inspections linked to IMO conventions (SOLAS, MARPOL)",
+      "description": "Ensuring container operations comply with SOLAS and MARPOL regulations through regular inspections.",
+      "image": "img/1/i5.jpg"
     },
-    "title": "Elevators Technical Inspection DIVISION",
-    "description": "The Elevators Technical Inspection Division is responsible for ensuring the safety and compliance of elevators through rigorous inspections and monitoring.",
-    "services": [
-      {
-        "name": "Regulatory visits and inspections linked to IMO conventions (SOLAS, MARPOL)",
-        "description": "Regular inspections to ensure elevators comply with relevant IMO conventions.",
-        "image": "img/1/i5.jpg"
-      },
-      {
-        "name": "Monitoring of new constructions",
-        "description": "Continuous oversight of new elevator constructions to ensure they meet safety standards.",
-        "image": "img/1/i3.jpg"
-      },
-      {
-        "name": "Special, intermediate, annual, periodic, and occasional visits.",
-        "description": "Various types of visits to maintain elevator safety and compliance.",
-        "image": "img/1/i4.jpg"
-      },
-      {
-        "name": "Assistive techniques",
-        "description": "Advanced techniques to support the inspection and maintenance of elevators.",
-        "image": "img/1/i6.jpg"
-      }
-    ],
-    "image": "img/slider/s2.png",
-    "name": "INSPECTION TECHNIQUE DES ASCENSEURS"
-  }
-]
+    {
+      "name": "Monitoring of new constructions",
+      "description": "Overseeing the construction of new container facilities to ensure they meet safety standards.",
+      "image": "img/1/i3.jpg"
+    },
+    {
+      "name": "Special, intermediate, annual, periodic, and occasional visits.",
+      "description": "Conducting various types of visits to ensure continuous compliance and safety.",
+      "image": "img/1/i4.jpg"
+    },
+    {
+      "name": "Assistive techniques",
+      "description": "Employing advanced techniques to assist in the inspection and verification of containers.",
+      "image": "img/1/i6.jpg"
+    }
+  ],
+  "title": "Containers Control & Verification DIVISION",
+  "icon": "fa-anchor",
+  "backgroundImageUrl": "fa-default-icon",
+  "background_images": "img/slider/s8.jpg"
+},
+{
+  "_id": {
+    "$oid": "663ca4f50306e469d53e2889"
+  },
+  "description": "The Elevators Technical Inspection Division is responsible for ensuring the safety and compliance of elevators through rigorous inspections and monitoring.",
+  "image": "img/slider/s2.png",
+  "name": "INSPECTION TECHNIQUE DES ASCENSEURS",
+  "services": [
+    {
+      "name": "Regulatory visits and inspections linked to IMO conventions (SOLAS, MARPOL)",
+      "description": "Regular inspections to ensure elevators comply with relevant IMO conventions.",
+      "image": "img/1/i5.jpg"
+    },
+    {
+      "name": "Monitoring of new constructions",
+      "description": "Continuous oversight of new elevator constructions to ensure they meet safety standards.",
+      "image": "img/1/i3.jpg"
+    },
+    {
+      "name": "Special, intermediate, annual, periodic, and occasional visits.",
+      "description": "Various types of visits to maintain elevator safety and compliance.",
+      "image": "img/1/i4.jpg"
+    },
+    {
+      "name": "Assistive techniques",
+      "description": "Advanced techniques to support the inspection and maintenance of elevators.",
+      "image": "img/1/i6.jpg"
+    }
+  ],
+  "title": "Elevators Technical Inspection DIVISION",
+  "icon": "fa-arrow-up + fa-arrow-down",
+  "backgroundImageUrl": "fa-default-icon",
+  "background_images": "img/slider/s6.jpg"
+}]

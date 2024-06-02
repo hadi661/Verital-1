@@ -1,0 +1,122 @@
+<!-- Include Header -->
+<%- include('partials/header.ejs', { currentRoute: '/division', services: services, divisions: divisions }) %>
+
+<!-- Division Content -->
+<% if (division) { %>
+  <div id="<%= division.name %>" class="slider-area">
+    <div class="header-bg4 page-area">
+      <div class="home-overly"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="slider-content text-center">
+              <div class="header-bottom">
+                <div class="layer2 wow zoomIn" data-wow-duration="1s" data-wow-delay=".4s">
+                  <h1 class="title2"><%= division.title %></h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END Header -->
+    <div class="blog-page area-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <div class="page-head-blog">
+              <div class="single-blog-page">
+                <!-- search option start -->
+                <form action="/search" method="get">
+                  <div class="search-option">
+                    <input type="text" name="q" placeholder="Search...">
+                    <button type="submit">Search</button>
+                  </div>
+                </form>
+                <!-- search option end -->
+              </div>
+              <div class="single-blog-page">
+                <!-- recent start -->
+                <div class="left-blog">
+                  <h4>Our services</h4>
+                  <div class="recent-post">
+                    <!-- start single post -->
+                    <% division.services.forEach(service => { %>
+                      <div class="recent-single-post">
+                        <div class="post-img">
+                          <a href="<%= division.name %>">
+                            <% if (service.image && service.image.length > 0) { %>
+                              <img src="<%= service.image[0] %>" alt="<%= service.name %>">
+                            <% } else { %>
+                              <img src="img/default.png" alt="<%= service.name %>">
+                            <% } %>
+                          </a>
+                        </div>
+                        <div class="pst-content">
+                          <p><a href="<%= division.name %>"><%= service.name %></a></p>
+                        </div>
+                      </div>
+                    <% }) %>
+                    <!-- End single post -->
+                  </div>
+                </div>
+                <!-- recent end -->
+              </div>
+            </div>
+          </div>
+          <!-- End left sidebar -->
+          <!-- Start single blog -->
+          <div class="col-md-8 col-sm-8 col-xs-12">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="single-blog">
+                  <div class="single-blog-img">
+                    <a href="<%= division.name %>">
+                      <% if (division.image && division.image.length > 0) { %>
+                        <img src="<%= division.image[0] %>" alt="<%= division.name %> Image">
+                      <% } else { %>
+                        <img src="img/default.png" alt="<%= division.name %> Image">
+                      <% } %>
+                    </a>
+                  </div>
+                  <div class="blog-meta">
+                    <span class="comments-type"></span>
+                  </div>
+                  <div class="blog-text">
+                    <h4>
+                      <a href="<%= division.name %>"><%= division.title %></a>
+                    </h4>
+                    <p>
+                      <%= division.description %>
+                    </p>
+                  </div>
+                  <span>
+                    <a href="<%= division.name %>.html" class="ready-btn">Read more</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End single blog -->
+        </div>
+      </div>
+    </div>
+  </div>
+<% } else { %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <p class="alert alert-warning">Division data is missing or incomplete.</p>
+      </div>
+    </div>
+  </div>
+<% } %>
+
+<!-- Include Footer -->
+<%- include ('partials/footer.ejs')%>
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<!-- JavaScript Libraries -->
+<%- include ('partials/lib.ejs')%>

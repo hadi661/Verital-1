@@ -1,9 +1,9 @@
-<%- include ('partials/header.ejs')%>
+<%- include('partials/header.ejs', { currentRoute: '/contact' }) %>
 
 <!-- Start Google Map -->
 <div class="map-container">
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21888.55382199453!2d3.0606491!3d36.7146951!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fad0afd9463ab%3A0xa88e2f6cd6697730!2sVERITAL%20-%20Direction%20G%C3%A9n%C3%A9rale!5e1!3m2!1sen!2sdz!4v1714042568588!5m2!1sen!2sdz" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
+</div> <br>
 <!-- End Google Map -->
 
 <!-- Start Content -->
@@ -16,7 +16,7 @@
                         <i class="fa fa-globe"></i>
                         <b><h5><u><%= contact.name %></u></h5></b>
                         <a href="https://www.google.com/maps/search/<%= encodeURIComponent(contact.address) %>" target="_blank">
-                            <p><%= contact.address.replace(/, /g, '<br>') %></p>
+                            <p><%= contact.address.replace(/, /g, '') %></p>
                         </a>
                         <a href="tel:<%= contact.phone.join('').replace(/\s/g, '') %>">Appelez-nous au <%= contact.phone.join(' / ') %></a>
                         <a href="mailto:<%= contact.email %>"><%= contact.email %></a>
@@ -42,10 +42,10 @@
   <div class="slider-container">
   <div class="slider">
   <div class="slide">
-  <img src="img/1/1.png" alt="" />
-  <img src="img/1/2.png" alt="" />
-  <img src="img/1/24-225x202.png" alt="" />
-  <img src="img/1/25-240x202.png" alt="" />
+  <img src="/public/img/1/1.png" alt="" />
+  <img src="/public/img/1/2.png" alt="" />
+  <img src="/public/img/1/24-225x202.png" alt="" />
+  <img src="/public/img/1/25-240x202.png" alt="" />
   <img src="img/1/27-231x202.png" alt="" />
   <img src="img/1/29-225x202.png" alt="" />
   <img src="img/1/30-320x202.png" alt="" />

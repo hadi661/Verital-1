@@ -1,8 +1,22 @@
-<%- include ('partials/header.ejs')%>
+<%- include('partials/header.ejs', { currentRoute: '/team' }) %>
 <!-- Start team Area -->
 <div id="team" class="our-team-area area-padding">
   <div class="container">
     
+      <div class="single-blog-page">
+        <!-- search option start -->
+        <form action="/search" method="get">
+          <div class="search-option">
+            <form action="/search" method="get">
+              <input type="text" name="q" placeholder="Search...">
+              <button type="submit">Search</button>
+          </form>
+          </div>
+        </form>
+        <!-- search option end -->
+      </div>
+      <!-- search option end -->
+    </div>
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="section-headline text-center">
           <a href="/team" target="_blank"> <!-- Ensure this href is /team -->

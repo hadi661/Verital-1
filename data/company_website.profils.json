@@ -1,0 +1,63 @@
+[{
+  "_id": {
+    "$oid": "6655e3877c24af94558e2801"
+  },
+  "CEO": {
+    "title": {
+      "en": "CEO's Message",
+      "fr": "MOT DU PDG",
+      "ar": "رسالة المدير التنفيذي"
+    },
+    "content": {
+      "en": "VERITAL is increasingly called upon to contribute to debates on 'security' and 'analysis of potential problems.' J’y vois un signe de changement dans le regard des responsables sur cette entreprise et le début d’une reconnaissance des efforts engagés et des responsabilités courageusement assumées dans ces domaines.",
+      "fr": "VERITAL est de plus en plus sollicité pour contribuer aux débats sur la « sécurité » et « analyse de problèmes potentiels ». J’y vois un signe de changement dans le regard des responsables sur cette entreprise et le début d’une reconnaissance des efforts engagés et des responsabilités courageusement assumées dans ces domaines.",
+      "ar": "تُطلب من VERITAL بشكل متزايد المساهمة في المناقشات حول 'الأمان' و 'تحليل المشاكل المحتملة'. J’y vois un signe de changement dans النظرة إلى هذه الشركة من قِبل المسؤولين وبداية للاعتراف بالجهود التي تُبذل والمسؤوليات التي تُتحمل بشجاعة في هذه المجالات."
+    },
+    "quotes": {
+      "en": [
+        "VERITAL is not quite like the others; its missions of public service, its risk management culture, and the international standardization of its professions are a reality that no one should ignore in the clear interest of the safety and comfort of citizens and the follow-up of our country's conventional commitments internationally.",
+        "VERITAL has firmly embarked on the path of development, undoubtedly at the right time and certainly to the satisfaction of the citizen it serves without knowing it and the public authorities it represents and assists at the operational level to ensure their legal, regulatory, and even constitutional responsibilities, since the State is responsible vis-à-vis its citizens.",
+        "In short, VERITAL makes its precious contribution to the safety of people and property."
+      ],
+      "fr": [
+        "VERITAL, n’est pas tout à fait comme les autres, ses missions de service public, sa culture de la gestion du risque et la standardisation au plan international de ses métiers sont une réalité que nul ne doit ignorer dans l’ intérêt bien compris de la sécurité et du confort du citoyen et du suivi des engagements conventionnels de notre pays au plan international.",
+        "VERITAL, s’est résolument engagée dans la voie du développement, sans doute au bon moment et certainement à la satisfaction du citoyen qu’elle sert sans qu’ il le sache et des pouvoirs publics qu’elle représente et assiste au plan opérationnel pour assurer leurs responsabilités légales et réglementaires voire constitutionnelles, puisque l’État est responsable vis-à-vis de ses citoyens.",
+        "Somme toute, VERITAL apporte sa contribution précieuse à la sécurité des personnes et des biens."
+      ],
+      "ar": [
+        "تعتبر VERITAL غير كاملة مثل الآخرين ؛ مهامها في الخدمة العامة ، وثقافتها في إدارة المخاطر ، والتقييس الدولي لمهنها واقع يجب على الجميع أن لا يتجاهلوه في مصلحة واضحة للسلامة وراحة المواطنين ومتابعة التزامات بلدنا بالتزاماتها التقليدية على الصعيد الدولي.",
+        "بدأت VERITAL بحزم في طريق التنمية ، دون شك في الوقت المناسب وبالتأكيد لرضا المواطن الذي تخدمه دون أن يعرف ذلك والسلطات العامة التي تمثلها وتساعدها على المستوى التشغيلي لضمان مسؤولياتها القانونية والتنظيمية وحتى الدستورية ، حيث أن الدولة مسؤولة تجاه مواطنيها.",
+        "في الختام ، تقدم VERITAL مساهمتها الثمينة في سلامة الأشخاص والممتلكات."
+      ]
+    },
+    "text": {
+      "en": "Responsibilities, the diversity of its relations and services with and for the public authorities are part of its specifics. I am convinced that, with this new perspective on it, VERITAL will meet the challenge, ambitious but realistic, of being the reference public enterprise in Algeria in the field of supervision of security both in terms of technical expertise and advice and analysis of potential problems. It will continue to develop its capacity to promote, by making them coexist, safety and environmental protection in the specific activities of aeronautics, maritime transport, guided and industrial transport. For VERITAL, modest in size but strategic in its missions and responsibilities and aware of its role as a citizen company, this is a major challenge because its ability to carry out its growth policy through partnership and strengthen its role as the exclusive representative of public authorities depends on it by gaining their trust and ensuring the respect for their conventional commitments internationally.",
+      "fr": "Les responsabilités, la diversité de ses relations et services avec et pour le compte des pouvoirs publics font partie de ses spécificités. Je suis convaincu que, forte de ce nouveau regard porté sur elle, VERITAL saura relever le défi, ambitieux certes mais réaliste, d’ être l’entreprise publique de référence en Algérie dans le domaine de la supervision de la sécurité tant en termes d’expertises techniques que de conseils et analyse de problèmes potentiels. Elle continuera de développer sa capacité à promouvoir, en les faisant cohabiter, la sécurité et la protection de l’environnement dans les activités spécifiques de l’aéronautique, des transports maritimes, guidés et de l’ industrie. C’est en fait pour VERITAL, modeste par sa taille mais stratégique par ses missions et responsabilités et la conscience de son rôle d’entreprise citoyenne, un défi majeur car en dépend sa capacité à mener dans la durée sa politique de croissance par le partenariat et affermir son rôle de représentant exclusif des pouvoirs publics en gagnant leur confiance et en veillant au respect de leurs engagements conventionnels au plan international.",
+      "ar": "المسؤوليات وتنوع علاقاتها وخدماتها مع ولصالح السلطات العامة جزء من تفاصيلها. أنا مقتنع بأنه، بفضل هذة النظرة الجديدة عليها، ستتمكن فريتال من مواجهة التحدي، الطموح ولكن واقعي، بأن تكون المؤسسة العامة المرجعية في الجزائر في مجال الإشراف على الأمن من حيث الخبرة الفنية والنصائح وتحليل المشاكل المحتملة. ستستمر في تطوير قدرتها على الترويج، من خلال جعلها تتعايش، الأمان وحماية البيئة في الأنشطة المحددة للطيران والنقل البحري والموجه والصناعي. بالنسبة لفريتال، الصغيرة من حيث الحجم ولكن الاستراتيجية في مهامها ومسؤولياتها والتي تدرك دورها كشركة مواطن، فإن هذا تحدي كبير لأن قدرتها على تنفيذ سياستها النمو من خلال الشراكة وتعزيز دورها كالممثل الحصري للسلطات العامة يعتمد على الحصول على ثقتهم وضمان احترام التزاماتهم التقليدية دولياً."
+    },
+    "additionalContent": {
+      "en": null,
+      "fr": null,
+      "ar": null
+    },
+    "images": {
+      "en": [
+        "img/1/ser1-600x399.jpg",
+        "img/1/ser1-600x399.jpg"
+      ],
+      "fr": [
+        "img/1/ser1-600x399.jpg",
+        "img/1/ser1-600x399.jpg"
+      ],
+      "ar": [
+        "img/1/ser1-600x399.jpg",
+        "img/1/ser1-600x399.jpg"
+      ]
+    },
+    "videos": {
+      "en": [],
+      "fr": [],
+      "ar": []
+    }
+  }
+}]

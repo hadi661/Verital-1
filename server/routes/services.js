@@ -1,24 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const Service = require('../models/services');
+const Services = require('../models/services');
+const Division = require('../models/division');
 
 // Route to create a new service
-router.post('/services', async (req, res) => {
+router.post('/service', async (req, res) => {
     try {
-        const newService = new Service(req.body);
+        console.log('Incoming POST data:', req.body);
+        const newService = new Services(req.body);
         await newService.save();
-        res.status(201).send(newService);
-    } catch (err) {
-        console.error(err);
-        res.status(500).send('Server Error');
-    }
-});
-
-// Route to read all services
-router.get('/services', async (req, res) => {
-    try {
-        const services = await Service.find();
-        res.status(200).json(services);
+        res.redirect('/service');
     } catch (err) {
         console.error(err);
         res.status(500).send('Server Error');
@@ -26,13 +17,10 @@ router.get('/services', async (req, res) => {
 });
 
 // Route to update a service
-router.put('/services/:id', async (req, res) => {
+router.put('/service/:id', async (req, res) => {
     try {
-        const updatedService = await Service.findByIdAndUpdate(req.params.id, req.body, { new: true });
-        if (!updatedService) {
-            return res.status(404).json({ message: "Service not found" });
-        }
-        res.json(updatedService);
+        await Services.findByIdAndUpdate(req.params.id, req.body);
+        res.redirect('/service');
     } catch (err) {
         console.error(err);
         res.status(500).send('Server Error');
@@ -40,14 +28,31 @@ router.put('/services/:id', async (req, res) => {
 });
 
 // Route to delete a service
-router.delete('/services/:id', async (req, res) => {
+router.delete('/service/:id', async (req, res) => {
     try {
-        await Service.findByIdAndDelete(req.params.id);
-        res.status(204).send();
+        await Services.findByIdAndDelete(req.params.id);
+        res.redirect('/service');
     } catch (err) {
         console.error(err);
         res.status(500).send('Server Error');
     }
 });
 
+router.get('/services/:serviceName', async (req, res) => {
+    try {
+        const serviceName = req.params.serviceName;
+        const service = await Services.findOne({ name: serviceName });
+        const allServices = await Services.find(); // Fetch all services
+        const divisions = await Division.find();
+
+        if (service) {
+            res.render('service', { service: service, allServices: allServices, divisions: divisions });
+        } else {
+            res.status(404).send('Service not found');
+        }
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Server Error');
+    }
+});
 module.exports = router;

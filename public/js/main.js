@@ -10,16 +10,14 @@
     });
   }
 
-  /* Top Menu Stick */
   function topMenuStick() {
     var s = $("#sticker");
     var pos = s.position();
     $(window).on('scroll', function() {
-      var windowpos = $(window).scrollTop();
-      s.toggleClass("stick", windowpos > pos.top);
+        var windowpos = $(window).scrollTop();
+        s.toggleClass("stick", windowpos > pos.top);
     });
-  }
-
+}
   /* Language Dropdown Scroll */
   function languageDropdownScroll() {
     var languageDropdown = $("#language-dropdown");
@@ -28,7 +26,10 @@
       languageDropdown.toggleClass("scroll", windowpos > 300);
     });
   }
-
+  
+  function changeLanguage(lang) {
+    window.location.search = '?lang=' + lang;
+}
   /* Navbar Nav */
   function navbarNav() {
     var mainMenu = $(".main-menu ul.navbar-nav li");
@@ -84,43 +85,39 @@
     });
   }
 
-  // Back to Top Button
-  $(document).ready(function() {
-    function backToTopButton() {
-        $(window).scroll(function() {
-            $('.back-to-top').toggle($(this).scrollTop() > 100);
-        });
+ /* Back to Top Button */
+function backToTopButton() {
+    $(window).scroll(function() {
+        $('.back-to-top').toggle($(this).scrollTop() > 100);
+    });
 
-        $('.back-to-top').click(function() {
-            $('html, body').animate({
-                scrollTop: 0
-            }, 1500, 'easeInOutExpo');
-            return false;
-        });
+    $('.back-to-top').click(function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1500, 'easeInOutExpo');
+        return false;
+    });
+}
+
+// Additional function to show/hide back-to-top button
+window.onscroll = function() { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.querySelector('.back-to-top').classList.add('show');
+    } else {
+        document.querySelector('.back-to-top').classList.remove('show');
     }
+}
 
-    // Call the function
-    backToTopButton();
-
-    // Additional function to show/hide back-to-top button
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            document.querySelector('.back-to-top').classList.add('show');
-        } else {
-            document.querySelector('.back-to-top').classList.remove('show');
-        }
-    }
-
-    // Additional function for smooth scrolling when clicking the button
-    document.querySelector('.back-to-top').addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+// Additional function for smooth scrolling when clicking the button
+document.querySelector('.back-to-top').addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
     });
 });
+
   /* Parallax */
   function parallax() {
     $('.wellcome-area').parallax("50%", 0.4);
@@ -136,7 +133,7 @@
     });
   }
 
-  /* Testimonial  */
+  /* Testimonial */
   var testimonies = {
     en: [
       "Philippe Durand: VERITAL has been an essential partner in optimizing our operations. Their technical expertise and commitment to quality have significantly improved our efficiency and compliance with standards.",
@@ -269,24 +266,105 @@
       changeLanguage(lang);
     });
   }
+/* Smooth Scroll Function */
+function smoothScrollTo(targetId) {
+  $('html, body').stop().animate({
+    scrollTop: $('#' + targetId).offset().top - 55
+  }, 1500, 'easeInOutExpo');
+}
 
-  /* Initialize all functions */
-  $(document).ready(function() {
-    preloader();
-    topMenuStick();
-    languageDropdownScroll();
-    navbarNav();
-    initWow();
-    nivoSlider();
-    scrollspy();
-    venobox();
-    pageScroll();
-    backToTopButton();
-    parallax();
-    panelCollapse();
-    displayTestimonies();
-    isotopeInit();
-    knobInit();
-    changeLanguageButton();
+$(document).ready(function() {
+  preloader();
+  topMenuStick();
+  languageDropdownScroll();
+  navbarNav();
+  initWow();
+  nivoSlider();
+  scrollspy();
+  venobox();
+  pageScroll();
+  backToTopButton();
+  parallax();
+  panelCollapse();
+  displayTestimonies();
+  isotopeInit();
+  knobInit();
+  changeLanguageButton();
+
+  // Smooth scroll for internal links except home link
+  $('a[href^="#"]').on('click', function(event) {
+      var target = $(this.hash);
+      if (target.length) {
+          event.preventDefault();
+          $('html, body').animate({
+              scrollTop: target.offset().top
+          }, 1000);
+      }
   });
+
+  // Smooth scroll for ACCUEIL link
+  $('a[href="/"]').on('click', function(event) {
+   // event.preventDefault();
+    smoothScrollTo('home'); // Replace 'home' with the id of your home section
+  });
+});
+
+function getHeaderClass(divisionName) {
+  console.log('Division Name:', divisionName); // Add this line
+  switch (divisionName) {
+      case 'Aero':
+          return 'header-bg4';
+      case 'Marine':
+          return 'header-bg5';
+      case 'CONTRÔLE DE QUALITÉ':
+          return 'header-bg6';
+      case 'INDUSTRIE':
+          return 'header-bg7';
+      case 'TRANSPORT FERROVIAIRE ET GUIDE':
+          return 'header-bg8';
+      case 'CONTROLE ET VERIFICATION DES CONTENEURS':
+          return 'header-bg9';
+      case 'INSPECTION TECHNIQUE DES ASCENSEURS':
+          return 'header-bg10';
+      // Add more cases for other divisions
+      default:
+          return ''; // Default class if no match found
+  }
+}
+document.addEventListener('DOMContentLoaded', function () {
+  document.getElementById('sus_submit').addEventListener('click', function (e) {
+    e.preventDefault();
+    const email = document.getElementById('sus_email').value;
+    const msgSubmit = document.getElementById('msg_Submit');
+
+    if (validateEmail(email)) {
+      fetch('/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email: email })
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          msgSubmit.classList.remove('hidden');
+          msgSubmit.innerHTML = 'Subscription successful!';
+        } else {
+          msgSubmit.classList.remove('hidden');
+          msgSubmit.innerHTML = 'Subscription failed. Try again.';
+        }
+      });
+    } else {
+      msgSubmit.classList.remove('hidden');
+      msgSubmit.innerHTML = 'Please enter a valid email address.';
+    }
+  });
+});
+
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(String(email).toLowerCase());
+}
+
 })(jQuery);

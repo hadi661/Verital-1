@@ -1,13 +1,30 @@
-// models/services.js
 const mongoose = require('mongoose');
 
-// Define schema for services
-const ServiceSchema = new mongoose.Schema({
-    title: { type: String, required: true },
-    description: { type: String, required: true }
+const allServicesSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  description: { type: String, required: true },
+  image: String
 });
 
-// Create model from schema
-const Service = mongoose.model('Service', ServiceSchema);
+const servicesSchema = new mongoose.Schema({
+  name: { type: String, required: true, unique: true },
+  title: {
+    en: { type: String, required: true },
+    fr: { type: String, required: true },
+    ar: { type: String, required: true }
+  },
+  services: { type: [allServicesSchema], default: [] },
+  description: {
+    type: {
+      en: { type: String, required: true },
+      fr: { type: String, required: true },
+      ar: { type: String, required: true }
+    },
+    required: true
+  },
+  image: { type: [String], required: false },
+  icon: { type: [String], required: false } // Added icon field
+});
 
-module.exports = Service;
+const Services = mongoose.model('Services', servicesSchema);
+module.exports = Services;

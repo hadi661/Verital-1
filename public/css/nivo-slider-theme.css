@@ -12,7 +12,7 @@
 }
 
 .nivo-caption::after {
-  background: #444 none repeat scroll 0 0;
+  background: #444 ;
   content: "";
   height: 100%;
   left: 0;
@@ -87,11 +87,11 @@
 }
 
 .nivo-directionNav {
-  display: block;
+  display: auto;
 }
 
 .nivo-controlNav a {
-  background: transparent none repeat scroll 0 0;
+  background: transparent;
   border: 2px solid #fff;
   box-shadow: none;
   display: inline-block;
@@ -106,12 +106,9 @@
 }
 
 .nivo-controlNav a:hover, .nivo-controlNav a.active {
-  background: #fff none repeat scroll 0 0;
+  background: #fff;
   border-color: #3EC1D5;
-  -moz-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
+  transform: rotate(180deg); /* Simplified transform property */
 }
 
 /* Normal desktop :992px. */
@@ -194,7 +191,7 @@ preview-1
 
 .preview-1 .nivoSlider {
   position: relative;
-  background: url(../lib/nivo-slider/img/loading.gif) no-repeat 50% 50%;
+  background: url(/public/lib/nivo-slider/img/loading.gif) no-repeat 50% 50%;
 }
 
 .preview-1 .nivoSlider img {
@@ -218,7 +215,7 @@ preview-1
   display: inline-block;
   width: 22px;
   height: 22px;
-  background: url(../lib/nivo-slider/img/bullets.png) no-repeat;
+  background: url(/public/lib/nivo-slider/img/bullets.png) no-repeat;
   text-indent: -9999px;
   border: 0;
   margin: 0 2px;
@@ -232,13 +229,10 @@ preview-1
   display: block;
   width: 30px;
   height: 30px;
-  background: url(../lib/nivo-slider/img/arrows.png) no-repeat;
+  background: url(/public/lib/nivo-slider/img/arrows.png) no-repeat;
   text-indent: -9999px;
   border: 0;
   opacity: 0;
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
@@ -338,10 +332,6 @@ preview-2
   font-size: 0;
 }
 
-.preview-2 .nivoSlider .nivo-directionNav a.nivo-nextNav {
-  font-size: 0;
-}
-
 .preview-2 .nivo-directionNav a.nivo-prevNav::before {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
   color: #ffffff;
@@ -366,7 +356,10 @@ preview-2
   color: #fff;
   background: #3EC1D5;
 }
-
+/* Remove text from the next button */
+.preview-2 .nivo-directionNav a.nivo-nextNav {
+  font-size: 0;
+}
 .preview-2 .nivo-directionNav a.nivo-nextNav::before {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
   border: 1px solid #fff;
@@ -382,6 +375,7 @@ preview-2
   top: 50%;
   transition: all 300ms ease-in 0s;
   width: 50px;
+  font-size: 0;
   z-index: 9;
   font-size: 30px;
 }

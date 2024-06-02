@@ -1,0 +1,113 @@
+<%
+function isActiveRoute(route, currentRoute) {
+  return route === currentRoute ? 'active' : '';
+}
+%>
+<div id="preloader"></div>
+<!-- Include the header partial -->
+<%- include('partials/header.ejs', { currentRoute: '/services', services: allServices }) %>
+
+<!-- Start Bottom Header -->
+<div class="header-bg page-area">
+    <div class="home-overly"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="slider-content text-center">
+            <div class="header-bottom">
+              <div class="layer2 wow zoomIn" data-wow-duration="1s" data-wow-delay=".4s">
+                <h1 class="title2"><%= service.title.en %></h1> <!-- Dynamic service title in English -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END Header -->
+  
+  <div class="blog-page area-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <div class="page-head-blog">
+          
+<div class="single-blog-page">
+  <!-- search option start -->
+  <form action="/search" method="get">
+    <div class="search-option">
+      <input type="text" name="q" placeholder="Search...">
+      <button type="submit">Search</button>
+    </div>
+  </form>
+  <!-- search option end -->
+</div>
+            </div>
+            <div class="single-blog-page">
+              <!-- recent start -->
+              <div class="left-blog">
+                <h4>Services</h4>
+                <div class="recent-post">
+                  <% allServices.forEach(service => { %> <!-- Loop through all services -->
+                    <!-- start single post -->
+                    <div class="recent-single-post">
+                      <div class="post-img">
+                        <a href="/services/<%= service.name %>"> <!-- Dynamic service link -->
+                          <img src="<%= service.image[0] %>" alt="<%= service.name %>"> <!-- Dynamic service image -->
+                        </a>
+                      </div>
+                      <div class="pst-content">
+                        <p><a href="/services/<%= service.name %>"><%= service.title.en %></a></p> <!-- Dynamic service title in English -->
+                      </div>
+                    </div>
+                    <!-- End single post -->
+                  <% }) %>
+                </div>
+              </div>
+              <!-- recent end -->
+            </div>
+            <!-- Other sections omitted for brevity -->
+          </div>
+        </div>
+  
+        <!-- Start single blog -->
+        <div class="col-md-8 col-sm-8 col-xs-12">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="single-blog">
+                <div class="single-blog-img">
+                  <img src="<%= service.image[0] %>" alt="<%= service.name %>"> <!-- Dynamic service image -->
+                </div>
+                <div class="blog-meta">
+                  <!-- Add dynamic content if needed -->
+                </div>
+                <div class="blog-text">
+                  <h4>
+                    <a href="#"><%= service.title.en %></a> <!-- Dynamic service title in English -->
+                  </h4>
+                  <p><%= service.description.en %></p> <!-- Dynamic service description in English -->
+                </div>
+                <!-- Dynamic content for service features -->
+                <span>
+                  <a href="blog-details.html" class="ready-btn">En savoir plus</a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End single blog -->
+      </div>
+    </div>
+  </div>
+  <!-- End Blog Area -->
+  
+  <div class="clearfix"></div>
+  
+
+<!-- Start Footer bottom Area -->
+<%- include ('partials/footer.ejs')%>
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<!-- JavaScript Libraries -->
+<%- include ('partials/lib.ejs')%>

@@ -1,30 +1,21 @@
 
+<%
+function isActiveRoute(route, currentRoute) {
+  return route === currentRoute ? 'active' : '';
+}
+%>
 <div id="preloader"></div>
-
 <!-- index.ejs -->
-<%- include('partials/header.ejs') %>
-
+<%- include('partials/header.ejs', { currentRoute: '/' }) %>
 <!-- header end -->
-
 <!-- Start Slider Area -->
 <div id="home" class="slider-area">
   <div class="bend niceties preview-2">
     <div id="ensign-nivoslider" class="slides">
-      <img src="img/slider/aero.png" alt="" title="#slider-direction-1" />
-      <img src="img/slider/slider1.jpg" alt="" title="#slider-direction-2" />
-      <img src="img/slider/s2.png" alt="" title="#slider-direction-3" />
-      <img src="img/slider/s3.jpg" alt="" title="#slider-direction-4" />
-      <img src="img/slider/s4.jpg" alt="" title="#slider-direction-1" />
-      <img src="img/slider/s5.jpg" alt="" title="#slider-direction-2" />
-      <img src="img/slider/s6.jpg" alt="" title="#slider-direction-3" />
-      <img src="img/slider/s1.png" alt="" title="#slider-direction-1" />
-      <img src="img/slider/s7.jpg" alt="" title="#slider-direction-1" />
-      <img src="img/slider/s8.jpg" alt="" title="#slider-direction-2" />
-      <img src="img/slider/s9.jpg" alt="" title="#slider-direction-3" />
-      <img src="img/slider/s10.jpg" alt="" title="#slider-direction-1" />
-      <img src="img/slider/s11.jpg" alt="" title="#slider-direction-2" />
+      <% slides.forEach(slide => { %>
+        <img src="<%= slide.src %>" alt="<%= slide.alt %>" title="<%= slide.title %>" />
+      <% }) %>
     </div>
-
     <!-- direction 1 -->
     <div id="slider-direction-1" class="slider-direction slider-one">
       <div class="container">
@@ -42,7 +33,7 @@
               <!-- layer 3 -->
               <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
                 <a class="ready-btn right-btn page-scroll" href="#services">Nos Services</a>
-                <a class="ready-btn right-btn page-scroll" href="index2.html">Nos Divisions</a>
+                <a class="ready-btn right-btn page-scroll" href="#Divisions">Nos Divisions</a>
                 <a class="ready-btn page-scroll" href="#about">En savoir plus</a>
                 <a class="ready-btn page-scroll" href="#blog">Actualités</a>
                 
@@ -70,7 +61,7 @@
               <!-- layer 3 -->
               <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
                 <a class="ready-btn right-btn page-scroll" href="#services">Nos Services</a>
-                <a class="ready-btn right-btn page-scroll" href="index2.html">Nos Divisions</a>
+                <a class="ready-btn right-btn page-scroll" href="#Divisions">Nos Divisions</a>
                 <a class="ready-btn page-scroll" href="#about">En savoir plus</a>
                 <a class="ready-btn page-scroll" href="#blog">Actualités</a>
               </div>
@@ -97,7 +88,7 @@
               <!-- layer 3 -->
               <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
                 <a class="ready-btn right-btn page-scroll" href="#services">Nos Services</a>
-                <a class="ready-btn right-btn page-scroll" href="index2.html">Nos Divisions</a>
+                <a class="ready-btn right-btn page-scroll" href="#Divisions">Nos Divisions</a>
                 <a class="ready-btn page-scroll" href="#about">En savoir plus</a>
                 <a class="ready-btn page-scroll" href="#blog">Actualités</a>
               </div>
@@ -125,7 +116,7 @@
           <!-- layer 3 -->
           <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
             <a class="ready-btn right-btn page-scroll" href="#services">Nos Services</a>
-                <a class="ready-btn right-btn page-scroll" href="index2.html">Nos Divisions</a>
+                <a class="ready-btn right-btn page-scroll" href="#Divisions">Nos Divisions</a>
                 <a class="ready-btn page-scroll" href="#about">En savoir plus</a>
                 <a class="ready-btn page-scroll" href="#blog">Actualités</a>
           </div>
@@ -135,201 +126,22 @@
   </div>
 </div>
 <!-- End Slider Area -->
+<!-- views/index.ejs or relevant file -->
+<div class="single-blog-page">
+  <!-- search option start -->
+  <form action="/search" method="get">
+    <div class="search-option">
+      <form action="/search" method="get">
+        <input type="text" name="q" placeholder="Search...">
+        <button type="submit">Search</button>
+    </form>
+    </div>
+  </form>
+  <!-- search option end -->
+</div>
+
 <!-- start CEO area -->
-
-<div id="CEO" class="about-area area-padding" translate="yes">
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 col-sm-12 col-xs-12">
-      <div class="section-headline text-center">
-        <h2>MOT DU PDG</h2>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <!-- single-well start-->
-    <div class="col-md-6 col-sm-6 col-xs-12">
-      <div class="well-left">
-        <div class="single-well">
-          <a href="#CEO">
-              <img src="img/about/4.png" alt="">
-            </a>
-            <center>
-            <p ><b>Mr.Mohammed Nabil Hamo</b></p>
-            <p><b> Président Directeur Général </b></p>
-          </center>
-        </div>
-        <div class="image-container">
-          <a href="#home">
-              <img src="img/about/3.png" alt="">
-          </a>
-      </div>
-      
-         
-           </div>
-    </div>
-    <!-- single-well end-->
-    <div class="col-md-6 col-sm-6 col-xs-12" translate="yes">
-      <div class="well-middle">
-        <div class="single-well">
-          <a href="#">
-            <h4 class="sec-head">MOT DU PDG</h4>
-          </a>
-          <p>
-            VERITAL est de plus en plus sollicité pour contribuer aux débats sur la <b>« sécurité »</b> et <B>« analyse de problèmes potentiels ».</B>
-J’y vois un signe de changement dans le regard des responsables sur cette entreprise et le début d’une reconnaissance des efforts engagés et des responsabilités courageusement assumées dans ces domaines.</p>
-          <p>
-            <ul>
-              <il>
-                <p><i class="fa fa-quote-right"></i>  <b>  VERITAL, n’est pas tout à fait comme les autres, ses missions de service public, sa culture de la gestion du risque et la standardisation au plan international de ses métiers sont une réalité que nul ne doit ignorer dans l’ intérêt bien compris de la sécurité et du confort du citoyen et du suivi des engagements conventionnels de notre pays au plan international.</b> <i class="fa fa-quote-left"></i></p>
-                
-              </il>
-            </ul>
-        <p>Les responsabilités, la diversité de ses relations et services avec et pour le compte des pouvoirs publics font partie de ses spécificités.</p>
-        <ul>
-          <il>
-            <p><i class="fa fa-quote-right"></i>VERITAL, s’est résolument engagée dans la voie du développement, sans doute au bon moment et certainement à la satisfaction du citoyen qu’elle sert sans qu’ il le sache et des pouvoirs publics qu’elle représente et assiste au plan opérationnel pour assurer leurs responsabilités légales et réglementaires voire constitutionnelles, puisque l’État est responsable vis-à-vis de ses citoyens. <i class="fa fa-quote-left"></i></p>
-            
-          </il>
-        </ul>
-        <p>Je suis convaincu que, forte de ce nouveau regard porté sur elle,VERITAL saura relever le défi, ambitieux certes mais réaliste, d’ être l’entreprise publique de référence en Algérie dans le domaine de la supervision de la sécurité tant en termes d’expertises techniques que de conseils et analyse de problèmes potentiels.</p>
-        <p>Elle continuera de développer sa capacité à promouvoir, en les faisant cohabiter, la sécurité et la protection de l’environnement dans les activités spécifiques de l’aéronautique, des transports maritimes, guidés et de l’ industrie.</p>
-        <p>C’est en fait pour VERITAL, modeste par sa taille mais stratégique par ses missions et responsabilités et la conscience de son rôle d’entreprise citoyenne, un défi majeur car en dépend sa capacité à mener dans la durée sa politique de croissance par le partenariat et affermir son rôle de représentant exclusif des pouvoirs publics en gagnant leur confiance et en veillant au respect de leurs engagements conventionnels au plan international.</p>
-        <p><i class="fa fa-quote-right"></i> <B> Somme toute, VERITAL apporte sa contribution 
-          précieuse à la sécurité des personnes et des biens</B> <i class="fa fa-quote-left"></i></p>
-        </div>
-      </div>
-    </div>
-    <!-- End col-->
-  </div>
-</div>
-</div>
-<!-- end CEO area-->
-<!-- Start About area -->
-<div id="about" class="about-area area-padding" translate="yes">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="section-headline text-center">
-          <h2>PROFIL Verital</h2>
-          
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <!-- single-well start-->
-      <div class="col-md-6 col-sm-6 col-xs-12">
-        <div class="well-left">
-          <div class="single-well">
-            <a href="#">
-                                <img src="img/about/1.jpg" alt="">
-                              </a>
-             
-          </div>
-          <div class="image-container1">
-            <div class="video-box">
-                <a class="venobox play-btn mb-4" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/embed/V6539Psow84"></a>
-                <img src="img/1/ser1-600x399.jpg" class="img-fluid" alt="">
-            </div>
-        </div>
-         <div class="image-container">
-            <a href="#">
-                <img src="img/about/3.png" alt="">
-               
-            </a>
-           
-        </div>
-          
-        <div class="single-well">
-          <a href="#">
-              <img src="img/about/slide 8.jpg" alt="">
-          </a>
-         
-      </div>
-         
-        
-             </div>
-      </div>
-      <!-- single-well end-->
-      <div class="col-md-6 col-sm-6 col-xs-12" translate="yes">
-        <div class="well-middle">
-          <div class="single-well">
-            <a href="#">
-              <h4 class="sec-head">Qui sommes nous</h4>
-            </a>
-            
-            <p>
-VERITAL est une EPE/SPA (Société Par Actions) de droit algérien gérée professionnellement et crée en 1989. </p>
-            <p>
-Son activité consiste, en Algérie et à l’étranger au contrôle des transports, de l’industrie, au contrôle de conformité des produits du commerce international et de qualité.</p>
-            <p>
-Son souci majeur est d’assurer la promotion de la sécurité des personnes et des biens dans les secteurs des transports et de la qualité.</p>
-            <p> 
-Grace à son  équipe hautement qualifiée (ingénieurs, experts, …) avec une longue et riche expérience dans différentes activités. VERITAL possède les moyens et les capacités nécessaires de satisfaire durablement les exigences du ses clients par une assistance et une écoute  organisées et permanentes. 
-            </p>
-            <ul>
-              <li>
-                <i class="fa fa-check" ></i> <b> Un réseau national performant</b>
-                 <p>La combinaison unique d'un réseau national et d'une forte présence locale,une forte réactivité et une qualité de services.</p>
-              </li>
-              <li>
-                <i class="fa fa-check"></i> <b>Notre réputation</b>
-               <p>Fondée sur plus de 30 ans d'expérience dans le domaine du contrôle technique.</p>
-              </li>
-              <li>
-                <i class="fa fa-check"></i><b>Un capital humain de haut niveau
-                  </b>
-                  
-                    <p >- Une solide expertise technique.</p>          
-                     <p>  - Une culture entrepreneuriale centrée sur le client. </p>
-                 
-              </li>
-              <li>
-                <i class="fa fa-check"></i> <b>Une expertise technique reconnue
-                  </b> <p>– Un portefeuille d'accréditations exhaustif.<p>
-                    – La connaissance des différents secteurs d'activité..</p></p>
-              </li>
-              
-            </ul>
-            <a href="#">
-              <h4 class="sec-head">VERITAL est chargée notamment :</h4>
-            </a>
-            <ul>
-              <li>
-                <i class="fa fa-check" ></i> De la réalisation des opérations de contrôle des aéronefs immatriculés en Algérie requises selon les règles tant nationales qu’internationales, applicable pour la délivrance des certificats de navigabilité de ces appareils.
-              </li>
-              <li> <i class="fa fa-check" ></i>Des interventions au titre de la classification et/ou de la certification des navires et engins assimilés ainsi que des structures pétrolières marines, fixes ou mobiles, en vue de la délivrance des certificats de classification ou de tout autre certificats attestant de la conformité desdits navires, engins ou structures.
-              </li>
-            <li><i class="fa fa-check" ></i>De réaliser en Algérie et à l’étranger différentes prestations, la mise en oeuvre de services de contrôle, d’expertise et d'étalonnage, agréage des produits, vérification, analyse de problèmes potentiels, assistance technique et évaluation de la sécurité des infrastructures des systèmes de transports ferroviaires et guidés destinées à promouvoir la sécurité des personnes et des biens.</li>
-            </ul>
-            <a href="#">
-              <h4 class="sec-head">VERITAL assure à ses clients:</h4>
-            </a>
-            <ul>
-              <li>
-                <i class="fa fa-check" ></i> Des visites effectuées à la date prévue;</li>
-              <li><i class="fa fa-check" ></i>La disponibilité du personnel technique et les déplacements sur site;</li>
-              <li><i class="fa fa-check" ></i>La délivrance de différents certificats...</li>
-            </ul>
-            <a href="#">
-              <h4 class="sec-head">VERITAL est présente sur tout le territoire national:</h4>
-            </a>
-            <ul>
-              <li><i class="fa fa-check" ></i>Direction Générale : Alger </li>
-              <li><i class="fa fa-check" ></i>Division : Oran </li>
-              <li><i class="fa fa-check" ></i>Division : Béjaia </li>
-              <li><i class="fa fa-check" ></i>Division : Hassi Messaoud </li>
-              <li><i class="fa fa-check" ></i>Division : Annaba </li>
-              
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- End col-->
-    </div>
-  </div>
-</div>
-
+<%- include('partials/about.ejs', { aboutData: aboutData }) %> <!-- Pass aboutData to the include -->
 <!-- End About area -->
 <div class="our-skill-area fix hidden-sm">
   <div class="test-overly"></div>
@@ -338,7 +150,6 @@ Grace à son  équipe hautement qualifiée (ingénieurs, experts, …) avec une 
       <!-- section-heading end -->
       <div class="row">
         <div class="skill-text">
-          
         </div>
       </div>
     </div>
@@ -350,111 +161,35 @@ Grace à son  équipe hautement qualifiée (ingénieurs, experts, …) avec une 
     <div class="row ">
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="section-headline services-head text-center">
-          <h2>Nos Services</h2>
+          <a class="<%= isActiveRoute('/services', currentRoute) %>" href="/services" target="_blank" translate="yes"><h2>Nos Services</h2> </a>
         </div>
       </div>
     </div>
     <div class="row text-center">
       <div class="services-contents">
-        
-        <!-- Start Left services -->
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <div class="about-move">
-            <div class="services-details">
-              <div class="single-services">
-                <a class="services-icon" href="audit.html" target="_blank">
-                                          <i class="fa fa-code" ></i>
-            
-                                      </a>
-                
-                <h4>AUDIT</h4>
-                <p>  <h8>
-                  gestion en temps réel de toute situation et
- Proposer des axes de progrès avec le
- Évaluation de la durabilité et de l'adaptabilité de vos installations
- Conformité réglementaire...</h8> 
-                </p>
-                
+        <!-- Start Looping through services -->
+        <% services.forEach(service => { %>
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="/services/<%= service.name %>" target="_blank">
+                    <i class="fa <%= service.icon %>"></i>
+                  </a>
+                  <h4><%= service.title %></h4>
+                  <p><%= service.description %></p>
+                </div>
               </div>
+              <!-- end about-details -->
             </div>
-            
-            <!-- end about-details -->
           </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <div class="about-move">
-            <div class="services-details">
-              <div class="single-services">
-                <a class="services-icon" href="Certification.html" target="_blank">
-                                          <i class="fa fa-certificate"></i>
-                                      </a>
-                <h4>CERTIFICATION</h4>
-                <p>
-                  La certification est à la base de l'excellence de nos services rendus en termes d'expertise afin d'entretenir des relations de confiance, de proximité avec nos clients, gérer les risques et stimuler la performance...
-                </p>
-              </div>
-            </div>
-            <!-- end about-details -->
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <!-- end col-md-4 -->
-          <div class=" about-move">
-            <div class="services-details">
-              <div class="single-services">
-                <a class="services-icon" href="inspection.html" target="_blank">
-                  <i class="fa fa-search"></i>
-
-                                      </a>
-                  <h4>INSPECTION</h4>
-                  <p>
-                    L'inspection consiste à vérifier sur place qu'un produit, un actif ou un système répond aux critères spécifiés...
-                </p>
-              </div>
-            </div>
-            <!-- end about-details -->
-          </div>
-        </div>
-        
-        <div class="col-md-6 col-sm-4 col-xs-12">
-          <!-- end col-md-4 -->
-          <div class=" about-move">
-            <div class="services-details">
-              <div class="single-services">
-                <a class="services-icon" href="consultation.html" target="_blank">
-                  <i class="fa fa-user"></i>
-
-                                      </a>
-                <h4>CONSULTATION </h4>
-                <p>
-                  Consultation personnalisée et recommandations d'une organisation composée d'experts hautement qualifiés pour aider les entreprises à répondre aux exigences réglementaires.                  </p>
-              </div>
-            </div>
-            <!-- end about-details -->
-          </div>
-        </div>
-        <!-- End Left services -->
-        
-        <div class="col-md-6 col-sm-4 col-xs-12 text-center">
-          <!-- end col-md-4 -->
-          <div class=" about-move">
-            <div class="services-details">
-              <div class="single-services">
-                <a class="services-icon" href="#contact" target="_blank">
-                                          <i class="fa fa-ticket"></i>
-                                      </a>
-                <h4>24/7 ASSISTANCE </h4>
-                <p>
-                  les clients peuvent obtenir de l'aide et trouver des réponses à leurs questions dès qu'elles se présentent, 24h/24 et 7j/7 et en temps réel                  </p>
-              </div>
-            </div>
-            <!-- end about-details -->
-          </div>
-        </div>
+        <% }) %>
+        <!-- End Looping through services -->
       </div>
     </div>
   </div>
 </div>
+
 <!-- End Service area -->
 <!-- our-skill-area start -->
 <div class="our-skill-area fix hidden-sm">
@@ -505,143 +240,45 @@ Grace à son  équipe hautement qualifiée (ingénieurs, experts, …) avec une 
 <!-- Start portfolio Area -->
 <div id="Divisions" class="services-area area-padding">
   <div class="container">
-    <div class="row ">
+    <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="section-headline services-head text-center">
-         <a href="index2.html" target="_blank" translate="yes"> <h2>Nos Divisions</h2></a>
+          <a class="<%= isActiveRoute('/division', currentRoute) %>" href="/division" target="_blank" translate="yes"> <h2>Nos Divisions</h2></a>
         </div>
       </div>
     </div>
-    <div class="row text-center">
-      <div class="services-contents">
-        
-        <!-- Start Left services -->
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <div class="about-move">
-            <div class="services-details">
-              <div class="single-services">
-                <a class="services-icon" href="Aero.html" target="_blank">
-                                          <i class="fa fa-send" ></i>
-            
-                                      </a>
-                
-                <h4>AÉRONAUTIQUES</h4>
-                <p>  <h8>
-                  Apprenez-en davantage sur cette division ici...</h8> 
-                </p>
-                
+    <div class="container">
+      <div class="row mx-auto"> <!-- Add mx-auto class here -->
+        <% divisions.forEach((division, index) => { %>
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="contact-item text-center" style="background-image: url('<%= division.backgroundImageUrl %>');">
+              <div class="contact-icon">
+                <div class="about-move">
+                  <div class="services-details">
+                    <div class="single-services">
+                      <a class="services-icon" href="/division/<%= division.name %>" target="_blank">
+                        <i class="fa <%= division.icon %>"></i>
+                      </a>
+                      <h4><%= division.title %></h4>
+                      <p><%= division.description %></p>
+                    </div>
+                  </div>
+                  <!-- end about-details -->
+                </div>
               </div>
             </div>
-            
-            <!-- end about-details -->
           </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <div class="about-move">
-            <div class="services-details">
-              <div class="single-services">
-                <a class="services-icon" href="Marine.html" target="_blank">
-                                          <i class="fa fa-ship"></i>
-                                      </a>
-                <h4>MARINE</h4>
-                <p>
-                  Apprenez-en davantage sur cette division ici...</p>
-              </div>
-            </div>
-            <!-- end about-details -->
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <!-- end col-md-4 -->
-          <div class=" about-move">
-            <div class="services-details">
-              <div class="single-services">
-                <a class="services-icon" href="Quality.html" target="_blank">
-                  <i class="fa fa-search"></i>
-
-                                      </a>
-                  <h4>CONTRÔLE DE QUALITÉ</h4>
-                  <p>
-                    Apprenez-en davantage sur cette division ici...</p>
-              </div>
-            </div>
-            <!-- end about-details -->
-          </div>
-        </div>
-        
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <!-- end col-md-4 -->
-          <div class=" about-move">
-            <div class="services-details">
-              <div class="single-services">
-                <a class="services-icon" href="Industry.html" target="_blank">
-                  <i class="fa fa-industry"></i>
-
-                                      </a>
-                <h4> INDUSTRIE</h4>
-                <p>
-                  Apprenez-en davantage sur cette division ici...</p>
-              </div>
-            </div>
-            <!-- end about-details -->
-          </div>
-        </div>
-        <!-- End Left services -->
-        
-        <div class="col-md-4 col-sm-4 col-xs-12 text-center">
-          <!-- end col-md-4 -->
-          <div class=" about-move">
-            <div class="services-details">
-              <div class="single-services">
-                <a class="services-icon" href="Rail.html" target="_blank">
-                                          <i class="fa fa-train"></i>
-                                      </a>
-                <h4>TRANSPORT FERROVIAIRE ET GUIDE</h4>
-                <p>
-                  Apprenez-en davantage sur cette division ici...</p>
-              </div>
-            </div>
-            <!-- end about-details -->
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <!-- end col-md-4 -->
-          <div class=" about-move">
-            <div class="services-details">
-              <div class="single-services">
-                <a class="services-icon" href="Containers.html" target="_blank">
-                  <i class="fa fa-anchor"></i> 
-
-                                      </a>
-                <h4>CONTROLE ET VERIFICATION DES CONTENEURS</h4>
-                <p>
-                  Apprenez-en davantage sur cette division ici...</p>
-              </div>
-            </div>
-            <!-- end about-details -->
-          </div>
-        </div>
-        <div class="col-md-12 col-sm-4 col-xs-12">
-          <!-- end col-md-4 -->
-          <div class=" about-move">
-            <div class="services-details">
-              <div class="single-services">
-                <a class="services-icon" href="Elevators.html" target="_blank">
-                  <i class="fa fa-arrow-up"></i>
-                  <i class="fa fa-arrow-down"></i>
-                                      </a>
-                <h4>INSPECTION TECHNIQUE DES ASCENSEURS</h4>
-                <p>
-                  Apprenez-en davantage sur cette division ici...</p>
-              </div>
-            </div>
-            <!-- end about-details -->
-          </div>
-        </div>
+          <% if ((index + 1) % 2 === 0) { %>
+          </div><div class="row mx-auto justify-content-center"> <!-- Close and reopen row for every 2 items -->
+        <% } %>
+      <% }); %>
       </div>
     </div>
   </div>
 </div>
+
+
+
 <!-- awesome-portfolio end -->
 <!-- Start reviews Area -->
 <div class="reviews-area hidden-xs">
@@ -656,7 +293,7 @@ Grace à son  équipe hautement qualifiée (ingénieurs, experts, …) avec une 
         
         </h2>
       <h5>pour toute question contactez-nous</h5>
-      <a href="contact.html" class="ready-btn" target="_blank">Contactez-nous</a>
+      <a href="mailto:dg@verital.dz" class="ready-btn" target="_blank">Contactez-nous</a>
     </div>
   </div>
 </div>
@@ -970,7 +607,17 @@ Grace à son  équipe hautement qualifiée (ingénieurs, experts, …) avec une 
 </div>
 <!-- End Contact Area -->
 
-
+<script>
+  $(document).ready(function() {
+    $('a.page-scroll').on('click', function(event) {
+      var $anchor = $(this);
+      $('html, body').stop().animate({
+        scrollTop: $($anchor.attr('href')).offset().top - 55
+      }, 1500, 'easeInOutExpo');
+      event.preventDefault();
+    });
+  });
+</script>
 <!-- Start Footer bottom Area -->
 <%- include ('partials/footer.ejs')%>
 

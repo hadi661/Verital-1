@@ -1,0 +1,121 @@
+const express = require('express');
+const router = express.Router();
+const Slide = require('../models/slide');
+const Division = require('../models/division');
+const TeamMember = require('../models/teams');
+const Contact = require('../models/contact');
+const Profil = require('../models/profil');
+const About = require('../models/about');
+const Service = require('../models/services');
+const News = require('../models/news');  // Add this line to import the News model
+const connectDB = require('../config/db');
+
+// Create a news article (admin)
+router.post('/', async (req, res) => {
+    try {
+        const news = new News(req.body);
+        await news.save();
+        res.redirect('/admin/news');
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: 'Server Error' });
+    }
+});
+
+// Read all news articles
+router.get('/', async (req, res) => {
+    try {
+        const page = parseInt(req.query.page) || 1;
+        const limit = 3;
+        const skip = (page - 1) * limit;
+        const newsData = await News.find().sort({ date: -1 }).skip(skip).limit(limit);
+        const count = await News.countDocuments();
+
+        const teams = await TeamMember.find();
+        const divisions = await Division.find();
+        const contact1 = await Contact.find();
+        const profilData = await Profil.findOne();
+        const aboutData = await About.findOne();
+        const slides = await Slide.find();
+        const services = await Service.find(); 
+
+        const totalPages = Math.ceil(count / limit);
+
+        res.render('news', { 
+            newsData, 
+            services, 
+            divisions, 
+            currentPage: page, 
+            totalPages 
+        });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: 'Server Error' });
+    }
+});
+
+// Read a single news article
+router.get('/:id', async (req, res) => {
+    try {
+        const news = await News.findById(req.params.id);
+        if (!news) {
+            return res.status(404).json({ message: 'News not found' });
+        }
+        res.json(news);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: 'Server Error' });
+    }
+});
+
+// Update a news article (admin)
+router.put('/:id', async (req, res) => {
+    try {
+        const news = await News.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        if (!news) {
+            return res.status(404).json({ message: 'News not found' });
+        }
+        res.redirect('/admin/news');
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: 'Server Error' });
+    }
+});
+
+// Delete a news article (admin)
+router.delete('/:id', async (req, res) => {
+    try {
+        const news = await News.findByIdAndDelete(req.params.id);
+        if (!news) {
+            return res.status(404).json({ message: 'News not found' });
+        }
+        res.redirect('/admin/news');
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: 'Server Error' });
+    }
+});
+
+// Admin page to manage news articles
+router.get('/admin', async (req, res) => {
+    try {
+        const newsData = await News.find().sort({ date: -1 });
+        res.render('admin/news', { newsData });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: 'Server Error' });
+    }
+});
+
+// Route to fetch archived news articles
+router.get('/archive', async (req, res) => {
+    try {
+        const newsData = await News.find().sort({ date: -1 });
+        res.render('archive', { newsData });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: 'Server Error' });
+    }
+});
+
+module.exports = router;

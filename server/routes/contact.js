@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Contact = require('../models/contact');
-
+const Division = require('../models/division');
 // Route to create a new contact
 router.post('/contact', async (req, res) => {
     try {
@@ -41,12 +41,12 @@ router.delete('/contact/:id', async (req, res) => {
     }
 });
 // Route to read all contacts
+
 router.get('/contact', async (req, res) => {
     try {
-        const contact1= await Contact.find();
-        console.log('Fetched contacts:', contact1);
-        res.status(200).json(contact1);
-        res.render('contact', { contact1 });
+        const contact1 = await Contact.find();
+        const divisions = await Division.find();
+        res.render('contact', { contact1, divisions, currentRoute:'/contact' });
     } catch (err) {
         console.error(err);
         res.status(500).send('Server Error');

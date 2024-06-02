@@ -1,0 +1,72 @@
+[{
+  "_id": {
+    "$oid": "663cc241108f275e24732a59"
+  },
+  "title": "Sample Article",
+  "content": "This is a sample article content.",
+  "date": {
+    "$date": "2024-05-09T12:32:01.011Z"
+  },
+  "category": "Company News",
+  "pictures": "/public/img/blog/566.jpg"
+},
+{
+  "_id": {
+    "$oid": "663cc241108f275e24732a64"
+  },
+  "title": "Sample Article 1",
+  "content": "This is a sample article content for article 1.",
+  "date": {
+    "$date": "2024-05-09T12:32:01.011Z"
+  },
+  "category": "Company News",
+  "pictures": "img/blog/566.jpg"
+},
+{
+  "_id": {
+    "$oid": "663cc241108f275e24732a60"
+  },
+  "title": "Sample Article 2",
+  "content": "This is a sample article content for article 2.",
+  "date": {
+    "$date": "2024-05-10T12:32:01.011Z"
+  },
+  "category": "Industry News",
+  "pictures": "/public/img/blog/566.jpg"
+},
+{
+  "_id": {
+    "$oid": "663cc241108f275e24732a61"
+  },
+  "title": "Sample Article 3",
+  "content": "This is a sample article content for article 3.",
+  "date": {
+    "$date": "2024-05-11T12:32:01.011Z"
+  },
+  "category": "Product Updates",
+  "pictures": "/public/img/blog/566.jpg"
+},
+{
+  "_id": {
+    "$oid": "663cc241108f275e24732a62"
+  },
+  "title": "Sample Article 4",
+  "content": "This is a sample article content for article 4.",
+  "date": {
+    "$date": "2024-05-12T12:32:01.011Z"
+  },
+  "category": "Team Announcements",
+  "pictures": "/public/img/blog/566.jpg"
+},
+{
+  "_id": {
+    "$oid": "663cc241108f275e24732a63"
+  },
+  "title": "Sample Article 5",
+  "content": "This is a sample article content for article 5.",
+  "date": {
+    "$date": "2024-05-13T12:32:01.011Z"
+  },
+  "category": "Company Achievements",
+  "pictures": "/public/img/blog/566.jpg"
+}]

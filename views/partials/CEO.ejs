@@ -1,9 +1,11 @@
-<div id="CEO" class="about-area area-padding" translate="yes">
+<div id="CEO" class="about-area area-padding">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="section-headline text-center">
-                    <h2>MOT DU PDG</h2>
+                    <h2>
+                      <%= profileData.CEO.title || profileData.CEO.title.en %>
+                    </h2>
                 </div>
             </div>
         </div>
@@ -12,30 +14,41 @@
                 <div class="well-left">
                     <div class="single-well">
                         <a href="#CEO">
-                            <img src="img/about/4.png" alt="">
+                            <% if (profileData.CEO.images && profileData.CEO.images.length > 0) { %>
+                                <img src="<%= profileData.CEO.images[1] %>" alt="">
+                            <% } %>
                         </a>
                         <center>
-                            <p><b>Mr.Mohammed Nabil Hamo</b></p>
-                            <p><b> Président Directeur Général </b></p>
+                            <p><b>Mr. Mohammed Nabil Hamo</b></p>
+                            <p><b>Président Directeur Général</b></p>
                         </center>
                     </div>
                     <div class="image-container">
                         <a href="#home">
-                            <img src="img/about/3.png" alt="">
+                            <% if (profileData.CEO.images && profileData.CEO.images.length > 1) { %>
+                                <img src="<%= profileData.CEO.images[0] %>" alt="">
+                            <% } %>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-6 col-xs-12" translate="yes">
+            <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="well-middle">
                     <div class="single-well">
                         <a href="#">
-                            <h4 class="sec-head">MOT DU PDG</h4>
+                            <h4 class="sec-head"><%= profileData.CEO.title || profileData.CEO.title.en %></h4>
                         </a>
-                        <p>
-                            VERITAL est de plus en plus sollicité pour contribuer aux débats sur la <b>« sécurité »</b> et <b>« analyse de problèmes potentiels ».</b> J’y vois un signe de changement dans le regard des responsables sur cette entreprise et le début d’une reconnaissance des efforts engagés et des responsabilités courageusement assumées dans ces domaines.
-                        </p>
-                        <!-- Additional content goes here -->
+                        <p><%= profileData.CEO.content || profileData.CEO.content.en %></p>
+                        <% if (profileData.CEO.quotes && profileData.CEO.quotes.length > 0) { %>
+                          <% profileData.CEO.quotes.forEach(quote => { %>
+                              <ul>
+                                  <li>
+                                      <p><i class="fa fa-quote-right"></i> <b><%= quote %></b> <i class="fa fa-quote-left"></i></p>
+                                  </li>
+                              </ul>
+                          <% }) %>
+                        <% } %>
+                        <p><%= profileData.CEO.text %></p>
                     </div>
                 </div>
             </div>

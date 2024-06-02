@@ -7,7 +7,8 @@ const ContactSchema = new mongoose.Schema({
     phone: { type: [String], required: true },
     email: { type: String, required: true },
     website: { type: String, default: null },
-    fax: { type: [Number], default: null }
+    fax: { type: [Number], default: null },
+    images: { type: [String], required: false }
 });
 
 // Create model from schema

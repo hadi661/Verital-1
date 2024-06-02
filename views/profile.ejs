@@ -1,0 +1,8 @@
+<%- include('partials/header.ejs', { currentRoute: '/profile' }) %>
+<section>
+    <%- include ('partials/CEO.ejs') %>
+    <%- include('partials/about.ejs', { aboutData: aboutData }) %> <!-- Pass aboutData to the include -->
+</section>
+<%- include ('partials/footer.ejs') %>
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+<%- include ('partials/lib.ejs') %>

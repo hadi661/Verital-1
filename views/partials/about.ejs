@@ -1,19 +1,58 @@
-<div id="about" class="about-area area-padding" translate="yes">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="section-headline text-center">
-                    <h2>PROFIL Verital</h2>
-                </div>
-            </div>
+<!-- views/about.ejs -->
+<div id="about" class="about-area area-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="section-headline text-center">
+          <h2><%= aboutData.title %></h2>
         </div>
-        <div class="row">
-            <div class="col-md-6 col-sm-6 col-xs-12">
-                <!-- Left content -->
-            </div>
-            <div class="col-md-6 col-sm-6 col-xs-12" translate="yes">
-                <!-- Right content -->
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="well-left">
+          <div class="single-well">
+            <a href="#">
+              <img src="<%= aboutData.images[0] %>" alt="">
+            </a>
+          </div>
+          <div class="image-container1">
+            <div class="video-box">
+              <a class="venobox play-btn mb-4" data-autoplay="true" data-vbtype="video" href="<%= aboutData.videos[0] %>"></a>
+              <img src="<%= aboutData.images[1] %>" class="img-fluid" alt="">
+            </div>
+          </div>
+          <div class="image-container">
+            <a href="#">
+              <img src="<%= aboutData.images[2] %>" alt="">
+            </a>
+          </div>
+          <div class="single-well">
+            <a href="#">
+              <img src="<%= aboutData.images[3] %>" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="well-middle">
+          <div class="single-well">
+            <a href="#">
+              <h4 class="sec-head">Qui sommes nous</h4>
+            </a>
+            <p><%= aboutData.content %></p>
+            <p><%= aboutData.text %></p>
+            <% aboutData.additionalContent.forEach(content => { %>
+              <ul>
+                <li>
+                  <i class="fa fa-check"></i> <b><%= content.split(": ")[0] %></b>
+                  <p><%= content.split(": ")[1] %></p>
+                </li>
+              </ul>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
