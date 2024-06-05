@@ -1,13 +1,14 @@
 {
-    "home": "ACCUEIL",
-    "profile": "PROFIL",
-    "services": "SERVICES",
-    "divisions": "DIVISIONS",
-    "team": "EQUIPE",
-    "news": "ACTUALITES",
-    "contact": "CONTACT",
-    "languages": "LANGUES",
-    "french": "Français",
-    "english": "Anglais",
-    "arabic": "Arabe"
+	"home": "ACCUEIL",
+	"profile": "PROFIL",
+	"services": "SERVICES",
+	"divisions": "DIVISIONS",
+	"team": "EQUIPE",
+	"news": "ACTUALITES",
+	"contact": "CONTACT",
+	"languages": "LANGUES",
+	"french": "Français",
+	"english": "Anglais",
+	"arabic": "Arabe",
+	"عربي": "عربي"
 }

@@ -1,3 +1,4 @@
+//routes/main.js
 const express = require('express');
 const router = express.Router();
 const ProfileCollection = require('../models/profil');
@@ -15,6 +16,7 @@ const Services = require('../models/services');
 connectDB();
 router.get('/', async (req, res) => {
     try {
+        const lang = req.query.lang || 'fr';
         const locals = {
             title: "Verital Spa",
             description: "siège veritas alger direction general DG",
@@ -26,10 +28,9 @@ router.get('/', async (req, res) => {
         const profileData = await ProfileCollection.findOne();
         const aboutData = await About.findOne();
         const slides = await Slide.find();
-        const allServices = await Service.find(); // Fetch all services
-        const services = await Service.find();
+        const allServices = await Service.find(); 
         const topTeamMembers = await TeamMember.find().sort({ position: 1 }).limit(4);
-        const lang = req.query.lang || 'en';
+        
         if (!profileData) {
             return res.status(404).send('Profile data not found');
         }
@@ -311,6 +312,7 @@ router.delete('/profile/:id', async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 });
+
 // Route to fetch and render about data
 router.get('/about', async (req, res) => {
     try {
@@ -318,16 +320,35 @@ router.get('/about', async (req, res) => {
             title: "Verital Spa",
             description: "siège veritas alger direction general DG",
         };
-        const aboutData = await About.findOne();
+        const lang = res.locals.lang;
+        const aboutData = await About.findOne({}, {
+            [`title.${lang}`]: 1,
+            [`content.${lang}`]: 1,
+            [`text.${lang}`]: 1,
+            [`additionalContent.${lang}`]: 1,
+            images: 1,
+            videos: 1
+        });
         const teams = await TeamMember.find();
         const divisions = await Division.find();
         const contact1 = await Contact.find();
-        const profilData = await Profil.findOne();
-        const services = await Service.find(); 
+        const profileData = await ProfileCollection.findOne();
+        const services = await Service.find();
+
         if (!aboutData) {
             return res.status(404).send('About data not found');
         }
-        res.render('about', { aboutData,locals, teams, services, divisions, contact1, profilData, currentRoute:'about' });
+
+        res.render('about', {
+            locals,
+            aboutData,
+            teams,
+            services,
+            divisions,
+            contact1,
+            profileData,
+            currentRoute: 'about'
+        });
     } catch (err) {
         console.error(err);
         res.status(500).send('Server Error');

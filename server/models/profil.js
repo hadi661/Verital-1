@@ -6,7 +6,7 @@ const  MultilingualContentSchema= new Schema({
   fr: { type: String, required: true },
   ar: { type: String, required: true },
 }, { _id: false });
-
+ 
 const QuoteSchema = new Schema({
   en: { type: String, required: false },
   fr: { type: String, required: false },

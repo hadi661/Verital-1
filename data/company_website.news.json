@@ -1,72 +1,88 @@
 [{
   "_id": {
-    "$oid": "663cc241108f275e24732a59"
+    "$oid": "665f1bb477b2994e6c3a0d55"
   },
-  "title": "Sample Article",
-  "content": "This is a sample article content.",
+  "title": {
+    "en": "Sample News Article",
+    "fr": "Article de presse d'échantillon",
+    "ar": "مقالة أخبار عينية"
+  },
+  "category": {
+    "en": "Sample Category",
+    "fr": "Catégorie d'échantillon",
+    "ar": "فئة عينية"
+  },
+  "content": {
+    "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies malesuada erat, vel lacinia sapien sodales et. Sed rhoncus dolor in tortor efficitur, sed gravida sapien varius. Duis nec lectus vel urna congue auctor. Nam ut tempor neque. Vivamus vel gravida eros. Morbi ultricies pharetra convallis. Cras dapibus felis et ipsum cursus luctus. Integer eget posuere eros. In hac habitasse platea dictumst. Sed vel eros ut turpis hendrerit finibus. Ut vel vehicula mi. Fusce id justo quis dolor gravida facilisis.",
+    "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies malesuada erat, vel lacinia sapien sodales et. Sed rhoncus dolor in tortor efficitur, sed gravida sapien varius. Duis nec lectus vel urna congue auctor. Nam ut tempor neque. Vivamus vel gravida eros. Morbi ultricies pharetra convallis. Cras dapibus felis et ipsum cursus luctus. Integer eget posuere eros. In hac habitasse platea dictumst. Sed vel eros ut turpis hendrerit finibus. Ut vel vehicula mi. Fusce id justo quis dolor gravida facilisis.",
+    "ar": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies malesuada erat, vel lacinia sapien sodales et. Sed rhoncus dolor in tortor efficitur, sed gravida sapien varius. Duis nec lectus vel urna congue auctor. Nam ut tempor neque. Vivamus vel gravida eros. Morbi ultricies pharetra convallis. Cras dapibus felis et ipsum cursus luctus. Integer eget posuere eros. In hac habitasse platea dictumst. Sed vel eros ut turpis hendrerit finibus. Ut vel vehicula mi. Fusce id justo quis dolor gravida facilisis."
+  },
   "date": {
-    "$date": "2024-05-09T12:32:01.011Z"
+    "$date": "2024-06-04T13:50:44.787Z"
   },
-  "category": "Company News",
-  "pictures": "/public/img/blog/566.jpg"
+  "pictures": "/public/img/blog/566.jpg",
+  "comments": [
+    {
+      "user": "User1",
+      "text": "Great article!QDFDDFSDFSDF",
+      "date": {
+        "$date": "2024-06-04T13:50:44.788Z"
+      }
+    },
+    {
+      "user": "User2",
+      "text": "Interesting topic.qdqdsdqDEQRRRRRRRbf<f",
+      "date": {
+        "$date": "2024-06-04T13:50:44.788Z"
+      }
+    }
+  ],
+  "reactions": {
+    "likes": 10,
+    "dislikes": 2
+  }
 },
 {
   "_id": {
-    "$oid": "663cc241108f275e24732a64"
+    "$oid": "665f1c5977b2994e6c3a0d56"
   },
-  "title": "Sample Article 1",
-  "content": "This is a sample article content for article 1.",
+  "title": {
+    "en": "Sample News Article",
+    "fr": "Article de presse d'échantillon",
+    "ar": "مقالة أخبار عينية"
+  },
+  "category": {
+    "en": "Sample Category",
+    "fr": "Catégorie d'échantillon",
+    "ar": "فئة عينية"
+  },
+  "content": {
+    "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies malesuada erat, vel lacinia sapien sodales et. Sed rhoncus dolor in tortor efficitur, sed gravida sapien varius. Duis nec lectus vel urna congue auctor. Nam ut tempor neque. Vivamus vel gravida eros. Morbi ultricies pharetra convallis. Cras dapibus felis et ipsum cursus luctus. Integer eget posuere eros. In hac habitasse platea dictumst. Sed vel eros ut turpis hendrerit finibus. Ut vel vehicula mi. Fusce id justo quis dolor gravida facilisis.",
+    "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies malesuada erat, vel lacinia sapien sodales et. Sed rhoncus dolor in tortor efficitur, sed gravida sapien varius. Duis nec lectus vel urna congue auctor. Nam ut tempor neque. Vivamus vel gravida eros. Morbi ultricies pharetra convallis. Cras dapibus felis et ipsum cursus luctus. Integer eget posuere eros. In hac habitasse platea dictumst. Sed vel eros ut turpis hendrerit finibus. Ut vel vehicula mi. Fusce id justo quis dolor gravida facilisis.",
+    "ar": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies malesuada erat, vel lacinia sapien sodales et. Sed rhoncus dolor in tortor efficitur, sed gravida sapien varius. Duis nec lectus vel urna congue auctor. Nam ut tempor neque. Vivamus vel gravida eros. Morbi ultricies pharetra convallis. Cras dapibus felis et ipsum cursus luctus. Integer eget posuere eros. In hac habitasse platea dictumst. Sed vel eros ut turpis hendrerit finibus. Ut vel vehicula mi. Fusce id justo quis dolor gravida facilisis."
+  },
   "date": {
-    "$date": "2024-05-09T12:32:01.011Z"
+    "$date": "2024-06-04T13:53:29.826Z"
   },
-  "category": "Company News",
-  "pictures": "img/blog/566.jpg"
-},
-{
-  "_id": {
-    "$oid": "663cc241108f275e24732a60"
-  },
-  "title": "Sample Article 2",
-  "content": "This is a sample article content for article 2.",
-  "date": {
-    "$date": "2024-05-10T12:32:01.011Z"
-  },
-  "category": "Industry News",
-  "pictures": "/public/img/blog/566.jpg"
-},
-{
-  "_id": {
-    "$oid": "663cc241108f275e24732a61"
-  },
-  "title": "Sample Article 3",
-  "content": "This is a sample article content for article 3.",
-  "date": {
-    "$date": "2024-05-11T12:32:01.011Z"
-  },
-  "category": "Product Updates",
-  "pictures": "/public/img/blog/566.jpg"
-},
-{
-  "_id": {
-    "$oid": "663cc241108f275e24732a62"
-  },
-  "title": "Sample Article 4",
-  "content": "This is a sample article content for article 4.",
-  "date": {
-    "$date": "2024-05-12T12:32:01.011Z"
-  },
-  "category": "Team Announcements",
-  "pictures": "/public/img/blog/566.jpg"
-},
-{
-  "_id": {
-    "$oid": "663cc241108f275e24732a63"
-  },
-  "title": "Sample Article 5",
-  "content": "This is a sample article content for article 5.",
-  "date": {
-    "$date": "2024-05-13T12:32:01.011Z"
-  },
-  "category": "Company Achievements",
-  "pictures": "/public/img/blog/566.jpg"
+  "pictures": "/public/img/blog/429532026_904534388130593_404600344822068039_n.JPG",
+  "comments": [
+    {
+      "user": "User1",
+      "text": "Great article!QDFDDFSDFSDF",
+      "date": {
+        "$date": "2024-06-04T13:53:29.826Z"
+      }
+    },
+    {
+      "user": "User2",
+      "text": "Interesting topic.qdqdsdqDEQRRRRRRRbf<f",
+      "date": {
+        "$date": "2024-06-04T13:53:29.826Z"
+      }
+    }
+  ],
+  "reactions": {
+    "likes": 10,
+    "dislikes": 2
+  }
 }]

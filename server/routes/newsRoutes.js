@@ -7,20 +7,8 @@ const Contact = require('../models/contact');
 const Profil = require('../models/profil');
 const About = require('../models/about');
 const Service = require('../models/services');
-const News = require('../models/news');  // Add this line to import the News model
+const News = require('../models/news');  
 const connectDB = require('../config/db');
-
-// Create a news article (admin)
-router.post('/', async (req, res) => {
-    try {
-        const news = new News(req.body);
-        await news.save();
-        res.redirect('/admin/news');
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ message: 'Server Error' });
-    }
-});
 
 // Read all news articles
 router.get('/', async (req, res) => {
@@ -37,7 +25,7 @@ router.get('/', async (req, res) => {
         const profilData = await Profil.findOne();
         const aboutData = await About.findOne();
         const slides = await Slide.find();
-        const services = await Service.find(); 
+        const services = await Service.find();
 
         const totalPages = Math.ceil(count / limit);
 
@@ -54,6 +42,7 @@ router.get('/', async (req, res) => {
     }
 });
 
+
 // Read a single news article
 router.get('/:id', async (req, res) => {
     try {
@@ -61,14 +50,56 @@ router.get('/:id', async (req, res) => {
         if (!news) {
             return res.status(404).json({ message: 'News not found' });
         }
-        res.json(news);
+        res.render('blog', { article: news });
     } catch (err) {
         console.error(err);
         res.status(500).json({ message: 'Server Error' });
     }
 });
+// Add a comment
+router.post('/:id/comment', async (req, res) => {
+    const { user, text } = req.body;
+    if (!user || !text) {
+        return res.status(400).json({ message: 'User and text are required' });
+    }
+    try {
+        const news = await News.findById(req.params.id);
+        if (!news) {
+            return res.status(404).json({ message: 'News not found' });
+        }
+        const newComment = { user, text };
+        news.comments.push(newComment);
+        await news.save();
+        res.status(200).json({ message: 'Comment added successfully' });
+    } catch (err) {
+        console.error('Error adding comment:', err);
+        res.status(500).json({ message: 'Server Error' });
+    }
+});
 
-// Update a news article (admin)
+router.post('/:id/react', async (req, res) => {
+    const { type } = req.body;
+    if (!type || (type !== 'like' && type !== 'dislike')) {
+        return res.status(400).json({ message: 'Valid reaction type is required' });
+    }
+    try {
+        const news = await News.findById(req.params.id);
+        if (!news) {
+            return res.status(404).json({ message: 'News not found' });
+        }
+        if (type === 'like') {
+            news.reactions.likes += 1;
+        } else if (type === 'dislike') {
+            news.reactions.dislikes += 1;
+        }
+        await news.save();
+        res.status(200).json({ message: 'Reaction added successfully' });
+    } catch (err) {
+        console.error('Error adding reaction:', err);
+        res.status(500).json({ message: 'Server Error' });
+    }
+});
+//  news article (admin)
 router.put('/:id', async (req, res) => {
     try {
         const news = await News.findByIdAndUpdate(req.params.id, req.body, { new: true });

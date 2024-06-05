@@ -140,8 +140,8 @@ function isActiveRoute(route, currentRoute) {
   <!-- search option end -->
 </div>
 
-<!-- start CEO area -->
-<%- include('partials/about.ejs', { aboutData: aboutData }) %> <!-- Pass aboutData to the include -->
+<!-- start about area -->
+<%- include('partials/about.ejs', { aboutData, lang }) %> 
 <!-- End About area -->
 <div class="our-skill-area fix hidden-sm">
   <div class="test-overly"></div>
@@ -158,39 +158,43 @@ function isActiveRoute(route, currentRoute) {
 <!-- Start Service area -->
 <div id="services" class="services-area area-padding">
   <div class="container">
-    <div class="row ">
+    <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="section-headline services-head text-center">
-          <a class="<%= isActiveRoute('/services', currentRoute) %>" href="/services" target="_blank" translate="yes"><h2>Nos Services</h2> </a>
+          <a class="<%= isActiveRoute('/services', currentRoute) %>" href="/services" target="_blank" translate="yes">
+            <h2>Nos Services</h2>
+          </a>
         </div>
       </div>
     </div>
-    <div class="row text-center">
-      <div class="services-contents">
-        <!-- Start Looping through services -->
-        <% services.forEach(service => { %>
-          <div class="col-md-6 col-sm-6 col-xs-12">
-            <div class="about-move">
-              <div class="services-details">
-                <div class="single-services">
-                  <a class="services-icon" href="/services/<%= service.name %>" target="_blank">
-                    <i class="fa <%= service.icon %>"></i>
-                  </a>
-                  <h4><%= service.title %></h4>
-                  <p><%= service.description %></p>
+    <div class="row">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- Start Looping through services -->
+          <% services.forEach(service => { %>
+            <div class="swiper-slide">
+              <div class="about-move">
+                <div class="services-details">
+                  <div class="single-services">
+                    <a class="services-icon" href="/services/<%= service.name %>" target="_blank">
+                      <i class="fa <%= service.icon %>"></i>
+                    </a>
+                    <h4><%= service.title[lang] %></h4>
+                    <p><%= service.description[lang] %></p>
+                  </div>
                 </div>
               </div>
-              <!-- end about-details -->
             </div>
-          </div>
-        <% }) %>
-        <!-- End Looping through services -->
+          <% }) %>
+          <!-- End Looping through services -->
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
   </div>
 </div>
-
 <!-- End Service area -->
+
 <!-- our-skill-area start -->
 <div class="our-skill-area fix hidden-sm">
   <div class="test-overly"></div>
@@ -206,8 +210,6 @@ function isActiveRoute(route, currentRoute) {
   </div>
 </div>
 <!-- our-skill-area end -->
-
-
 <!-- Start Wellcome Area -->
 <div class="wellcome-area">
   <div class="well-bg">
@@ -236,8 +238,7 @@ function isActiveRoute(route, currentRoute) {
   </div>
 </div>
 <!-- End Wellcome Area -->
-
-<!-- Start portfolio Area -->
+<!-- divisions-->
 <div id="Divisions" class="services-area area-padding">
   <div class="container">
     <div class="row">
@@ -248,7 +249,7 @@ function isActiveRoute(route, currentRoute) {
       </div>
     </div>
     <div class="container">
-      <div class="row mx-auto"> <!-- Add mx-auto class here -->
+      <div class="row mx-auto"> 
         <% divisions.forEach((division, index) => { %>
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="contact-item text-center" style="background-image: url('<%= division.backgroundImageUrl %>');">
@@ -263,7 +264,7 @@ function isActiveRoute(route, currentRoute) {
                       <p><%= division.description %></p>
                     </div>
                   </div>
-                  <!-- end about-details -->
+                  
                 </div>
               </div>
             </div>
@@ -276,31 +277,23 @@ function isActiveRoute(route, currentRoute) {
     </div>
   </div>
 </div>
-
-
-
-<!-- awesome-portfolio end -->
+<!-- divisions end -->
 <!-- Start reviews Area -->
 <div class="reviews-area hidden-xs">
   <div class="work-us">
     <div class="work-left-text">
-      <a href="mailto:dg@verital.dz">
-                      <img src="img/about/2.jpg" alt="">
-                  </a>
+      <a href="#">
+        <img src="/public/img/about/2.jpg" alt="">
+      </a>
     </div>
     <div class="work-right-text text-center">
-      <h2>travailler avec nous
-        
-        </h2>
-      <h5>pour toute question contactez-nous</h5>
-      <a href="mailto:dg@verital.dz" class="ready-btn" target="_blank">Contactez-nous</a>
+      <h2>Working with us</h2>
+      <h5>Web Design, Ready Home, Construction and Co-operate Outstanding Buildings.</h5>
+      <a href="#contact" class="ready-btn">Contact us</a>
     </div>
   </div>
 </div>
 <!-- End reviews Area -->
-<!-- Start team Area -->
-
-<!-- Start team Area -->
 <div id="team" class="our-team-area area-padding">
   <div class="container">
     
@@ -348,7 +341,8 @@ function isActiveRoute(route, currentRoute) {
         <% }); %>
       </div>
   </div>
-</div></div>
+</div>
+</div>
 
 
 <!-- End Team Area -->
@@ -418,7 +412,6 @@ function isActiveRoute(route, currentRoute) {
 
           </div>
         </div>
-          
         <!-- End Left Blog-->
         <!-- Start Left Blog -->
         <div class="col-md-4 col-sm-4 col-xs-12">
@@ -493,16 +486,17 @@ function isActiveRoute(route, currentRoute) {
 <div class="slider-container">
 <div class="slider">
 <div class="slide">
-<img src="img/1/1.png" alt="" />
-<img src="img/1/2.png" alt="" />
-<img src="img/1/24-225x202.png" alt="" />
-<img src="img/1/25-240x202.png" alt="" />
-<img src="img/1/27-231x202.png" alt="" />
-<img src="img/1/29-225x202.png" alt="" />
-<img src="img/1/30-320x202.png" alt="" />
-<img src="img/client/1.png" alt="" />
-<img src="img/client/3.png" alt="" />
-<img src="img/client/4.png" alt="" /> <!-- Duplicate the first image to create a loop -->
+<img src="/public/img/1/1.png" alt="" />
+<img src="/public/img/1/2.png" alt="" />
+<img src="/public/img/1/24-225x202.png" alt="" />
+<img src="/public/img/1/25-240x202.png" alt="" />
+<img src="/public/img/1/27-231x202.png" alt="" />
+<img src="/public/img/1/29-225x202.png" alt="" />
+<img src="/public/img/1/30-320x202.png" alt="" />
+<img src="/public/img/client/1.png" alt="" />
+<img src="/public/img/client/3.png" alt="" />
+<img src="/public/img/client/26.png" alt="" />
+<img src="/public/img/client/4.png" alt="" /> <!-- Duplicate the first image to create a loop -->
 <img src="img/1/1.png" alt="" />
 </div>
 </div>

@@ -27,13 +27,15 @@
                     <div class="single-blog-page">
                         <!-- search option start -->
                         <form action="/search" method="get">
-                            <div class="search-option">
-                                <input type="text" name="q" placeholder="Search...">
-                                <button type="submit">Search</button>
-                            </div>
+                          <div class="search-option">
+                            <form action="/search" method="get">
+                              <input type="text" name="q" placeholder="Search...">
+                              <button type="submit">Search</button>
+                          </form>
+                          </div>
                         </form>
                         <!-- search option end -->
-                    </div>
+                      </div>
                     <div class="single-blog-page">
                         <!-- recent start -->
                         <div class="left-blog">
@@ -43,12 +45,12 @@
                                 <% newsData.forEach(news => { %>
                                     <div class="recent-single-post">
                                         <div class="post-img">
-                                            <a href="/news">
+                                            <a href="/blog">
                                                 <img src="<%= news.pictures %>" alt="">
                                             </a>
                                         </div>
                                         <div class="pst-content">
-                                            <p><a href="/news"> <%= news.title %> </a></p>
+                                            <p><a href="/blog"> <%= news.title %> </a></p>
                                         </div>
                                     </div>
                                 <% }); %>
@@ -70,59 +72,69 @@
                 </div>
             </div>
             <!-- End Sidebar -->
-
-            <!-- Main Content -->
-            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                <div class="row">
-                    <% newsData.forEach(news => { %>
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="single-blog">
-                                <div class="single-blog-img">
-                                    <a href="/news">
-                                        <img src="<%= news.pictures %>" alt="">
-                                    </a>
-                                </div>
-                                <div class="blog-meta">
-                                    <span class="comments-type">
-                                        <i class="fa fa-comment-o"></i>
-                                        <a href="#">0</a>
-                                    </span>
-                                    <span class="date-type">
-                                        <i class="fa fa-calendar"></i> <%= new Date(news.date).toDateString() %>
-                                    </span>
-                                </div>
-                                <div class="blog-text">
-                                    <h4>
-                                        <a href="/news"><%= news.title %></a>
-                                    </h4>
-                                    <p>
-                                        <%= news.content %>
-                                    </p>
-                                </div>
-                                <span>
-                                    <a href="/news" class="ready-btn">Read more</a>
-                                </span>
+<!-- Main Content -->
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+    <div class="row">
+        <% newsData.forEach(news => { %>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="single-blog">
+                    <div class="single-blog-img">
+                        <a href="/blog/<%= news._id %>">
+                            <img src="<%= news.pictures %>" alt="">
+                        </a>
+                    </div>
+                    <div class="blog-meta">
+                        <span class="comments-type">
+                            <i class="fa fa-comment-o"></i>
+                            <a href="#">0</a>
+                        </span>
+                        <span class="date-type">
+                            <i class="fa fa-calendar"></i> <%= new Date(news.date).toDateString() %>
+                        </span>
+                    </div>
+                    <div class="blog-text">
+                        <h4>
+                            <a href="/blog/<%= news._id %>"><%= news.title.en %></a>
+                        </h4>
+                        <p>
+                            <%= news.shortContent %>
+                        </p>
+                    </div>
+                    <div class="container">
+                        <h1>News</h1>
+                
+                        <% newsData.forEach(news => { %>
+                            <div class="news-item">
+                                <h2><%= news.title.en %></h2>
+                                <p><%= news.shortContent %></p>
+                                <p>Likes: <%= news.reactions.likes %>, Dislikes: <%= news.reactions.dislikes %></p>
+                                <p>Comments: <%= news.comments.length %></p>
                             </div>
-                        </div>
-                    <% }); %>
-                </div>
-                <div class="blog-pagination">
-                    <ul class="pagination">
-                        <li><a href="?page=<%= Math.max(currentPage - 1, 1) %>">&lt;</a></li>
-                        <% for (let i = 1; i <= totalPages; i++) { %>
-                            <li class="<%= currentPage === i ? 'active' : '' %>">
-                                <a href="?page=<%= i %>"><%= i %></a>
-                            </li>
-                        <% } %>
-                        <li><a href="?page=<%= Math.min(currentPage + 1, totalPages) %>">&gt;</a></li>
-                    </ul>
+                        <% }); %>
+                    <span>
+                        <a href="/blog/<%= news._id %>" class="ready-btn">Read more</a>
+                    </span>
                 </div>
             </div>
-            <!-- End Main Content -->
-        </div>
+        <% }); %>
+    </div>
+    <div class="blog-pagination">
+        <ul class="pagination">
+            <li><a href="?page=<%= Math.max(currentPage - 1, 1) %>">&lt;</a></li>
+            <% for (let i = 1; i <= totalPages; i++) { %>
+                <li class="<%= currentPage === i ? 'active' : '' %>">
+                    <a href="?page=<%= i %>"><%= i %></a>
+                </li>
+            <% } %>
+            <li><a href="?page=<%= Math.min(currentPage + 1, totalPages) %>">&gt;</a></li>
+        </ul>
     </div>
 </div>
-
+<!-- End Main Content -->
+</div>
+</div>
+</div>
+</div>
 <%- include('partials/footer.ejs') %>
 <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 <!-- JavaScript Libraries -->

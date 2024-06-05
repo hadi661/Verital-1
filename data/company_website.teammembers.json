@@ -1,0 +1,284 @@
+[{
+  "_id": {
+    "$oid": "6641e7a65e2f2d6acbd8934b"
+  },
+  "name": "Mr. Mohammed Nbil Hamo",
+  "position": "CEO",
+  "image": "/public/img/team/1.png",
+  "socialMedia": {
+    "facebook": "name on face",
+    "twitter": "name_tw",
+    "instagram": "name_insta"
+  },
+  "facebook": "www.facebook.com",
+  "instagram": "www.instagram.com",
+  "twitter": "www.twitter.com"
+},
+{
+  "_id": {
+    "$oid": "6641e7a65e2f2d6acbd8934c"
+  },
+  "name": "Mr. Mohammed Nbil Hamo",
+  "position": "PDG",
+  "image": "/public/img/team/1.png",
+  "socialMedia": {
+    "facebook": "name on face",
+    "twitter": "name_tw",
+    "instagram": "name_insta"
+  },
+  "facebook": "www.facebook.com",
+  "instagram": "www.instagram.com",
+  "twitter": "www.twitter.com"
+},
+{
+  "_id": {
+    "$oid": "6641e7a65e2f2d6acbd8934d"
+  },
+  "name": "hadi",
+  "position": "CEO",
+  "image": "/public/img/team/1.png",
+  "socialMedia": {
+    "facebook": "name on face",
+    "twitter": "name_tw",
+    "instagram": "name_insta"
+  },
+  "facebook": "www.facebook.com",
+  "instagram": "www.instagram.com",
+  "twitter": "www.twitter.com"
+},
+{
+  "_id": {
+    "$oid": "6641e7a65e2f2d6acbd8934e"
+  },
+  "name": "Mr. Mohammed Nbil Hamo",
+  "position": "CEO",
+  "image": "/public/img/team/1.png",
+  "socialMedia": {
+    "facebook": "name on face",
+    "twitter": "name_tw",
+    "instagram": "name_insta"
+  },
+  "facebook": "www.facebook.com",
+  "instagram": "www.instagram.com",
+  "twitter": "www.twitter.com"
+},
+{
+  "_id": {
+    "$oid": "664db2cdfd89e28b5d40450d"
+  },
+  "name": "ahmed",
+  "position": "Senior Developer",
+  "image": "/public/img/team/1.png",
+  "socialMedia": {
+    "facebook": "name on face",
+    "twitter": "name_tw",
+    "instagram": "name_insta",
+    "_id": {
+      "$oid": "664db35afd89e28b5d404515"
+    }
+  },
+  "__v": 0,
+  "facebook": "www.facebook.com",
+  "instagram": "www.instagram.com",
+  "twitter": "www.twitter.com"
+},
+{
+  "_id": {
+    "$oid": "664de76170b393a6e34c397b"
+  },
+  "name": "sara Doe",
+  "position": "Senior ",
+  "image": "new_url_to_image",
+  "socialMedia": {
+    "facebook": "name on face",
+    "twitter": "name_tw",
+    "instagram": "name_insta",
+    "_id": {
+      "$oid": "664de76170b393a6e34c397c"
+    }
+  },
+  "__v": 0,
+  "facebook": "www.facebook.com",
+  "instagram": "www.instagram.com",
+  "twitter": "www.twitter.com"
+},
+{
+  "_id": {
+    "$oid": "664e0335cfc4f02a34a45037"
+  },
+  "name": "Jane Doe",
+  "position": "Senisfsdfsdfor ",
+  "image": "new_url_to_image",
+  "socialMedia": {
+    "facebook": "name on face",
+    "twitter": "name_tw",
+    "instagram": "name_insta",
+    "_id": {
+      "$oid": "664e0335cfc4f02a34a45038"
+    }
+  },
+  "__v": 0,
+  "facebook": "www.facebook.com",
+  "instagram": "www.instagram.com",
+  "twitter": "www.twitter.com"
+},
+{
+  "_id": {
+    "$oid": "664e3026b095fc43359e42e7"
+  },
+  "name": "John Doe",
+  "position": "CEO",
+  "image": "img/team/1.png",
+  "socialMedia": {
+    "facebook": "name on face",
+    "twitter": "name_tw",
+    "instagram": "name_insta"
+  },
+  "facebook": "www.facebook.com",
+  "instagram": "www.instagram.com",
+  "twitter": "www.twitter.com"
+},
+{
+  "_id": {
+    "$oid": "664e3026b095fc43359e42e8"
+  },
+  "name": "Alice Smith",
+  "position": "CTO",
+  "image": "img/team/2.png",
+  "socialMedia": {
+    "facebook": "name on face",
+    "twitter": "name_tw",
+    "instagram": "name_insta"
+  },
+  "facebook": "www.facebook.com",
+  "instagram": "www.instagram.com",
+  "twitter": "www.twitter.com"
+},
+{
+  "_id": {
+    "$oid": "664e3026b095fc43359e42e9"
+  },
+  "name": "Bob Johnson",
+  "position": "CFO",
+  "image": "img/team/3.png",
+  "socialMedia": {
+    "facebook": "name on face",
+    "twitter": "name_tw",
+    "instagram": "name_insta"
+  },
+  "facebook": "www.facebook.com",
+  "instagram": "www.instagram.com",
+  "twitter": "www.twitter.com"
+},
+{
+  "_id": {
+    "$oid": "664e3026b095fc43359e42ea"
+  },
+  "name": "Charlie Brown",
+  "position": "COO",
+  "image": "img/team/4.png",
+  "socialMedia": {
+    "facebook": "name on face",
+    "twitter": "name_tw",
+    "instagram": "name_insta"
+  },
+  "facebook": "www.facebook.com",
+  "instagram": "www.instagram.com",
+  "twitter": "www.twitter.com"
+},
+{
+  "_id": {
+    "$oid": "664e3026b095fc43359e42eb"
+  },
+  "name": "David Wilson",
+  "position": "CMO",
+  "image": "img/team/5.png",
+  "socialMedia": {
+    "facebook": "name on face",
+    "twitter": "name_tw",
+    "instagram": "name_insta"
+  },
+  "facebook": "www.facebook.com",
+  "instagram": "www.instagram.com",
+  "twitter": "www.twitter.com"
+},
+{
+  "_id": {
+    "$oid": "664e3026b095fc43359e42ec"
+  },
+  "name": "Emma Thomas",
+  "position": "CIO",
+  "image": "img/team/6.png",
+  "socialMedia": {
+    "facebook": "name on face",
+    "twitter": "name_tw",
+    "instagram": "name_insta"
+  },
+  "facebook": "www.facebook.com",
+  "instagram": "www.instagram.com",
+  "twitter": "www.twitter.com"
+},
+{
+  "_id": {
+    "$oid": "664e3026b095fc43359e42ed"
+  },
+  "name": "Frank White",
+  "position": "Chief Architect",
+  "image": "img/team/7.png",
+  "socialMedia": {
+    "facebook": "name on face",
+    "twitter": "name_tw",
+    "instagram": "name_insta"
+  },
+  "facebook": "www.facebook.com",
+  "instagram": "www.instagram.com",
+  "twitter": "www.twitter.com"
+},
+{
+  "_id": {
+    "$oid": "664e3026b095fc43359e42ee"
+  },
+  "name": "Grace Hall",
+  "position": "VP of Sales",
+  "image": "img/team/8.png",
+  "socialMedia": {
+    "facebook": "name on face",
+    "twitter": "name_tw",
+    "instagram": "name_insta"
+  },
+  "facebook": "www.facebook.com",
+  "instagram": "www.instagram.com",
+  "twitter": "www.twitter.com"
+},
+{
+  "_id": {
+    "$oid": "664e3026b095fc43359e42ef"
+  },
+  "name": "Hank Harris",
+  "position": "VP of Marketing",
+  "image": "img/team/9.png",
+  "socialMedia": {
+    "facebook": "name on face",
+    "twitter": "name_tw",
+    "instagram": "name_insta"
+  },
+  "facebook": "www.facebook.com",
+  "instagram": "www.instagram.com",
+  "twitter": "www.twitter.com"
+},
+{
+  "_id": {
+    "$oid": "664e3026b095fc43359e42f0"
+  },
+  "name": "Ivy Walker",
+  "position": "VP of Engineering",
+  "image": "img/team/10.png",
+  "socialMedia": {
+    "facebook": "name on face",
+    "twitter": "name_tw",
+    "instagram": "name_insta"
+  },
+  "facebook": "www.facebook.com",
+  "instagram": "www.instagram.com",
+  "twitter": "www.twitter.com"
+}]

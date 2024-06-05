@@ -7,13 +7,15 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const { isActiveRoute } = require('./middleware/middlewares');
 const i18n = require('i18n');
-
+const blogRoutes = require('./server/routes/BlogRoutes');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 const PORT = process.env.PORT || 5010;
 
 // Connect to MongoDB
 connectDB();
+
 
 // i18n configuration
 i18n.configure({
@@ -25,6 +27,22 @@ i18n.configure({
 
 // Middleware to use i18n
 app.use(i18n.init);
+app.use(cookieParser());
+
+// Middleware to handle language change
+app.use((req, res, next) => {
+    if (req.cookies.lang) {
+        res.setLocale(req.cookies.lang);
+    } else {
+        res.setLocale('fr'); // default locale
+    }
+    next();
+});
+
+app.get('/change-language/:locale', (req, res) => {
+    res.cookie('lang', req.params.locale, { maxAge: 900000, httpOnly: true });
+    res.redirect('back');
+});
 
 // Session middleware
 app.use(session({
@@ -46,28 +64,20 @@ app.set('layout', './layouts/main');
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-// Middleware to handle language change
-app.use((req, res, next) => {
-    if (req.query.lang) {
-        res.cookie('lang', req.query.lang, { maxAge: 900000, httpOnly: true });
-        res.setLocale(req.query.lang);
-    }
-    next();
-});
-
 // Global variables for views
 app.use((req, res, next) => {
     res.locals.isActiveRoute = isActiveRoute;
     res.locals.currentRoute = req.path;
+    res.locals.lang = req.cookies.lang || 'fr';
     next();
 });
-
 // Include routes
 app.use('/', require('./server/routes/main')); // Main routes
 
 app.use('/testimonials', require('./server/routes/testimonials')); // Testimonials routes
 app.use('/contact', require('./server/routes/contact')); // Contact routes
 app.use('/news', require('./server/routes/newsRoutes')); // News routes
+app.use('/blog', blogRoutes);
 app.use('/admin/news', require('./server/routes/newsRoutes')); // Admin news routes
 app.use('/search', require('./server/routes/search')); // Search routes
 app.post('/subscribe', (req, res) => {

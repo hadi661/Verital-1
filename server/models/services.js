@@ -1,3 +1,4 @@
+//services.js/models
 const mongoose = require('mongoose');
 
 const allServicesSchema = new mongoose.Schema({
