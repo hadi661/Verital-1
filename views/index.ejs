@@ -173,7 +173,7 @@ function isActiveRoute(route, currentRoute) {
           <!-- Start Looping through services -->
           <% services.forEach(service => { %>
             <div class="swiper-slide">
-              <div class="about-move">
+              <div class="about-move" style="background-image: url('<%= service.backgroundimages[0] %>'); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
                 <div class="services-details">
                   <div class="single-services">
                     <a class="services-icon" href="/services/<%= service.name %>" target="_blank">
@@ -194,7 +194,6 @@ function isActiveRoute(route, currentRoute) {
   </div>
 </div>
 <!-- End Service area -->
-
 <!-- our-skill-area start -->
 <div class="our-skill-area fix hidden-sm">
   <div class="test-overly"></div>
@@ -244,35 +243,34 @@ function isActiveRoute(route, currentRoute) {
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="section-headline services-head text-center">
-          <a class="<%= isActiveRoute('/division', currentRoute) %>" href="/division" target="_blank" translate="yes"> <h2>Nos Divisions</h2></a>
+          <a class="<%= isActiveRoute('/division', currentRoute) %>" href="/division" target="_blank" translate="yes">
+            <h2>Nos Divisions</h2>
+          </a>
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="row mx-auto"> 
-        <% divisions.forEach((division, index) => { %>
-          <div class="col-md-6 col-sm-6 col-xs-12">
-            <div class="contact-item text-center" style="background-image: url('<%= division.backgroundImageUrl %>');">
-              <div class="contact-icon">
-                <div class="about-move">
-                  <div class="services-details">
-                    <div class="single-services">
-                      <a class="services-icon" href="/division/<%= division.name %>" target="_blank">
-                        <i class="fa <%= division.icon %>"></i>
-                      </a>
-                      <h4><%= division.title %></h4>
-                      <p><%= division.description %></p>
-                    </div>
+    <div class="row">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- Start Looping through divisions -->
+          <% divisions.forEach(division => { %>
+            <div class="swiper-slide">
+              <div class="about-move" style="background-image: url('<%= division.backgroundImageUrl %>'); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                <div class="services-details">
+                  <div class="single-services">
+                    <a class="services-icon" href="/division/<%= division.name %>" target="_blank">
+                      <i class="fa <%= division.icon %>"></i>
+                    </a>
+                    <h4><%= division.title %></h4>
+                    <p><%= division.description %></p>
                   </div>
-                  
                 </div>
               </div>
             </div>
-          </div>
-          <% if ((index + 1) % 2 === 0) { %>
-          </div><div class="row mx-auto justify-content-center"> <!-- Close and reopen row for every 2 items -->
-        <% } %>
-      <% }); %>
+          <% }) %>
+          <!-- End Looping through divisions -->
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
   </div>

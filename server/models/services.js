@@ -1,4 +1,3 @@
-//services.js/models
 const mongoose = require('mongoose');
 
 const allServicesSchema = new mongoose.Schema({
@@ -24,7 +23,8 @@ const servicesSchema = new mongoose.Schema({
     required: true
   },
   image: { type: [String], required: false },
-  icon: { type: [String], required: false } // Added icon field
+  backgroundimages: { type: [String], required: true },
+  icon: { type: [String], required: false }
 });
 
 const Services = mongoose.model('Services', servicesSchema);

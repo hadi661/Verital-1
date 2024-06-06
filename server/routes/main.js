@@ -28,13 +28,13 @@ router.get('/', async (req, res) => {
         const profileData = await ProfileCollection.findOne();
         const aboutData = await About.findOne();
         const slides = await Slide.find();
-        const allServices = await Service.find(); 
-        const topTeamMembers = await TeamMember.find().sort({ position: 1 }).limit(4);
+        const allServices = await Services.find();
+         const topTeamMembers = await TeamMember.find().sort({ position: 1 }).limit(4);
         
         if (!profileData) {
             return res.status(404).send('Profile data not found');
         }
-
+        console.log('All Services:', allServices);
         res.render('index', { locals, teams, services: allServices, topTeamMembers, divisions, contact1, profileData, aboutData, slides, currentRoute: '/', lang});
     } catch (err) {
         console.error(err);

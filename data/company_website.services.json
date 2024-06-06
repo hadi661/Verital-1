@@ -1,77 +1,125 @@
-[
-  {
-    "name": "audit",
-    "title": {
-      "en": "AUDIT",
-      "fr": "AUDIT",
-      "ar": "AUDIT"
-    },
-    "description": {
-      "en": "Real-time management of any situation and Propose improvement areas with sustainability and adaptability assessment of your installations Regulatory compliance...",
-      "fr": "Gestion en temps réel de toute situation et Proposer des axes de progrès avec le Évaluation de la durabilité et de l'adaptabilité de vos installations Conformité réglementaire...",
-      "ar": "إدارة الوقت الفعلي لأي موقف واقتراح مجالات التحسين مع تقييم الاستدامة وقابلية التكيف لتركيباتك الامتثال التنظيمي..."
-    },
-    "image": ["path/to/audit-image.jpg"],
-    "icon": ["fa-code"]
+[{
+  "_id": {
+    "$oid": "665c6bc478b0ceb94322429f"
   },
-  {
-    "name": "certification",
-    "title": {
-      "en": "CERTIFICATION",
-      "fr": "CERTIFICATION",
-      "ar": "CERTIFICATION"
-    },
-    "description": {
-      "en": "Certification is at the heart of the excellence of our services rendered in terms of expertise in order to maintain trusted, close relationships with our clients, manage risks and drive performance...",
-      "fr": "La certification est à la base de l'excellence de nos services rendus en termes d'expertise afin d'entretenir des relations de confiance, de proximité avec nos clients, gérer les risques et stimuler la performance...",
-      "ar": "الشهادة هي في قلب تميز خدماتنا التي نقدمها من حيث الخبرة من أجل الحفاظ على علاقات وثيقة وثقة مع عملائنا، وإدارة المخاطر وتحفيز الأداء..."
-    },
-    "image": ["path/to/certification-image.jpg"],
-    "icon": ["fa-certificate"]
+  "name": "audit",
+  "title": {
+    "en": "AUDIT",
+    "fr": "AUDIT",
+    "ar": "AUDIT"
   },
-  {
-    "name": "inspection",
-    "title": {
-      "en": "INSPECTION",
-      "fr": "INSPECTION",
-      "ar": "INSPECTION"
-    },
-    "description": {
-      "en": "Inspection involves on-site verification that a product, asset, or system meets specified criteria...",
-      "fr": "L'inspection consiste à vérifier sur place qu'un produit, un actif ou un système répond aux critères spécifiés...",
-      "ar": "التفتيش ينطوي على التحقق في الموقع من أن منتجًا أو أصلًا أو نظامًا يتوافق مع المعايير المحددة..."
-    },
-    "image": ["path/to/inspection-image.jpg"],
-    "icon": ["fa-search"]
+  "description": {
+    "en": "Real-time management of any situation and Propose improvement areas with sustainability and adaptability assessment of your installations Regulatory compliance...",
+    "fr": "Gestion en temps réel de toute situation et Proposer des axes de progrès avec le Évaluation de la durabilité et de l'adaptabilité de vos installations Conformité réglementaire...",
+    "ar": "إدارة الوقت الفعلي لأي موقف واقتراح مجالات التحسين مع تقييم الاستدامة وقابلية التكيف لتركيباتك الامتثال التنظيمي..."
   },
-  {
-    "name": "consultation",
-    "title": {
-      "en": "CONSULTATION",
-      "fr": "CONSULTATION",
-      "ar": "CONSULTATION"
-    },
-    "description": {
-      "en": "Personalized consultation and recommendations from an organization composed of highly qualified experts to help businesses meet regulatory requirements.",
-      "fr": "Consultation personnalisée et recommandations d'une organisation composée d'experts hautement qualifiés pour aider les entreprises à répondre aux exigences réglementaires.",
-      "ar": "الاستشارة الشخصية والتوصيات من مؤسسة تتألف من خبراء مؤهلين تأهيلاً عاليًا لمساعدة الشركات في تلبية المتطلبات التنظيمية."
-    },
-    "image": ["path/to/consultation-image.jpg"],
-    "icon": ["fa-user"]
+  "image": [
+    "\\public\\img\\blog\\1.jpg"
+  ],
+  "icon": [
+    "fa-check"
+  ],
+  "backgroundimages": [
+    "\\public\\img\\about\\audit.png"
+  ]
+},
+{
+  "_id": {
+    "$oid": "665c6bc478b0ceb9432242a0"
   },
-  {
-    "name": "assistance",
-    "title": {
-      "en": "24/7 ASSISTANCE",
-      "fr": "ASSISTANCE 24/7",
-      "ar": "المساعدة على مدار الساعة 24/7"
-    },
-    "description": {
-      "en": "Customers can get help and find answers to their questions as soon as they arise, 24/7 and in real time.",
-      "fr": "Les clients peuvent obtenir de l'aide et trouver des réponses à leurs questions dès qu'elles se présentent, 24h/24 et 7j/7 et en temps réel.",
-      "ar": "يمكن للعملاء الحصول على المساعدة والعثور على الإجابات على أسئلتهم بمجرد ظهورها، على مدار الساعة 24/7 وفي الوقت الفعلي."
-    },
-    "image": ["path/to/assistance-image.jpg"],
-    "icon": ["fa-ticket"]
-  }
-]
+  "name": "certification",
+  "title": {
+    "en": "CERTIFICATION",
+    "fr": "CERTIFICATION",
+    "ar": "CERTIFICATION"
+  },
+  "description": {
+    "en": "Certification is at the heart of the excellence of our services rendered in terms of expertise in order to maintain trusted, close relationships with our clients, manage risks and drive performance...",
+    "fr": "La certification est à la base de l'excellence de nos services rendus en termes d'expertise afin d'entretenir des relations de confiance, de proximité avec nos clients, gérer les risques et stimuler la performance...",
+    "ar": "الشهادة هي في قلب تميز خدماتنا التي نقدمها من حيث الخبرة من أجل الحفاظ على علاقات وثيقة وثقة مع عملائنا، وإدارة المخاطر وتحفيز الأداء..."
+  },
+  "image": [
+    "path/to/certification-image.jpg"
+  ],
+  "icon": [
+    "fa-certificate"
+  ],
+  "backgroundimages": [
+    "\\public\\img\\about\\certification.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "665c6bc478b0ceb9432242a1"
+  },
+  "name": "inspection",
+  "title": {
+    "en": "INSPECTION",
+    "fr": "INSPECTION",
+    "ar": "INSPECTION"
+  },
+  "description": {
+    "en": "Inspection involves on-site verification that a product, asset, or system meets specified criteria...",
+    "fr": "L'inspection consiste à vérifier sur place qu'un produit, un actif ou un système répond aux critères spécifiés...",
+    "ar": "التفتيش ينطوي على التحقق في الموقع من أن منتجًا أو أصلًا أو نظامًا يتوافق مع المعايير المحددة..."
+  },
+  "image": [
+    "path/to/inspection-image.jpg"
+  ],
+  "icon": [
+    "fa-search"
+  ],
+  "backgroundimages": [
+    "\\public\\img\\about\\leadspace.png"
+  ]
+},
+{
+  "_id": {
+    "$oid": "665c6bc478b0ceb9432242a2"
+  },
+  "name": "consultation",
+  "title": {
+    "en": "CONSULTATION",
+    "fr": "CONSULTATION",
+    "ar": "CONSULTATION"
+  },
+  "description": {
+    "en": "Personalized consultation and recommendations from an organization composed of highly qualified experts to help businesses meet regulatory requirements.",
+    "fr": "Consultation personnalisée et recommandations d'une organisation composée d'experts hautement qualifiés pour aider les entreprises à répondre aux exigences réglementaires.",
+    "ar": "الاستشارة الشخصية والتوصيات من مؤسسة تتألف من خبراء مؤهلين تأهيلاً عاليًا لمساعدة الشركات في تلبية المتطلبات التنظيمية."
+  },
+  "image": [
+    "path/to/consultation-image.jpg"
+  ],
+  "icon": [
+    "fa-user"
+  ],
+  "backgroundimages": [
+    "\\public\\img\\about\\consul.jpeg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "665c6bc478b0ceb9432242a3"
+  },
+  "name": "assistance",
+  "title": {
+    "en": "24/7 ASSISTANCE",
+    "fr": "ASSISTANCE 24/7",
+    "ar": "المساعدة على مدار الساعة 24/7"
+  },
+  "description": {
+    "en": "Customers can get help and find answers to their questions as soon as they arise, 24/7 and in real time.",
+    "fr": "Les clients peuvent obtenir de l'aide et trouver des réponses à leurs questions dès qu'elles se présentent, 24h/24 et 7j/7 et en temps réel.",
+    "ar": "يمكن للعملاء الحصول على المساعدة والعثور على الإجابات على أسئلتهم بمجرد ظهورها، على مدار الساعة 24/7 وفي الوقت الفعلي."
+  },
+  "image": [
+    "path/to/assistance-image.jpg"
+  ],
+  "icon": [
+    "fa-ticket"
+  ],
+  "backgroundimages": [
+    "\\public\\img\\about\\Support-technique.png"
+  ]
+}]
