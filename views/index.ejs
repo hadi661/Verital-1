@@ -488,41 +488,6 @@ function isActiveRoute(route, currentRoute) {
   </div>
 </div>
 <!-- End Blog -->
-<!-- views/index.ejs -->
-
-<style>
-  .slider-container {
-    max-width: 100%; /* Adjust as needed */
-    overflow: hidden; /* Ensure images don't overflow */
-  }
-  
-  .slider {
-    display: flex; /* Ensure images are in a row */
-    transition: transform 0.5s ease; /* Optional: Add smooth sliding effect */
-  }
-  
-  .slide {
-    flex: 0 0 auto; /* Ensure images don't stretch */
-    padding: 0 10px; /* Adjust spacing between images */
-  }
-  
-  .slide img {
-    max-width: 100%; /* Resize images to fit container */
-    height: auto; /* Maintain aspect ratio */
-    animation: slide 200s linear infinite; /* Slower animation speed */
-    object-fit: contain;
-  }
-  
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-</style>
-
 <!-- Start Suscrive Area -->
 <div id="Suscrive" class="section-headline text-center">
   <h2><%= __('Approuvé par les plus grandes marques') %></h2>

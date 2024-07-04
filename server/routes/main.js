@@ -243,6 +243,7 @@ router.get('/contact', async (req, res) => {
 });
 router.get('/profile', async (req, res) => {
     try {
+        const lang = req.cookies.lang || 'fr'; // Default to French if not set
         const locals = {
             title: "Verital Spa",
             description: "siège veritas alger direction general DG",
@@ -254,30 +255,44 @@ router.get('/profile', async (req, res) => {
         const contact1 = await Contact.find();
         const services = await Service.find();
         const aboutData = await About.findOne();
-
+ // Log the fetched data for debugging
+ console.log('Divisions:', divisions);
+ console.log('Profile Data:', profileData);
+ console.log('Teams:', teams);
+ console.log('Contact1:', contact1);
+ console.log('Services:', services);
+ console.log('About Data:', aboutData);
         if (!profileData) {
             return res.status(404).send('Profile data not found');
         }
 
         const localizedProfileData = {
             CEO: {
-                title: profileData.CEO.title[req.lang] || '',
-                content: profileData.CEO.content[req.lang] || '',
-                quotes: profileData.CEO.quotes.map(quote => quote[req.lang] || '') || [],
-                images: profileData.CEO.images || [],
-                videos: profileData.CEO.videos || [],
-                text: profileData.CEO.text[req.lang] || 'Text not available for the selected language.',
+                title: profileData?.CEO?.title?.[lang] || '',
+                content: profileData?.CEO?.content?.[lang] || '',
+                quotes: profileData?.CEO?.quotes?.map(quote => quote?.[lang] || '') || [],
+                images: profileData?.CEO?.images || [],
+                videos: profileData?.CEO?.videos || [],
+                text: profileData?.CEO?.text?.[lang] || 'Text not available for the selected language.',
             }
         };
 
-        res.render('profile', { locals, profileData: localizedProfileData, aboutData, teams, services, divisions, contact1, currentRoute: '/', lang: req.lang });
+        res.render('profile', {
+            locals,
+            profileData: localizedProfileData,
+            aboutData,
+            teams,
+            services,
+            divisions,
+            contact1,
+            currentRoute: '/profile',
+            lang
+        });
     } catch (err) {
         console.error('Error fetching profile data:', err);
         res.status(500).send('Server Error');
     }
 });
-
-
 router.post('/profile', async (req, res) => {
     try {
         const newProfile = new ProfileCollection(req.body);
@@ -321,11 +336,11 @@ router.delete('/profile/:id', async (req, res) => {
 // Route to fetch and render about data
 router.get('/about', async (req, res) => {
     try {
+        const lang = req.cookies.lang || 'fr'; // Default to French if not set
         const locals = {
             title: "Verital Spa",
             description: "siège veritas alger direction general DG",
         };
-        const lang = res.locals.lang;
         const aboutData = await About.findOne({}, {
             [`title.${lang}`]: 1,
             [`content.${lang}`]: 1,
@@ -339,7 +354,7 @@ router.get('/about', async (req, res) => {
         const contact1 = await Contact.find();
         const profileData = await ProfileCollection.findOne();
         const services = await Service.find();
-
+        console.log('Fetched :', aboutData);
         if (!aboutData) {
             return res.status(404).send('About data not found');
         }
@@ -354,11 +369,14 @@ router.get('/about', async (req, res) => {
             profileData,
             currentRoute: 'about'
         });
-    } catch (err) {
+    } 
+   
+    catch (err) {
         console.error(err);
         res.status(500).send('Server Error');
     }
 });
+
 
 // Route to create new about data
 router.post('/about', async (req, res) => {

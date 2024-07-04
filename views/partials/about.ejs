@@ -38,17 +38,29 @@
         <div class="well-middle">
           <div class="single-well">
             <a href="#">
-              <h4 class="sec-head">Qui sommes nous</h4>
+              <h4 class="sec-head"><%= __('Qui sommes nous')%></h4>
             </a>
             <p><%= aboutData?.content?.[lang] ?? 'Content not available' %></p>
             <p><%= aboutData?.text?.[lang] ?? 'Text not available' %></p>
             <ul>
-              <% (aboutData?.additionalContent?.[lang] ?? []).forEach(content => { %>
-                <li>
-                  <i class="fa fa-check"></i> <b><%= content.split(": ")[0] %>:</b>
-                  <p><%= content.split(": ")[1] %></p>
-                </li>
-              <% }) %>
+              <% if (aboutData?.additionalContent?.[lang]) { %>
+                <% aboutData.additionalContent[lang].forEach(content => { %>
+                  <li>
+                    <i class="fa fa-check"></i> <b><%= content.split(": ")[0] %>:</b>
+                    <p><%= content.split(": ")[1] %></p>
+                  </li>
+                <% }) %>
+              <% } %>
+            </ul>
+            <ul>
+              <% if (aboutData?.quotes?.[lang]) { %>
+                <% aboutData.quotes[lang].forEach(quote => { %>
+                  <li>
+                    <i class="fa fa-quote-right"></i> <b><%= quote %></b>
+                    <i class="fa fa-quote-left"></i>
+                  </li>
+                <% }) %>
+              <% } %>
             </ul>
           </div>
         </div>

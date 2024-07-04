@@ -2,7 +2,9 @@
   "_id": {
     "$oid": "6652018d93f5400321b623a0"
   },
-  "quotes": [],
+  "quotes": [
+    "test to see if .."
+  ],
   "additionalContent": {
     "ar": [
       "شبكة وطنية فعالة: مزيج فريد من الشبكة الوطنية والحضور المحلي القوي والاستجابة القوية وجودة الخدمات.",
@@ -38,10 +40,10 @@
     "fr": "VERITAL est une EPE/SPA (Société Par Actions) de droit algérien gérée professionnellement et crée en 1989. Son activité consiste, en Algérie et à l’étranger au contrôle des transports, de l’industrie, au contrôle de conformité des produits du commerce international et de qualité. Son souci majeur est d’assurer la promotion de la sécurité des personnes et des biens dans les secteurs des transports et de la qualité."
   },
   "images": [
-    "img/about/1.jpg",
-    "img/1/ser1-600x399.jpg",
-    "img/about/3.png",
-    "img/about/slide 8.jpg"
+    "/public/img/about/1.jpg",
+    "/public/img/1/ser1-600x399.jpg",
+    "/public/img/about/3.png",
+    "/public/img/about/slide 8.jpg"
   ],
   "text": {
     "ar": "بفضل فريقها المؤهل تأهيلا عاليا مهندسين وخبراء وغيرهم وذوي الخبرة الطويلة والغنية في مختلف الأنشطة. تمتلك فريطال الوسائل والقدرات اللازمة لتلبية متطلبات عملائها بشكل مستدام من خلال المساعدة والاستماع المنظم والدائم",

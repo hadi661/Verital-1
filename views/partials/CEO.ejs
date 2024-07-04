@@ -3,9 +3,7 @@
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="section-headline text-center">
-                    <h2>
-                      <%= profileData.CEO.title || profileData.CEO.title.en %>
-                    </h2>
+                    <h2><%= profileData.CEO.title || 'Title not available' %></h2>
                 </div>
             </div>
         </div>
@@ -36,17 +34,17 @@
                 <div class="well-middle">
                     <div class="single-well">
                         <a href="#">
-                            <h4 class="sec-head"><%= profileData.CEO.title || profileData.CEO.title.en %></h4>
+                            <h4 class="sec-head"><%= profileData.CEO.title || 'Title not available' %></h4>
                         </a>
-                        <p><%= profileData.CEO.content || profileData.CEO.content.en %></p>
+                        <p><%= profileData.CEO.content || 'Content not available' %></p>
                         <% if (profileData.CEO.quotes && profileData.CEO.quotes.length > 0) { %>
-                          <% profileData.CEO.quotes.forEach(quote => { %>
-                              <ul>
-                                  <li>
-                                      <p><i class="fa fa-quote-right"></i> <b><%= quote %></b> <i class="fa fa-quote-left"></i></p>
-                                  </li>
-                              </ul>
-                          <% }) %>
+                            <% profileData.CEO.quotes.forEach(quote => { %>
+                                <ul>
+                                    <li>
+                                        <p><i class="fa fa-quote-right"></i> <b><%= quote %></b> <i class="fa fa-quote-left"></i></p>
+                                    </li>
+                                </ul>
+                            <% }) %>
                         <% } %>
                         <p><%= profileData.CEO.text %></p>
                     </div>

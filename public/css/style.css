@@ -1402,17 +1402,36 @@ div#preloader {
 }
 
 
-
-
-@keyframes slide {
-  0% {
-    transform: translateX(0);
+.slider-container {
+    max-width: 100%; /* Adjust as needed */
+    overflow: hidden; /* Ensure images don't overflow */
   }
-  100% {
-    transform: translateX(-100%);
+  
+  .slider {
+    display: flex; /* Ensure images are in a row */
+    transition: transform 0.5s ease; /* Optional: Add smooth sliding effect */
   }
-}
-
+  
+  .slide {
+    flex: 0 0 auto; /* Ensure images don't stretch */
+    padding: 0 10px; /* Adjust spacing between images */
+  }
+  
+  .slide img {
+    max-width: 100%; /* Resize images to fit container */
+    height: auto; /* Maintain aspect ratio */
+    animation: slide 200s linear infinite; /* Slower animation speed */
+    object-fit: contain;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 
 /*--------------------------------*/
 
