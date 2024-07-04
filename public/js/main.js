@@ -386,5 +386,4 @@ var swiper = new Swiper(".swiper", {
   },
 });
 
-
 })(jQuery);

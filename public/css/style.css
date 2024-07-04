@@ -3,7 +3,7 @@
 /*-----------------------------------------------------------------------------------
    CSS INDEX
   ===================
-
+  0. Mr.Djemel Elhadi
   1. Theme Default CSS (body, link color, section etc)
   2. - Area
    2.1 Stick menu Area
@@ -24,19 +24,19 @@
   17.Home Page 3  CSS
   18.Blog CSS
   17.Blog Details CSS
-
------------------------------------------------------------------------------------*/
-
 /*----------------------------------------*/
 /*  1.  Theme default CSS
-/*----------------------------------------*/
-
-html, body {
-  height: 100%;
-  font-family: 'Arial', sans-serif;
+/*----------------------------------------*/ 
+body {
+  background: #f4f4f4 none repeat scroll 0 0;
+  color: #444;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  text-align: left;
+  overflow-x: hidden;
+  line-height: 22px;
   margin: 0;
   padding: 0;
-  background: rgb(241, 239, 239);
 }
 
 .floatleft {
@@ -135,23 +135,12 @@ a:hover {
 a:active, a:hover {
   outline: 0 none;
 }
-
-body {
-  background: #fff none repeat scroll 0 0;
-  color: #444;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  text-align: left;
-  overflow-x: hidden;
-  line-height: 22px;
-}
-
 /* Back to top button */
 .back-to-top {
   position: fixed;
   display: none;
-  background: #236670;
-  color: #fff;
+  background: #1f616b;
+  color: #f4f4f4;
   padding: 6px 12px 9px 12px;
   font-size: 16px;
   border-radius: 2px;
@@ -168,19 +157,16 @@ body {
 
 .back-to-top:focus {
   background: #3EC1D5;
-  color: #fff;
+  color: #f4f4f4;
   outline: none;
 }
-
 .back-to-top:hover {
   background: #3cd6ed;
-  color: #fff;
+  color: #f4f4f4;
 }
-/* Show the button when scrolling down */
 body {
   position: relative;
 }
-
 .back-to-top.show {
   display: block;
 }
@@ -207,7 +193,7 @@ div#preloader {
   width: 100%;
   height: 100%;
   overflow: visible;
-  background: #fff url(/public/img/preloader.gif) no-repeat center center;
+  background: #f4f4f4 url(/public/img/preloader.gif) no-repeat center center;
 }
 
 ::-moz-selection {
@@ -262,8 +248,7 @@ div#preloader {
   transition: all 0.4s ease 0s;
 }
 
-/*--------------------------------*/
-
+/*---------------------v-----------*/
 /*  2. Header top Area
 /*--------------------------------*/
 .ticket {
@@ -276,7 +261,7 @@ div#preloader {
   z-index: 999;
 }
 .ticket img {
-  width: auto; /* Adjust size as needed */
+  width: auto; /* Adjust size*/
   height: auto;
   display: flex;
 }
@@ -1413,7 +1398,7 @@ div#preloader {
 .slide {
   display: flex; /* Make the container flexible */
   width: auto; /* Set the width to auto to accommodate all images */
-  animation: slide 100s linear infinite; /* Same animation as .slider */
+  animation: slide 200s linear infinite; /* Same animation as .slider */
 }
 
 
@@ -1537,6 +1522,7 @@ div#preloader {
 
 /* CSS for contact page */
 .map-container {
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -1694,7 +1680,7 @@ div#preloader {
 /*----------------------------------------*/
 
 .header-bg {
-  background: url(/public/img/slider/s7.jpg);
+  background: url(/public/img/slider/s7.jpg) no-repeat center center/cover;;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -1832,6 +1818,7 @@ div#preloader {
 }
 
 .blog-page .banner-box {
+  margin-top: 20px;
   margin-bottom: 40px;
 }
 
@@ -1962,7 +1949,7 @@ div#preloader {
 }
 
 .popular-tag.left-blog ul li a:hover {
-  color: #fff;
+  color: #1dada1;
 }
 
 .popular-tag.left-side-tags.left-blog ul {
@@ -2180,7 +2167,9 @@ li.threaded-comments {
 h3.comment-reply-title {
   margin: auto;
 }
-
+.title2, .title3 {
+  color: #fff;
+}
 span.email-notes {
   color: #42414f;
   display: block;
@@ -2229,7 +2218,26 @@ span.email-notes {
   transition: all 0.3s ease 0s;
   white-space: nowrap;
 }
+.comment .comment-actions {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
 
+.comment .comment-actions .reaction-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.comment .comment-actions .reply-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+}
 .comments-content-wrap span a {
   color: #000;
 }
@@ -2534,7 +2542,7 @@ backend styling see more button
   font-size: 24px;
   color: #292929; /* Makes text white for better contrast against the overlay */
   margin-bottom: 10px;
-}
+}a
 
 .swiper-slide p {
   font-size: 16px;
@@ -2562,3 +2570,203 @@ backend styling see more button
   height: fit-content;
 }
 
+
+/* comments section */
+.rticle-container {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.article-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blog-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.reaction {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.reaction-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.clear {
+  clear: both;
+}
+
+.comments-section {
+  margin-top: 40px;
+}
+
+.comments-section h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.comment-form {
+  margin-bottom: 20px;
+}
+
+.comment-btn {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.comment .comment-actions {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.comment .comment-actions .reaction-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  margin-right: 10px;
+}
+/* In your custom CSS file */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.reaction-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.reaction-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.comment-input,
+.comment-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.comment-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.comments, .replies {
+  margin-top: 20px;
+}
+
+.comment {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.comment-header, .reply-header {
+  display: flex;
+  align-items: center;
+}
+
+.comment-user-pic, .reply-user-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.reply {
+  margin-left: 40px;
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.reply .reply-header img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.reply .reply-header .reply-user {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.reply .reply-header .reply-date {
+  font-size: 12px;
+  color: #888;
+}
+
+.reply .reply-text {
+  margin-bottom: 10px;
+}
+
+.message {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.message.success {
+  color: green;
+}
+
+.message.error {
+  color: red;
+}
+
+.card {
+    margin: 20px 0;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}

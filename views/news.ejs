@@ -21,63 +21,89 @@
 <div class="blog-page area-padding">
     <div class="container">
         <div class="row">
-            <!-- Sidebar -->
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="page-head-blog">
-                    <div class="single-blog-page">
-                        <!-- search option start -->
-                        <form action="/search" method="get">
-                          <div class="search-option">
-                            <form action="/search" method="get">
-                              <input type="text" name="q" placeholder="Search...">
-                              <button type="submit">Search</button>
-                          </form>
-                          </div>
-                        </form>
-                        <!-- search option end -->
-                      </div>
-                    <div class="single-blog-page">
-                        <!-- recent start -->
-                        <div class="left-blog">
-                            <h4>recent post</h4>
-                            <div class="recent-post">
-                                <!-- start single post -->
-                                <% newsData.forEach(news => { %>
-                                    <div class="recent-single-post">
-                                        <div class="post-img">
-                                            <a href="/blog">
-                                                <img src="<%= news.pictures %>" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="pst-content">
-                                            <p><a href="/blog"> <%= news.title %> </a></p>
-                                        </div>
-                                    </div>
-                                <% }); %>
-                                <!-- End single post -->
-                            </div>
+           <!-- Sidebar -->
+           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <div class="page-head-blog">
+                <div class="single-blog-page">
+                    <!-- search option start -->
+                    <form action="/search" method="get">
+                        <div class="search-option">
+                            <input type="text" name="q" placeholder="Search...">
+                            <button class="button" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
                         </div>
-                        <!-- recent end -->
+                    </form>
+                    <!-- search option end -->
+                </div>
+                <div class="single-blog-page">
+                    <!-- recent start -->
+                    <div class="left-blog">
+                        <h4>Recent Post</h4>
+                        <div class="recent-post">
+                            <% newsData.forEach(news => { %>
+                                <div class="recent-single-post">
+                                    <div class="post-img">
+                                        <a href="/blog/<%= news._id %>">
+                                            <img src="<%= news.pictures %>" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="pst-content">
+                                        <p><a href="/blog/<%= news._id %>"> <%= news.title.en %> </a></p>
+                                    </div>
+                                </div>
+                            <% }); %>
+                        </div>
                     </div>
-                    <div class="single-blog-page">
-                        <div class="left-blog">
-                            <h4>archive</h4>
+                    <!-- recent end -->
+                </div>
+                <div class="single-blog-page">
+                    <div class="left-blog">
+                        <h4>Categories</h4>
+                        <ul>
+                            <% newsData.forEach(news => { %>
+                                <li><a href="#"> <%= news.category.en %> </a></li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+                <div class="single-blog-page">
+                    <div class="left-blog">
+                        <h4>Archive</h4>
+                        <ul>
+                            <% newsData.forEach(news => { %>
+                                <li><a href="#"><%= new Date(news.date).toDateString() %></a></li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+                <div class="single-blog-page">
+                    <div class="left-tags blog-tags">
+                        <div class="popular-tag left-side-tags left-blog">
+                            <h4>Popular Tags</h4>
                             <ul>
-                                <% newsData.forEach(news => { %>
-                                    <li><a href="#"><%= new Date(news.date).toDateString() %></a></li>
-                                <% }); %>
+                                <li><a href="#">Portfolio</a></li>
+                                <li><a href="#">Project</a></li>
+                                <li><a href="#">Design</a></li>
+                                <li><a href="#">wordpress</a></li>
+                                <li><a href="#">Joomla</a></li>
+                                <li><a href="#">Html</a></li>
+                                <li><a href="#">Masonry</a></li>
+                                <li><a href="#">Website</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- End Sidebar -->
+        </div>
+        <!-- End Sidebar -->
 <!-- Main Content -->
 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
     <div class="row">
         <% newsData.forEach(news => { %>
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="single-blog">
+                    <div class="article-container">
                     <div class="single-blog-img">
                         <a href="/blog/<%= news._id %>">
                             <img src="<%= news.pictures %>" alt="">
@@ -86,7 +112,11 @@
                     <div class="blog-meta">
                         <span class="comments-type">
                             <i class="fa fa-comment-o"></i>
-                            <a href="#">0</a>
+                            <a href="/blog/<%= news._id %>"><%= news.comments.length %></a>
+                            <i class="fa fa-thumbs-up"></i>
+                            <a href="/blog/<%= news._id %>"><%= news.reactions.likes %></a>
+                            <i class="fa fa-thumbs-down"></i>
+                            <a href="/blog/<%= news._id %>"><%= news.reactions.dislikes %></a> 
                         </span>
                         <span class="date-type">
                             <i class="fa fa-calendar"></i> <%= new Date(news.date).toDateString() %>
@@ -96,24 +126,16 @@
                         <h4>
                             <a href="/blog/<%= news._id %>"><%= news.title.en %></a>
                         </h4>
-                        <p>
-                            <%= news.shortContent %>
-                        </p>
+                            <% newsData.forEach(news => { %>
+                                <div class="news-item">
+                                    <p><%= news.shortContent %></p>
+                                </div>
+                            <% }); %>
+                        <span>
+                            <a href="/blog/<%= news._id %>" class="ready-btn">Read more</a>
+                        </span>
+                   
                     </div>
-                    <div class="container">
-                        <h1>News</h1>
-                
-                        <% newsData.forEach(news => { %>
-                            <div class="news-item">
-                                <h2><%= news.title.en %></h2>
-                                <p><%= news.shortContent %></p>
-                                <p>Likes: <%= news.reactions.likes %>, Dislikes: <%= news.reactions.dislikes %></p>
-                                <p>Comments: <%= news.comments.length %></p>
-                            </div>
-                        <% }); %>
-                    <span>
-                        <a href="/blog/<%= news._id %>" class="ready-btn">Read more</a>
-                    </span>
                 </div>
             </div>
         <% }); %>

@@ -1,4 +1,4 @@
-
+<!--Mr. DJEMEL El-hadi. 2024-->
 <%
 function isActiveRoute(route, currentRoute) {
   return route === currentRoute ? 'active' : '';
@@ -6,7 +6,7 @@ function isActiveRoute(route, currentRoute) {
 %>
 <div id="preloader"></div>
 <!-- index.ejs -->
-<%- include('partials/header.ejs', { currentRoute: '/' }) %>
+<%- include('partials/header.ejs', { currentRoute: '/' ,divisions:divisions , services }) %>
 <!-- header end -->
 <!-- Start Slider Area -->
 <div id="home" class="slider-area">
@@ -24,19 +24,18 @@ function isActiveRoute(route, currentRoute) {
             <div class="slider-content">
               <!-- layer 1 -->
               <div class="layer-1-1 hidden-xs wow slideInDown" data-wow-duration="2s" data-wow-delay=".2s">
-                <h2 class="title1">Verital</h2>
+                <h2 class="title1"><%= __('Verital')%></h2>
               </div>
               <!-- layer 2 -->
               <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
-                <h1 class="title2">Organisme algerién de Contrôle Technique depuis 1989 accrédité par ALGERAC</h1>
+                <h1 class="title2"><%= __('Organisme algerién de Contrôle Technique depuis 1989 accrédité par ALGERAC') %></h1>
               </div>
               <!-- layer 3 -->
               <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                <a class="ready-btn right-btn page-scroll" href="#services">Nos Services</a>
-                <a class="ready-btn right-btn page-scroll" href="#Divisions">Nos Divisions</a>
-                <a class="ready-btn page-scroll" href="#about">En savoir plus</a>
-                <a class="ready-btn page-scroll" href="#blog">Actualités</a>
-                
+                <a class="ready-btn right-btn page-scroll" href="#services"><%= __('Nos Services') %></a>
+                <a class="ready-btn right-btn page-scroll" href="#Divisions"><%= __('Nos Divisions') %></a>
+                <a class="ready-btn page-scroll" href="#about"><%= __('En savoir plus') %></a>
+                <a class="ready-btn page-scroll" href="#blog"><%= __('Actualités') %></a>
               </div>
             </div>
           </div>
@@ -52,18 +51,18 @@ function isActiveRoute(route, currentRoute) {
             <div class="slider-content text-center">
               <!-- layer 1 -->
               <div class="layer-1-1 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                <h2 class="title1">Les meilleur depuis 1989 </h2>
+                <h2 class="title1"><%= __('Les meilleur depuis 1989') %></h2>
               </div>
               <!-- layer 2 -->
               <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
-                <h1 class="title2">Nous sommes dans le domaine du service de qualité</h1>
+                <h1 class="title2"><%= __('Nous sommes dans le domaine du service de qualité') %></h1>
               </div>
               <!-- layer 3 -->
               <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                <a class="ready-btn right-btn page-scroll" href="#services">Nos Services</a>
-                <a class="ready-btn right-btn page-scroll" href="#Divisions">Nos Divisions</a>
-                <a class="ready-btn page-scroll" href="#about">En savoir plus</a>
-                <a class="ready-btn page-scroll" href="#blog">Actualités</a>
+                <a class="ready-btn right-btn page-scroll" href="#services"><%= __('Nos Services') %></a>
+                <a class="ready-btn right-btn page-scroll" href="#Divisions"><%= __('Nos Divisions') %></a>
+                <a class="ready-btn page-scroll" href="#about"><%= __('En savoir plus') %></a>
+                <a class="ready-btn page-scroll" href="#blog"><%= __('Actualités') %></a>
               </div>
             </div>
           </div>
@@ -79,18 +78,18 @@ function isActiveRoute(route, currentRoute) {
             <div class="slider-content">
               <!-- layer 1 -->
               <div class="layer-1-1 hidden-xs wow slideInUp" data-wow-duration="3s" data-wow-delay=".2s">
-                <h2 class="title1">Verital</h2>
+                <h2 class="title1"><%= __('Verital')%></h2>
               </div>
               <!-- layer 2 -->
               <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
-                <h1 class="title2">Aider à la sécurité et à la tranquillité d'esprit de votre entreprise</h1>
+                <h1 class="title2"><%= __('Aider à la sécurité et à la tranquillité d\'esprit de votre entreprise') %></h1>
               </div>
               <!-- layer 3 -->
               <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                <a class="ready-btn right-btn page-scroll" href="#services">Nos Services</a>
-                <a class="ready-btn right-btn page-scroll" href="#Divisions">Nos Divisions</a>
-                <a class="ready-btn page-scroll" href="#about">En savoir plus</a>
-                <a class="ready-btn page-scroll" href="#blog">Actualités</a>
+                <a class="ready-btn right-btn page-scroll" href="#services"><%= __('Nos Services') %></a>
+                <a class="ready-btn right-btn page-scroll" href="#Divisions"><%= __('Nos Divisions') %></a>
+                <a class="ready-btn page-scroll" href="#about"><%= __('En savoir plus') %></a>
+                <a class="ready-btn page-scroll" href="#blog"><%= __('Actualités') %></a>
               </div>
             </div>
           </div>
@@ -107,18 +106,18 @@ function isActiveRoute(route, currentRoute) {
         <div class="slider-content">
           <!-- layer 1 -->
           <div class="layer-1-1 hidden-xs wow slideInDown" data-wow-duration="2s" data-wow-delay=".2s">
-            <h2 class="title1">Verital</h2>
+            <h2 class="title1"><%= __('Verital')%></h2>
           </div>
           <!-- layer 2 -->
           <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
-            <h1 class="title2">Votre sécurité est notre mission</h1>
+            <h1 class="title2"><%= __('Votre sécurité est notre mission') %></h1>
           </div>
           <!-- layer 3 -->
           <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-            <a class="ready-btn right-btn page-scroll" href="#services">Nos Services</a>
-                <a class="ready-btn right-btn page-scroll" href="#Divisions">Nos Divisions</a>
-                <a class="ready-btn page-scroll" href="#about">En savoir plus</a>
-                <a class="ready-btn page-scroll" href="#blog">Actualités</a>
+            <a class="ready-btn right-btn page-scroll" href="#services"><%= __('Nos Services') %></a>
+            <a class="ready-btn right-btn page-scroll" href="#Divisions"><%= __('Nos Divisions') %></a>
+            <a class="ready-btn page-scroll" href="#about"><%= __('En savoir plus') %></a>
+            <a class="ready-btn page-scroll" href="#blog"><%= __('Actualités') %></a>
           </div>
         </div>
       </div>
@@ -132,9 +131,9 @@ function isActiveRoute(route, currentRoute) {
   <form action="/search" method="get">
     <div class="search-option">
       <form action="/search" method="get">
-        <input type="text" name="q" placeholder="Search...">
-        <button type="submit">Search</button>
-    </form>
+        <input type="text" name="q" placeholder="<%= __('Search...') %>">
+        <button type="submit"><%= __('Search') %></button>
+      </form>
     </div>
   </form>
   <!-- search option end -->
@@ -162,7 +161,7 @@ function isActiveRoute(route, currentRoute) {
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="section-headline services-head text-center">
           <a class="<%= isActiveRoute('/services', currentRoute) %>" href="/services" target="_blank" translate="yes">
-            <h2>Nos Services</h2>
+            <h2><%= __('Nos Services') %></h2>
           </a>
         </div>
       </div>
@@ -218,14 +217,14 @@ function isActiveRoute(route, currentRoute) {
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="wellcome-text">
             <div class="well-text text-center">
-              <h2>Bienvenue chez Verital</h2>
+              <h2><%= __('Bienvenue chez Verital') %></h2>
               <p>
-                abonnez-vous à notre newsletter et restez informé de toutes vos demandes et besoins
+                <%= __('abonnez-vous à notre newsletter et restez informé de toutes vos demandes et besoins') %>
               </p>
               <div class="subs-feilds">
                 <div class="suscribe-input">
-                  <input type="email" class="email form-control width-80" id="sus_email" placeholder="Email">
-                  <button type="submit" id="sus_submit" class="add-btn width-20">S'abonner</button>
+                  <input type="email" class="email form-control width-80" id="sus_email" placeholder="<%= __('Email') %>">
+                  <button type="submit" id="sus_submit" class="add-btn width-20"><%= __('S\'abonner') %></button>
                   <div id="msg_Submit" class="h3 text-center hidden"></div>
                 </div>
               </div>
@@ -244,35 +243,42 @@ function isActiveRoute(route, currentRoute) {
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="section-headline services-head text-center">
           <a class="<%= isActiveRoute('/division', currentRoute) %>" href="/division" target="_blank" translate="yes">
-            <h2>Nos Divisions</h2>
+            <h2><%= __('Nos Divisions') %></h2>
           </a>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <!-- Start Looping through divisions -->
-          <% divisions.forEach(division => { %>
-            <div class="swiper-slide">
-              <div class="about-move" style="background-image: url('<%= division.backgroundImageUrl %>'); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                <div class="services-details">
-                  <div class="single-services">
-                    <a class="services-icon" href="/division/<%= division.name %>" target="_blank">
-                      <i class="fa <%= division.icon %>"></i>
-                    </a>
-                    <h4><%= division.title %></h4>
-                    <p><%= division.description %></p>
-                  </div>
-                </div>
+    <!-- Divisions area -->
+<div class="row">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <% divisions.forEach(division => { %>
+        <div class="swiper-slide">
+          <div class="about-move" style="background-image: url('<%= division.background_images[0] %>'); width: 100%; height: 100%; display: flexbox; align-items: center; justify-content: center;">
+            <div class="services-details">
+              <div class="single-services">
+                <a class="services-icon" href="/division/<%= division.name %>" target="_blank">
+                  <i class="fa <%= division.icon[0] %>"></i>
+                </a>
+                <% if (division.title && division.title[lang]) { %>
+                  <h4><%= division.title[lang] %></h4>
+                <% } else { %>
+                  <h4>Title not available</h4>
+                <% } %>
+                <% if (division.description && division.description[lang]) { %>
+                  <p><%= division.description[lang] %></p>
+                <% } else { %>
+                  <p>Description not available</p>
+                <% } %>
               </div>
             </div>
-          <% }) %>
-          <!-- End Looping through divisions -->
+          </div>
         </div>
-        <div class="swiper-pagination"></div>
-      </div>
+      <% }) %>
     </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
   </div>
 </div>
 <!-- divisions end -->
@@ -285,9 +291,9 @@ function isActiveRoute(route, currentRoute) {
       </a>
     </div>
     <div class="work-right-text text-center">
-      <h2>Working with us</h2>
-      <h5>Web Design, Ready Home, Construction and Co-operate Outstanding Buildings.</h5>
-      <a href="#contact" class="ready-btn">Contact us</a>
+      <h2><%= __('Working with us') %></h2>
+      <h6 style="color: azure;"><%= __('abn') %></h6>
+      <a href="#contact" class="ready-btn"><%= __('Contact us') %></a>
     </div>
   </div>
 </div>
@@ -298,7 +304,7 @@ function isActiveRoute(route, currentRoute) {
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="section-headline text-center">
           <a href="/team" target="_blank"> <!-- Ensure this href is /team -->
-            <h2>Notre équipe spéciale</h2>
+            <h2><%= __('Notre équipe spéciale') %></h2>
           </a>
         </div>
       
@@ -346,26 +352,31 @@ function isActiveRoute(route, currentRoute) {
 <!-- End Team Area -->
 <!-- Start Testimonials -->
 <div class="our-skill-area fix hidden-sm">
-  
   <div class="skill-bg area-padding-2">
     <div class="container">
       <div class="text-center testimonial-heading">
-        <h2>REFERENCE</h2>
+        <h2><%= __('REFERENCE') %></h2>
       </div>
       <!-- section-heading end -->
       <div class="row">
         <div class="skill-text">
           <!-- Testimonies section -->
           <div class="testimonial-loop">
-            <!-- Testimonies will be dynamically inserted here -->
+            <% if (typeof testimonials !== 'undefined' && testimonials.length > 0) { %>
+              <% testimonials.forEach(testimonial => { %>
+                <div class="single-testimonial">
+                  <p><%= testimonial.text %></p>
+                </div>
+              <% }); %>
+            <% } else { %>
+              <p>No testimonials available.</p>
+            <% } %>
           </div>
-          
           <!-- End of testimonies loop -->
         </div>
       </div>
     </div>
   </div>
- 
 </div>
 <!-- End Testimonials -->
 <!-- Start Blog Area -->
@@ -376,7 +387,7 @@ function isActiveRoute(route, currentRoute) {
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="section-headline text-center">
-            <h2>Dernières nouvelles</h2>
+            <h2><%= __('Dernières nouvelles') %></h2>
           </div>
         </div>
       </div>
@@ -398,14 +409,14 @@ function isActiveRoute(route, currentRoute) {
             </div>
             <div class="blog-text">
               <h4>
-                  <a href="#">Nos Services</a>
+                  <a href="#"><%= __('Nos Services') %></a>
                 </h4>
               <p>
-                Parce que votre sécurité est notre priorité... 
+                <%= __('Parce que votre sécurité est notre priorité...') %>
               </p>
             </div>
             <span>
-                <a href="blog-details.html" class="ready-btn">En savoir plus</a>
+                <a href="blog-details.html" class="ready-btn"><%= __('En savoir plus') %></a>
               </span>
 
           </div>
@@ -428,14 +439,14 @@ function isActiveRoute(route, currentRoute) {
             </div>
             <div class="blog-text">
               <h4>
-                  <a href="#">Nos Services</a>
+                  <a href="#"><%= __('Nos Services') %></a>
                 </h4>
               <p>
-                Parce que votre sécurité est notre priorité... 
+                <%= __('Parce que votre sécurité est notre priorité...') %>
               </p>
             </div>
             <span>
-                <a href="blog-details.html" class="ready-btn">En savoir plus</a>
+                <a href="blog-details.html" class="ready-btn"><%= __('En savoir plus') %></a>
               </span>
 
           </div>
@@ -459,14 +470,14 @@ function isActiveRoute(route, currentRoute) {
             </div>
             <div class="blog-text">
               <h4>
-                  <a href="#">Nos Services</a>
+                  <a href="#"><%= __('Nos Services') %></a>
                 </h4>
               <p>
-                Parce que votre sécurité est notre priorité... 
+                <%= __('Parce que votre sécurité est notre priorité...') %>
               </p>
             </div>
             <span>
-                <a href="blog-details.html" class="ready-btn">En savoir plus</a>
+                <a href="blog-details.html" class="ready-btn"><%= __('En savoir plus') %></a>
               </span>
 
           </div>
@@ -477,30 +488,58 @@ function isActiveRoute(route, currentRoute) {
   </div>
 </div>
 <!-- End Blog -->
+<!-- views/index.ejs -->
+
+<style>
+  .slider-container {
+    max-width: 100%; /* Adjust as needed */
+    overflow: hidden; /* Ensure images don't overflow */
+  }
+  
+  .slider {
+    display: flex; /* Ensure images are in a row */
+    transition: transform 0.5s ease; /* Optional: Add smooth sliding effect */
+  }
+  
+  .slide {
+    flex: 0 0 auto; /* Ensure images don't stretch */
+    padding: 0 10px; /* Adjust spacing between images */
+  }
+  
+  .slide img {
+    max-width: 100%; /* Resize images to fit container */
+    height: auto; /* Maintain aspect ratio */
+    animation: slide 200s linear infinite; /* Slower animation speed */
+    object-fit: contain;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+</style>
+
 <!-- Start Suscrive Area -->
 <div id="Suscrive" class="section-headline text-center">
-  <h2>Approuvé par les plus grandes marques</h2>
+  <h2><%= __('Approuvé par les plus grandes marques') %></h2>
 </div>
 <div class="slider-container">
-<div class="slider">
-<div class="slide">
-<img src="/public/img/1/1.png" alt="" />
-<img src="/public/img/1/2.png" alt="" />
-<img src="/public/img/1/24-225x202.png" alt="" />
-<img src="/public/img/1/25-240x202.png" alt="" />
-<img src="/public/img/1/27-231x202.png" alt="" />
-<img src="/public/img/1/29-225x202.png" alt="" />
-<img src="/public/img/1/30-320x202.png" alt="" />
-<img src="/public/img/client/1.png" alt="" />
-<img src="/public/img/client/3.png" alt="" />
-<img src="/public/img/client/26.png" alt="" />
-<img src="/public/img/client/4.png" alt="" /> <!-- Duplicate the first image to create a loop -->
-<img src="img/1/1.png" alt="" />
+  <div class="slider">
+    <div class="slide">
+      <% brands.forEach(brand => { %>
+        <% brand.pictures.forEach(picture => { %>
+          <img src="<%= picture %>" alt="" />
+        <% }); %>
+      <% }); %>
+      <!-- Duplicate the first image to create a loop -->
+      <img src="<%= brands[0].pictures[0] %>" alt="" />
+    </div>
+  </div>
 </div>
-</div>
-</div>
-
-
 <!-- End Suscrive Area -->
 <!-- Start contact Area -->
 <div id="contact" class="contact-area">
@@ -510,7 +549,7 @@ function isActiveRoute(route, currentRoute) {
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="section-headline text-center">
-            <h2>Contactez-nous</h2>
+            <h2><%= __('Contactez-nous') %></h2>
           </div>
         </div>
       </div>
@@ -520,10 +559,10 @@ function isActiveRoute(route, currentRoute) {
           <div class="contact-icon text-center">
             <div class="single-icon">
               <i class="fa fa-mobile"></i>
-              <a href="tel:+21323701727"><P>Appelez-nous au +213 (0) 23 70 17 27</P></a>
+              <a href="tel:+21323701727"><P><%= __('Appelez-nous au +213 (0) 23 70 17 27') %></P></a>
               <p>
-                Fax: +213 (0) 23 70 17 28<br>
-                <span>Dimanche-jeudi (8h-16h)</span>
+                <%= __('Fax: +213 (0) 23 70 17 28') %><br>
+                <span><%= __('Dimanche-jeudi (8h-16h)') %></span>
               </p>
             </div>
           </div>
@@ -533,11 +572,9 @@ function isActiveRoute(route, currentRoute) {
           <div class="contact-icon text-center">
             <div class="single-icon">
               <i class="fa fa-envelope-o"></i>
-              <a href="mailto:dg@verital.dz"> <p>dg@verital.dz</p></a>
+              <a href="mailto:dg@verital.dz"> <p><%= __('dg@verital.dz') %></p></a>
               <p>
-                <a href="https://www.verital.dz " target="_blank"><p> Web:  www.verital.dz </p></a>
-               
-              
+                <a href="https://www.verital.dz " target="_blank"><p> <%= __('Web:  www.verital.dz') %> </p></a>
             </div>
           </div>
         </div>
@@ -547,8 +584,8 @@ function isActiveRoute(route, currentRoute) {
             <div class="single-icon">
               <i class="fa fa-map-marker"></i>
               <a href="https://www.google.com/maps/search/38,+Lotissement+Pons+Kouba,+Alger" target="_blank"><p>
-                38, Lotissement Pons<br>
-                <span>Kouba – Alger</span>
+                <%= __('38, Lotissement Pons') %><br>
+                <span><%= __('Kouba – Alger') %></span>
               </p></a>
 
               
@@ -569,26 +606,26 @@ function isActiveRoute(route, currentRoute) {
         <!-- Start  contact -->
         <div class="col-md-6 col-sm-6 col-xs-12">
           <div class="form contact-form">
-            <div id="sendmessage">Votre message a été envoyé. Merci!</div>
+            <div id="sendmessage"><%= __('Votre message a été envoyé. Merci!') %></div>
             <div id="errormessage"></div>
             <form action="" method="post" role="form" class="contactForm">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="votre nom" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <input type="text" name="name" class="form-control" id="name" placeholder="<%= __('votre nom') %>" data-rule="minlen:4" data-msg="<%= __('Please enter at least 4 chars') %>" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="votre Email" data-rule="email" data-msg="Please enter a valid email" />
+                <input type="email" class="form-control" name="email" id="email" placeholder="<%= __('votre Email') %>" data-rule="email" data-msg="<%= __('Please enter a valid email') %>" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Sujet" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="<%= __('Sujet') %>" data-rule="minlen:4" data-msg="<%= __('Please enter at least 8 chars of subject') %>" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="S'il te plaît, écris quelque chose pour nous" placeholder="Message"></textarea>
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="<%= __('S\'il te plaît, écris quelque chose pour nous') %>" placeholder="<%= __('Message') %>"></textarea>
                 <div class="validation"></div>
               </div>
-              <div class="text-center"><button type="submit">Envoyer message</button></div>
+              <div class="text-center"><button type="submit"><%= __('Envoyer message') %></button></div>
             </form>
           </div>
         </div>
@@ -617,4 +654,3 @@ function isActiveRoute(route, currentRoute) {
 
 <!-- JavaScript Libraries -->
 <%- include ('partials/lib.ejs')%>
-

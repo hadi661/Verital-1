@@ -1,5 +1,4 @@
 <%- include('partials/header.ejs', { currentRoute: '/blog', newsData: newsData }) %>
-
 <!-- Start Bottom Header -->
 <div class="header-bg page-area">
     <div class="home-overly"></div>
@@ -31,8 +30,8 @@
                         <!-- search option start -->
                         <form action="/search" method="get">
                             <div class="search-option">
-                                <input type="text" name="q" placeholder="Search...">
-                                <button class="button" type="submit">
+                                <input type="text" name="q" placeholder="Search..." class="search-input">
+                                <button class="search-btn" type="submit">
                                     <i class="fa fa-search"></i>
                                 </button>
                             </div>
@@ -102,82 +101,115 @@
             <!-- End Sidebar -->
             <!-- Start single blog -->
             <div class="col-md-8 col-sm-8 col-xs-12">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="single-blog-page">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <div class="single-blog">
-                                            <div class="single-blog-img">
-                                                <img src="<%= article.pictures %>" alt="">
-                                            </div>
-                                            <div class="blog-meta">
-                                                <span class="comments-type">
-                                                    <i class="fa fa-comment-o"></i>
-                                                    <a href="#"> <%= article.comments.length %> comments</a>
-                                                </span>
-                                                <span class="date-type">
-                                                    <i class="fa fa-calendar"></i> <%= new Date(article.date).toDateString() %>
-                                                </span>
-                                            </div>
-                                            <div class="blog-text">
-                                                <h4>
-                                                    <%= article.title.en %>
-                                                </h4>
-                                                <p>
-                                                    <%= article.content.en %>
-                                                </p>
-                                            </div>
-                                            <div class="blog-meta">
-                                                <span class="likes-type">
-                                                    <i class="fa fa-thumbs-up"></i>
-                                                    <%= article.reactions.likes %> Likes
-                                                </span>
-                                                <span class="dislikes-type">
-                                                    <i class="fa fa-thumbs-down"></i>
-                                                    <%= article.reactions.dislikes %> Dislikes
-                                                </span>
-                                            </div>
-                                            <form action="/news/<%= article._id %>/react" method="POST">
-                                                <button type="submit" name="type" value="like">Like</button>
-                                                <button type="submit" name="type" value="dislike">Dislike</button>
-                                            </form>                                            
-                                            <div class="clear"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <h3>Comments</h3>
-                                        <form action="/news/<%= article._id %>/comment" method="POST">
-                                            <input type="text" name="user" placeholder="Your name" required>
-                                            <textarea name="text" placeholder="Your comment" required></textarea>
-                                            <button type="submit">Submit</button>
-                                        </form>
-                                        <div class="comments">
-                                            <% article.comments.forEach(comment => { %>
-                                                <div class="comment">
-                                                    <strong><%= comment.user %>:</strong>
-                                                    <p><%= comment.text %></p>
-                                                    <small><%= new Date(comment.date).toDateString() %></small>
-                                                </div>
-                                            <% }); %>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="single-blog">
+                    <div class="single-blog-img">
+                        <img src="<%= article.pictures %>" alt="" class="img-fluid">
                     </div>
+                    <div class="blog-meta">
+                        <span class="comments-type">
+                            <i class="fa fa-comment-o"></i>
+                            <a href="#"> <%= article.comments.length %> comments</a>
+                        </span>
+                        <span class="reaction">
+                            <i class="fa fa-thumbs-up"></i>
+                            <%= article.reactions.likes %> Likes
+                        </span>
+                        <span class="reaction">
+                            <i class="fa fa-thumbs-down"></i>
+                            <%= article.reactions.dislikes %> Dislikes
+                        </span>
+                        <span class="date-type">
+                            <i class="fa fa-calendar"></i> <%= new Date(article.date).toDateString() %>
+                        </span>
+                    </div>
+                    <div class="blog-text">
+                        <h4>
+                            <%= article.title.en %>
+                        </h4>
+                        <p>
+                            <%= article.content.en %>
+                        </p>
+                    </div>
+                    <div class="reaction-container">
+                        <% if (article.reactions) { %>
+                           
+                        <% } %>
+                        <form id="reaction-form" action="/news/<%= article._id %>/react" method="POST" class="reaction-form">
+                            <button type="submit" name="type" value="like" class="reaction-btn">Like</button>
+                            <button type="submit" name="type" value="dislike" class="reaction-btn">Dislike</button>
+                        </form>
+                    </div>
+                    
+                   <!-- Comments Section -->
+<div class="comments-section">
+   
+    <!-- Add a new comment -->
+    <form class="comment-form" action="/blog/<%= article._id %>/comment" method="POST">
+        <input class="comment-input" type="text" name="user" placeholder="Your Name">
+        <textarea class="comment-textarea" name="text" placeholder="Your Comment"></textarea>
+        <button class="comment-btn" type="submit">Add Comment</button>
+    </form>
+    <h3>Comments</h3>
+    <!-- Loop through comments and display -->
+    <% article.comments.forEach(comment => { %>
+    <div class="comment">
+        <div class="comment-header">
+            <img class="comment-user-pic" src="profile_pic_url" alt="User Profile Pic">
+            <div class="comment-user"><%= comment.user %></div>
+            <div class="comment-date"><%= new Date(comment.date).toLocaleDateString() %></div>
+        </div>
+        <div class="comment-text">
+            <%= comment.text %>
+        </div>
+        <div class="comment-actions">
+            <form action="/blog/<%= article._id %>/comments/<%= comment._id %>/like" method="POST">
+                <button class="reaction-btn" type="submit">Like</button>
+            </form>
+            <form action="/blog/<%= article._id %>/comments/<%= comment._id %>/dislike" method="POST">
+                <button class="reaction-btn" type="submit">Dislike</button>
+            </form>
+        </div>
+        <!-- Loop through replies and display -->
+        <div class="replies">
+            <% comment.replies.forEach(reply => { %>
+            <div class="reply">
+                <div class="reply-header">
+                    <img class="reply-user-pic" src="profile_pic_url" alt="User Profile Pic">
+                    <div class="reply-user"><%= reply.user %></div>
+                    <div class="reply-date"><%= new Date(reply.date).toLocaleDateString() %></div>
+                </div>
+                <div class="reply-text">
+                    <%= reply.text %>
+                </div>
+                <div class="comment-actions">
+                    <form action="/blog/<%= article._id %>/comments/<%= comment._id %>/replies/<%= reply._id %>/like" method="POST">
+                        <button class="reaction-btn" type="submit">Like</button>
+                    </form>
+                    <form action="/blog/<%= article._id %>/comments/<%= comment._id %>/replies/<%= reply._id %>/dislike" method="POST">
+                        <button class="reaction-btn" type="submit">Dislike</button>
+                    </form>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+        <!-- Reply to this comment -->
+        <form action="/blog/<%= article._id %>/comments/<%= comment._id %>/reply" method="POST">
+            <input class="comment-input" type="text" name="user" placeholder="Your Name">
+            <textarea class="comment-textarea" name="text" placeholder="Your Reply"></textarea>
+            <button class="comment-btn" type="submit">Reply</button>
+        </form>
+    </div>
+    <% }); %>
+</div>
+
+  
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- End Blog Area -->
-<div class="clearfix"></div>
 
+<div class="clearfix"></div>
 <%- include('partials/footer.ejs') %>
 <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-<!-- JavaScript Libraries -->
 <%- include('partials/lib.ejs') %>

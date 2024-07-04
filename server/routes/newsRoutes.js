@@ -42,8 +42,6 @@ router.get('/', async (req, res) => {
     }
 });
 
-
-// Read a single news article
 router.get('/:id', async (req, res) => {
     try {
         const news = await News.findById(req.params.id);
@@ -148,5 +146,48 @@ router.get('/archive', async (req, res) => {
         res.status(500).json({ message: 'Server Error' });
     }
 });
-
+// Like a comment
+router.post('/:newsId/comments/:commentId/like', async (req, res) => {
+    try {
+      const news = await News.findById(req.params.newsId);
+      if (!news) {
+        return res.status(404).json({ message: 'News not found' });
+      }
+      const comment = news.comments.id(req.params.commentId);
+      if (!comment) {
+        return res.status(404).json({ message: 'Comment not found' });
+      }
+      comment.reactions.likes += 1;
+      await news.save();
+      res.status(200).json({ message: 'Comment liked successfully' });
+    } catch (err) {
+      console.error('Error liking comment:', err);
+      res.status(500).json({ message: 'Server Error' });
+    }
+  });
+  
+  // Reply to a comment
+  router.post('/:newsId/comments/:commentId/reply', async (req, res) => {
+    const { user, text } = req.body;
+    if (!user || !text) {
+      return res.status(400).json({ message: 'User and text are required' });
+    }
+    try {
+      const news = await News.findById(req.params.newsId);
+      if (!news) {
+        return res.status(404).json({ message: 'News not found' });
+      }
+      const comment = news.comments.id(req.params.commentId);
+      if (!comment) {
+        return res.status(404).json({ message: 'Comment not found' });
+      }
+      const newReply = { user, text };
+      comment.replies.push(newReply);
+      await news.save();
+      res.status(200).json({ message: 'Reply added successfully' });
+    } catch (err) {
+      console.error('Error adding reply:', err);
+      res.status(500).json({ message: 'Server Error' });
+    }
+  });
 module.exports = router;

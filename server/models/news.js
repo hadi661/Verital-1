@@ -1,10 +1,20 @@
-// models/news.js
 const mongoose = require('mongoose');
+
+const ReplySchema = new mongoose.Schema({
+    user: { type: String, required: true },
+    text: { type: String, required: true },
+    date: { type: Date, default: Date.now }
+});
 
 const CommentSchema = new mongoose.Schema({
     user: { type: String, required: true },
     text: { type: String, required: true },
-    date: { type: Date, default: Date.now }
+    date: { type: Date, default: Date.now },
+    reactions: {
+        likes: { type: Number, default: 0 },
+        dislikes: { type: Number, default: 0 }
+    },
+    replies: [ReplySchema]
 });
 
 const NewsSchema = new mongoose.Schema({
@@ -35,7 +45,8 @@ const NewsSchema = new mongoose.Schema({
     reactions: {
         likes: { type: Number, default: 0 },
         dislikes: { type: Number, default: 0 }
-    }
+    },
+    videos: [{ type: String }]
 });
 
 NewsSchema.virtual('shortContent').get(function() {

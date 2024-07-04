@@ -1,21 +1,26 @@
 require('dotenv').config();
+const SECRET = process.env.SECRET;
 const express = require('express');
 const expresslayout = require('express-ejs-layouts');
 const path = require('path');
-const connectDB = require('./server/config/db');
 const methodOverride = require('method-override');
 const session = require('express-session');
-const { isActiveRoute } = require('./middleware/middlewares');
+const { isActiveRoute } = require('./server/middleware/middlewares');
 const i18n = require('i18n');
-const blogRoutes = require('./server/routes/BlogRoutes');
 const cookieParser = require('cookie-parser');
-
+const connectDB = require('./server/config/db');
 const app = express();
 const PORT = process.env.PORT || 5010;
 
 // Connect to MongoDB
 connectDB();
 
+// Init Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use('/public', express.static(path.join(__dirname, 'public')));
+//app.use(express.static(path.resolve(import.meta.dirname, 'public')));
+app.use(methodOverride('_method'));
 
 // i18n configuration
 i18n.configure({
@@ -24,7 +29,7 @@ i18n.configure({
     defaultLocale: 'fr',
     cookie: 'lang',
 });
-
+   
 // Middleware to use i18n
 app.use(i18n.init);
 app.use(cookieParser());
@@ -36,7 +41,9 @@ app.use((req, res, next) => {
     } else {
         res.setLocale('fr'); // default locale
     }
-    next();
+    //console.log ('-----------------------------------------------');
+    //console.log (' [${new Date().toISOString()}]: ${req.method} ${req.url} ${JSON,stringify(req.body)} ');
+    return next();
 });
 
 app.get('/change-language/:locale', (req, res) => {
@@ -46,17 +53,14 @@ app.get('/change-language/:locale', (req, res) => {
 
 // Session middleware
 app.use(session({
-    secret: 'your_secret_key',
-    resave: false,
-    saveUninitialized: false,
-    cookie: { secure: false }  // Use secure: true in production with HTTPS
+    name:'sid', 
+    secret: 'SECRET',
+    resave: true,
+    saveUninitialized: true,
+    cookie: { secure: true }  // Use secure: true in production with HTTPS
 }));
 
-// Init Middleware
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use('/public', express.static(path.join(__dirname, 'public')));
-app.use(methodOverride('_method'));
+
 
 // Templating engine
 app.use(expresslayout);
@@ -71,13 +75,12 @@ app.use((req, res, next) => {
     res.locals.lang = req.cookies.lang || 'fr';
     next();
 });
-// Include routes
+// Include routes 
 app.use('/', require('./server/routes/main')); // Main routes
-
-app.use('/testimonials', require('./server/routes/testimonials')); // Testimonials routes
+app.use('/admin', require('./server/routes/admin'));
 app.use('/contact', require('./server/routes/contact')); // Contact routes
 app.use('/news', require('./server/routes/newsRoutes')); // News routes
-app.use('/blog', blogRoutes);
+app.use('/blog', require('./server/routes/BlogRoutes'));
 app.use('/admin/news', require('./server/routes/newsRoutes')); // Admin news routes
 app.use('/search', require('./server/routes/search')); // Search routes
 app.post('/subscribe', (req, res) => {
@@ -95,6 +98,21 @@ function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(String(email).toLowerCase());
 }
+app.post('/login', async (req, res) => {
+    const { username, password } = req.body;
+    // Authenticate user
+    const user = await User.findOne({ username, password }); // Simplified; use proper hashing in real code
+    if (user) {
+        req.session.user = {
+            id: user._id,
+            username: user.username,
+            isAdmin: user.isAdmin // Assume `isAdmin` is a field in your User model
+        };
+        res.redirect('/admin');
+    } else {
+        res.status(401).send('Invalid credentials');
+    }
+});
 
 // Handle 404 errors
 app.use((req, res, next) => {

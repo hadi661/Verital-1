@@ -1,63 +1,90 @@
 [{
   "_id": {
-    "$oid": "6641e6d75e2f2d6acbd89342"
+    "$oid": "66856092e6f4d6a9f219af2a"
   },
-  "lang": "en",
-  "text": "Omar Bencherif: I am grateful to VERITAL for their valuable assistance in achieving our compliance and security goals. Their expertise and commitment to excellence have been a true asset to our company."
+  "text": {
+    "en": "Philippe Durand: VERITAL has been an essential partner in optimizing our operations. Their technical expertise and commitment to quality have significantly improved our efficiency and compliance with standards.",
+    "fr": "Philippe Durand: VERITAL a été un partenaire essentiel dans l'optimisation de nos opérations. Leur expertise technique et leur engagement envers la qualité ont considérablement amélioré notre efficacité et notre conformité aux normes.",
+    "ar": "فيليب دوراند: كانت فريطال شريكًا أساسيًا في تحسين عملياتنا. لقد ساهمت خبرتهم التقنية والتزامهم بالجودة بشكل كبير في تحسين كفاءتنا وامتثالنا للمعايير."
+  }
 },
 {
   "_id": {
-    "$oid": "6641e6d75e2f2d6acbd89343"
+    "$oid": "668561f1e6f4d6a9f219af2b"
   },
-  "lang": "en",
-  "text": "Sophia Meziani: VERITAL has been a trusted partner in our journey to continuous improvement. Their proactive approach and willingness to go the extra mile have been essential to ensuring the quality and compliance of our products."
+  "text": {
+    "en": "Nadia Belkacem: I am impressed by VERITAL's professionalism and commitment to customer satisfaction. Their team has been very responsive and has always met our needs in an efficient and professional manner.",
+    "fr": "Nadia Belkacem: Je suis impressionnée par le professionnalisme et l'engagement de VERITAL envers la satisfaction du client. Leur équipe a été très réactive et a toujours répondu à nos besoins de manière efficace et professionnelle.",
+    "ar": "نادية بلقاسم: أنا معجبة بالاحترافية والالتزام الذي تظهره فريطال تجاه رضا العملاء. كان فريقهم سريع الاستجابة ودائمًا ما يلبي احتياجاتنا بكفاءة ومهنية."
+  }
 },
 {
   "_id": {
-    "$oid": "6641e6d75e2f2d6acbd89344"
+    "$oid": "66856325e6f4d6a9f219af2c"
   },
-  "lang": "en",
-  "text": "Karim Boudjellal: I highly recommend VERITAL's services to any company seeking reliable and efficient quality control solutions. Their competent team and commitment to excellence make them a valuable partner in our industry."
+  "text": {
+    "en": "Philippe Durand: VERITAL has been an essential partner in optimizing our operations. Their technical expertise and commitment to quality have significantly improved our efficiency and compliance with standards.",
+    "fr": "Philippe Durand: VERITAL a été un partenaire essentiel dans l'optimisation de nos opérations. Leur expertise technique et leur engagement envers la qualité ont considérablement amélioré notre efficacité et notre conformité aux normes.",
+    "ar": "فيليب دوراند: كانت فريطال شريكًا أساسيًا في تحسين عملياتنا. لقد ساهمت خبرتهم التقنية والتزامهم بالجودة بشكل كبير في تحسين كفاءتنا وامتثالنا للمعايير."
+  }
 },
 {
   "_id": {
-    "$oid": "6641e6d75e2f2d6acbd89345"
+    "$oid": "66856325e6f4d6a9f219af2d"
   },
-  "lang": "fr",
-  "text": "Amina Khaldi: VERITAL a dépassé toutes nos attentes en matière de contrôle et de qualité. Leur équipe compétente et leur souci du détail ont fait toute la différence dans la réussite de nos projets. Nous sommes extrêmement satisfaits de leur travail."
+  "text": {
+    "en": "Nadia Belkacem: I am impressed by VERITAL's professionalism and commitment to customer satisfaction. Their team has been very responsive and has always met our needs in an efficient and professional manner.",
+    "fr": "Nadia Belkacem: Je suis impressionnée par le professionnalisme et l'engagement de VERITAL envers la satisfaction du client. Leur équipe a été très réactive et a toujours répondu à nos besoins de manière efficace et professionnelle.",
+    "ar": "نادية بلقاسم: أنا معجبة بالاحترافية والالتزام الذي تظهره فريطال تجاه رضا العملاء. كان فريقهم سريع الاستجابة ودائمًا ما يلبي احتياجاتنا بكفاءة ومهنية."
+  }
 },
 {
   "_id": {
-    "$oid": "6641e6d75e2f2d6acbd89346"
+    "$oid": "66856325e6f4d6a9f219af2e"
   },
-  "lang": "fr",
-  "text": "Omar Bencherif: Je suis reconnaissant envers VERITAL pour leur assistance précieuse dans la réalisation de nos objectifs de conformité et de sécurité. Leur expertise et leur engagement envers l'excellence ont été un véritable atout pour notre entreprise."
+  "text": {
+    "en": "Youssef Hamdi: Working with VERITAL has been a very enriching experience. Their collaborative approach and willingness to understand our specific needs have been greatly appreciated. I highly recommend their services.",
+    "fr": "Youssef Hamdi: Travailler avec VERITAL a été une expérience très enrichissante. Leur approche collaborative et leur volonté de comprendre nos besoins spécifiques ont été très appréciées. Je recommande vivement leurs services.",
+    "ar": "يوسف حمدي: كان العمل مع فريطال تجربة مثرية للغاية. تقديرهم للتعاون واستعدادهم لفهم احتياجاتنا الخاصة كانت محل تقدير كبير. أوصي بشدة بخدماتهم."
+  }
 },
 {
   "_id": {
-    "$oid": "6641e6d75e2f2d6acbd89347"
+    "$oid": "66856325e6f4d6a9f219af2f"
   },
-  "lang": "fr",
-  "text": "Sophia Meziani: VERITAL a été un partenaire de confiance dans notre parcours vers l'amélioration continue. Leur approche proactive et leur volonté d'aller au-delà des attentes ont été essentielles pour garantir la qualité et la conformité de nos produits."
+  "text": {
+    "en": "Amina Khaldi: VERITAL has exceeded all our expectations in terms of control and quality. Their competent team and attention to detail have made all the difference in the success of our projects. We are extremely satisfied with their work.",
+    "fr": "Amina Khaldi: VERITAL a dépassé toutes nos attentes en matière de contrôle et de qualité. Leur équipe compétente et leur souci du détail ont fait toute la différence dans la réussite de nos projets. Nous sommes extrêmement satisfaits de leur travail.",
+    "ar": "أمينة الخالدي: تجاوزت فريطال كل توقعاتنا فيما يتعلق بالرقابة والجودة. لقد جعل فريقهم المؤهل واهتمامهم بالتفاصيل الفارق في نجاح مشاريعنا. نحن راضون للغاية عن عملهم."
+  }
 },
 {
   "_id": {
-    "$oid": "6641e6d75e2f2d6acbd89348"
+    "$oid": "66856325e6f4d6a9f219af30"
   },
-  "lang": "ar",
-  "text": "يوسف حمدي: كان العمل مع فريطال تجربة مثرية للغاية. تقديرهم للتعاون واستعدادهم لفهم احتياجاتنا الخاصة كانت محل تقدير كبير. أوصي بشدة بخدماتهم."
+  "text": {
+    "en": "Omar Bencherif: I am grateful to VERITAL for their valuable assistance in achieving our compliance and security goals. Their expertise and commitment to excellence have been a true asset to our company.",
+    "fr": "Omar Bencherif: Je suis reconnaissant envers VERITAL pour leur assistance précieuse dans la réalisation de nos objectifs de conformité et de sécurité. Leur expertise et leur engagement envers l'excellence ont été un véritable atout pour notre entreprise.",
+    "ar": "عمر بن شريف: أنا ممتن لفريطال على مساعدتهم القيمة في تحقيق أهدافنا فيما يتعلق بالامتثال والأمان. كانت خبرتهم والتزامهم بالتميز موردًا حقيقيًا لشركتنا."
+  }
 },
 {
   "_id": {
-    "$oid": "6641e6d75e2f2d6acbd89349"
+    "$oid": "66856325e6f4d6a9f219af31"
   },
-  "lang": "ar",
-  "text": "أمينة الخالدي: تجاوزت فريطال كل توقعاتنا فيما يتعلق بالرقابة والجودة. لقد جعل فريقهم المؤهل واهتمامهم بالتفاصيل الفارق في نجاح مشاريعنا. نحن راضون للغاية عن عملهم."
+  "text": {
+    "en": "Sophia Meziani: VERITAL has been a trusted partner in our journey to continuous improvement. Their proactive approach and willingness to go the extra mile have been essential to ensuring the quality and compliance of our products.",
+    "fr": "Sophia Meziani: VERITAL a été un partenaire de confiance dans notre parcours vers l'amélioration continue. Leur approche proactive et leur volonté d'aller au-delà des attentes ont été essentielles pour garantir la qualité et la conformité de nos produits.",
+    "ar": "صوفيا مزياني: كانت فريطال شريكًا موثوقًا به في رحلتنا نحو التحسين المستمر. نهجهم الاستباقي واستعدادهم لتجاوز التوقعات كانا أساسيين في ضمان جودة منتجاتنا ومطابقتها."
+  }
 },
 {
   "_id": {
-    "$oid": "6641e6d75e2f2d6acbd8934a"
+    "$oid": "66856325e6f4d6a9f219af32"
   },
-  "lang": "ar",
-  "text": "كريم بوجلال: أوصي بشدة بخدمات فريطال لأي شركة تبحث عن حلول موثوقة وفعالة للرقابة على الجودة. يجعل فريقهم المؤهل والتزامهم بالتميز شريكًا قيمًا في مجالنا."
+  "text": {
+    "en": "Karim Boudjellal: I highly recommend VERITAL's services to any company seeking reliable and efficient quality control solutions. Their competent team and commitment to excellence make them a valuable partner in our industry.",
+    "fr": "Karim Boudjellal: Je recommande vivement les services de VERITAL à toute entreprise cherchant des solutions de contrôle de qualité fiables et efficaces. Leur équipe compétente et leur engagement envers l'excellence en font un partenaire précieux dans notre secteur d'activité.",
+    "ar": "كريم بوجلال: أوصي بشدة بخدمات فريطال لأي شركة تبحث عن حلول موثوقة وفعالة للرقابة على الجودة. يجعل فريقهم المؤهل والتزامهم بالتميز شريكًا قيمًا في مجالنا."
+  }
 }]

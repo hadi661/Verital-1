@@ -1,18 +1,9 @@
-// models/brands.js
+// models/brand.js
 
 const mongoose = require('mongoose');
 
 const brandSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    pictures: {
-        type: [String],
-        required: true
-    }
+  pictures: [String] // Assuming pictures are stored as strings (paths)
 });
 
-const Brand = mongoose.model('Brand', brandSchema);
-
-module.exports = Brand;
+module.exports = mongoose.model('Brand', brandSchema);

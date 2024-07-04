@@ -12,35 +12,52 @@ const Testimonial = require('../models/testimonials');
 const News = require('../models/news');
 const connectDB = require('../config/db');
 const Services = require('../models/services');
+const Brand = require('../models/brands');
 // Connect to the database
 connectDB();
 router.get('/', async (req, res) => {
     try {
-        const lang = req.query.lang || 'fr';
-        const locals = {
-            title: "Verital Spa",
-            description: "siège veritas alger direction general DG",
-        };
-
-        const teams = await TeamMember.find();
-        const divisions = await Division.find();
-        const contact1 = await Contact.find();
-        const profileData = await ProfileCollection.findOne();
-        const aboutData = await About.findOne();
-        const slides = await Slide.find();
-        const allServices = await Services.find();
-         const topTeamMembers = await TeamMember.find().sort({ position: 1 }).limit(4);
-        
-        if (!profileData) {
-            return res.status(404).send('Profile data not found');
-        }
-        console.log('All Services:', allServices);
-        res.render('index', { locals, teams, services: allServices, topTeamMembers, divisions, contact1, profileData, aboutData, slides, currentRoute: '/', lang});
+      const lang = req.cookies.lang || 'fr'; // Default to French if not set
+      const locals = {
+        title: "Verital Spa",
+        description: "siège verital alger direction general DG",
+      };
+  
+      const teams = await TeamMember.find();
+      const divisions = await Division.find();
+       
+// Debugging line
+      const contact1 = await Contact.find();
+      const profileData = await ProfileCollection.findOne();
+      const aboutData = await About.findOne();
+      const slides = await Slide.find();
+      const allServices = await Service.find();
+      const topTeamMembers = await TeamMember.find().sort({ position: 1 }).limit(4);
+      const brands = await Brand.find();
+      if (!profileData) {
+        return res.status(404).send('Profile data not found');
+      }
+  
+      res.render('index', { 
+        locals, 
+        teams, 
+        services: allServices, 
+        topTeamMembers, 
+        divisions, 
+        lang, 
+        brands,
+        contact1, 
+        profileData, 
+        aboutData, 
+        slides, 
+        currentRoute: '/' 
+      });
     } catch (err) {
-        console.error(err);
-        res.status(500).send('Server Error');
+      console.error(err);
+      res.status(500).send('Server Error');
     }
-});
+  });
+  
 
 // Route to create a new team member
 router.post('/team', async (req, res) => {
@@ -123,36 +140,24 @@ router.delete('/division/:id', async (req, res) => {
     }
 });
 
-// Route to fetch and render a single division by name
 router.get('/division/:divisionName', async (req, res) => {
     try {
-        const locals = {
-            title: "Verital Spa",
-            description: "siège veritas alger direction general DG",
-        };
-        const divisionName = req.params.divisionName;
-        const division = await Division.findOne({ name: divisionName });
-        const divisions = await Division.find();
-        const teams = await TeamMember.find();
-        const services = await Service.find(); 
-        const contact1 = await Contact.find();
-        const profilData = await ProfileCollection.findOne();
-        const aboutData = await About.findOne();
-        const slides = await Slide.find();
-
-        console.log('Fetched Division:', division);
-
-        if (division) {
-            res.render('division', { division, services, divisions });
-        } else {
-            res.status(404).send('Division not found');
-        }
+      const divisionName = req.params.divisionName;
+      const lang = req.cookies.lang || 'fr'; // Default to French if not set
+      const division = await Division.findOne({ name: divisionName });
+      const services = await Service.find();
+      const divisions = await Division.find();
+  
+      if (division) {
+        res.render('division', { division, services, divisions, lang });
+      } else {
+        res.status(404).send('Division not found');
+      }
     } catch (err) {
-        console.error(err);
-        res.status(500).send('Server Error');
+      console.error(err);
+      res.status(500).send('Server Error');
     }
-});
-
+  });
 // Route to fetch all team members and top 4 team members by position
 router.get('/team', async (req, res) => {
     try {
@@ -498,4 +503,36 @@ router.get('/services/:serviceName', async (req, res) => {
         res.status(500).send('Server Error');
     }
 });
+// Route to fetch all brands
+router.get('/brands', async (req, res) => {
+    try {
+        const teams = await TeamMember.find();
+        const divisions = await Division.find();
+         
+  // Debugging line
+        const contact1 = await Contact.find();
+        const profileData = await ProfileCollection.findOne();
+        const aboutData = await About.findOne();
+        const slides = await Slide.find();
+        const allServices = await Service.find();
+        const topTeamMembers = await TeamMember.find().sort({ position: 1 }).limit(4);
+      const brands = await Brand.find();
+      res.render('index', { locals, 
+        teams, 
+        services: allServices, 
+        topTeamMembers, 
+        divisions, 
+        lang, 
+        brands,
+        contact1, 
+        profileData, 
+        aboutData, 
+        slides, 
+        currentRoute: '/' });
+    } catch (err) {
+      console.error(err);
+      res.status(500).send('Error fetching brands');
+    }
+  });
+  
 module.exports = router;
