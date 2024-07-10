@@ -22,7 +22,6 @@ router.get('/', async (req, res) => {
         title: "Verital Spa",
         description: "siège verital alger direction general DG",
       };
-  
       const teams = await TeamMember.find();
       const divisions = await Division.find();
        

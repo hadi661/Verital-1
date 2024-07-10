@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const bcrypt = require('bcrypt');
+
 const { isAuthenticated, isAdmin } = require('../middleware/auth');
 const Blog = require('../models/Blog');
 const Services = require('../models/services');
@@ -11,28 +13,31 @@ const About = require('../models/about');
 const Profil = require('../models/profil');
 const Slide = require('../models/slide');
 const User = require('../models/User');
-const bcrypt = require('bcrypt');
-//  middleware to all routes in this router
+
+// Middleware to check if the user is authenticated and is an admin
 router.use(isAuthenticated);
 router.use(isAdmin);
+
+router.get('/dashboard', (req, res) => {
+    res.render('dashboard');
+});
+
 // Login Route
 router.post('/login', async (req, res) => {
     const { username, password } = req.body;
 
     try {
         const user = await User.findOne({ username });
-        if (!user) {
-            return res.status(400).send('Invalid username or password');
+        if (!user || !await bcrypt.compare(password, user.password)) {
+            return res.render('login', { error: 'Invalid credentials' });
         }
 
-        const isMatch = await bcrypt.compare(password, user.password);
-        if (!isMatch) {
-            return res.status(400).send('Invalid username or password');
-        }
-
-        // Set user session
-        req.session.userId = user._id;
-        res.redirect('/admin');
+        req.session.user = {
+            id: user._id,
+            username: user.username,
+            role: user.role
+        };
+        res.redirect('/admin/dashboard');
     } catch (err) {
         console.error(err);
         res.status(500).send('Server Error');
@@ -43,21 +48,26 @@ router.post('/login', async (req, res) => {
 router.get('/logout', (req, res) => {
     req.session.destroy(err => {
         if (err) {
-            return res.status(500).send('Server Error');
+            console.error(err);
+            res.status(500).send('Server Error');
+        } else {
+            res.redirect('/login');
         }
-        res.redirect('/login');
     });
 });
+
 // Dashboard home
 router.get('/', async (req, res) => {
     try {
-        const blogCount = await Blog.countDocuments();
-        const serviceCount = await Services.countDocuments();
-        const testimonialCount = await Testimonial.countDocuments();
-        const contactCount = await Contact.countDocuments();
-        const divisionCount = await Division.countDocuments();
-        const teamMemberCount = await TeamMember.countDocuments();
-        const slideCount = await Slide.countDocuments();
+        const [blogCount, serviceCount, testimonialCount, contactCount, divisionCount, teamMemberCount, slideCount] = await Promise.all([
+            Blog.countDocuments(),
+            Services.countDocuments(),
+            Testimonial.countDocuments(),
+            Contact.countDocuments(),
+            Division.countDocuments(),
+            TeamMember.countDocuments(),
+            Slide.countDocuments()
+        ]);
 
         res.render('admin/dashboard', { blogCount, serviceCount, testimonialCount, contactCount, divisionCount, teamMemberCount, slideCount });
     } catch (err) {
@@ -321,8 +331,8 @@ router.delete('/team-members/:id', async (req, res) => {
 // Routes for managing About
 router.get('/about', async (req, res) => {
     try {
-        const about = await About.findOne();
-        res.render('admin/about', { about });
+        const aboutData = await About.find();
+        res.render('admin/about', { aboutData });
     } catch (err) {
         console.error(err);
         res.status(500).send('Server Error');
@@ -359,8 +369,6 @@ router.delete('/about/:id', async (req, res) => {
         res.status(500).send('Server Error');
     }
 });
-
-// Routes for managing Profile
 router.get('/profile', async (req, res) => {
     try {
         const profile = await Profil.findOne();
@@ -370,6 +378,7 @@ router.get('/profile', async (req, res) => {
         res.status(500).send('Server Error');
     }
 });
+
 
 router.post('/profile', async (req, res) => {
     try {
