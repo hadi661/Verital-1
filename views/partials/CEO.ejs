@@ -37,8 +37,6 @@
                             <h4 class="sec-head"><%= profileData.CEO.title || 'Title not available' %></h4>
                         </a>
                         <p><%= profileData.CEO.content || 'Content not available' %></p>
-                         <p><%= profileData.CEO.additionalContent %></p>
-                        <p><%= profileData.CEO.text %></p>
                         <% if (profileData.CEO.quotes && profileData.CEO.quotes.length > 0) { %>
                             <% profileData.CEO.quotes.forEach(quote => { %>
                                 <ul>
@@ -48,7 +46,7 @@
                                 </ul>
                             <% }) %>
                         <% } %>
-                       
+                        <p><%= profileData.CEO.text %></p>
                     </div>
                 </div>
             </div>

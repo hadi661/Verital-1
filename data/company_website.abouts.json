@@ -1,22 +1,10 @@
 [{
   "_id": {
-    "$oid": "668bc0c79b246363d44dcad9"
+    "$oid": "6652018d93f5400321b623a0"
   },
-  "title": {
-    "ar": "من نحن",
-    "en": "About Us",
-    "fr": "À propos de nous"
-  },
-  "content": {
-    "ar": "VERITAL هي شركة مساهمة (EPE/SPA) بموجب القانون الجزائري، تدار بشكل احترافي وتم إنشاؤها في عام 1989. يتمثل نشاطها، في الجزائر والخارج، في مراقبة النقل والصناعة ومراقبة مطابقة المنتجات التجارية الدولية و جودة. اهتمامها الرئيسي هو ضمان تعزيز سلامة الأشخاص والبضائع في قطاعي النقل والجودة.",
-    "en": "VERITAL is an EPE/SPA (Joint Stock Company) under Algerian law, professionally managed and created in 1989. Its activity consists, in Algeria and abroad, of the control of transport, of industry, of the conformity control of commercial products. international and quality. Its major concern is to ensure the promotion of the safety of people and goods in the transport and quality sectors.",
-    "fr": "VERITAL est une EPE/SPA (Société Par Actions) de droit algérien gérée professionnellement et crée en 1989. Son activité consiste, en Algérie et à l’étranger au contrôle des transports, de l’industrie, au contrôle de conformité des produits du commerce international et de qualité. Son souci majeur est d’assurer la promotion de la sécurité des personnes et des biens dans les secteurs des transports et de la qualité."
-  },
-  "text": {
-    "ar": "بفضل فريقها المؤهل تأهيلا عاليا مهندسين وخبراء وغيرهم وذوي الخبرة الطويلة والغنية في مختلف الأنشطة. تمتلك فريطال الوسائل والقدرات اللازمة لتلبية متطلبات عملائها بشكل مستدام من خلال المساعدة والاستماع المنظم والدائم",
-    "en": "Thanks to its highly qualified team (engineers, experts, etc.) with long and rich experience in different activities. VERITAL has the means and capabilities necessary to sustainably satisfy the requirements of its customers through organized and permanent assistance and listening.",
-    "fr": "Grâce à son équipe hautement qualifiée (ingénieurs, experts, …) avec une longue et riche expérience dans différentes activités. VERITAL possède les moyens et les capacités nécessaires de satisfaire durablement les exigences de ses clients par une assistance et une écoute organisées et permanentes."
-  },
+  "quotes": [
+    "test to see if .."
+  ],
   "additionalContent": {
     "ar": [
       "شبكة وطنية فعالة: مزيج فريد من الشبكة الوطنية والحضور المحلي القوي والاستجابة القوية وجودة الخدمات.",
@@ -46,19 +34,27 @@
       "VERITAL est présente sur tout le territoire national: Direction Générale : Alger; Division : Oran; Division : Béjaia; Division : Hassi Messaoud; Division : Annaba."
     ]
   },
-  "quotes": [
-    {
-      "ar": "اقتباس باللغة العربية",
-      "en": "Quote in English",
-      "fr": "Citation en français"
-    }
-  ],
+  "content": {
+    "ar": "VERITAL هي شركة مساهمة (EPE/SPA) بموجب القانون الجزائري، تدار بشكل احترافي وتم إنشاؤها في عام 1989. يتمثل نشاطها، في الجزائر والخارج، في مراقبة النقل والصناعة ومراقبة مطابقة المنتجات التجارية الدولية و جودة. اهتمامها الرئيسي هو ضمان تعزيز سلامة الأشخاص والبضائع في قطاعي النقل والجودة.",
+    "en": "VERITAL is an EPE/SPA (Joint Stock Company) under Algerian law, professionally managed and created in 1989. Its activity consists, in Algeria and abroad, of the control of transport, of industry, of the conformity control of commercial products. international and quality. Its major concern is to ensure the promotion of the safety of people and goods in the transport and quality sectors.",
+    "fr": "VERITAL est une EPE/SPA (Société Par Actions) de droit algérien gérée professionnellement et crée en 1989. Son activité consiste, en Algérie et à l’étranger au contrôle des transports, de l’industrie, au contrôle de conformité des produits du commerce international et de qualité. Son souci majeur est d’assurer la promotion de la sécurité des personnes et des biens dans les secteurs des transports et de la qualité."
+  },
   "images": [
     "/public/img/about/1.jpg",
     "/public/img/1/ser1-600x399.jpg",
     "/public/img/about/3.png",
     "/public/img/about/slide 8.jpg"
   ],
+  "text": {
+    "ar": "بفضل فريقها المؤهل تأهيلا عاليا مهندسين وخبراء وغيرهم وذوي الخبرة الطويلة والغنية في مختلف الأنشطة. تمتلك فريطال الوسائل والقدرات اللازمة لتلبية متطلبات عملائها بشكل مستدام من خلال المساعدة والاستماع المنظم والدائم",
+    "en": "Thanks to its highly qualified team (engineers, experts, etc.) with long and rich experience in different activities. VERITAL has the means and capabilities necessary to sustainably satisfy the requirements of its customers through organized and permanent assistance and listening.",
+    "fr": "Grâce à son équipe hautement qualifiée (ingénieurs, experts, …) avec une longue et riche expérience dans différentes activités. VERITAL possède les moyens et les capacités nécessaires de satisfaire durablement les exigences de ses clients par une assistance et une écoute organisées et permanentes."
+  },
+  "title": {
+    "ar": "من نحن",
+    "en": "Verital PROFILE",
+    "fr": "PROFIL Verital"
+  },
   "videos": [
     "https://www.youtube.com/embed/V6539Psow84"
   ]

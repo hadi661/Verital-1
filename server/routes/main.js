@@ -340,7 +340,6 @@ router.get('/about', async (req, res) => {
             title: "Verital Spa",
             description: "siège veritas alger direction general DG",
         };
-        
         const aboutData = await About.findOne({}, {
             [`title.${lang}`]: 1,
             [`content.${lang}`]: 1,
