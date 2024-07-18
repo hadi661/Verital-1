@@ -1,0 +1,94 @@
+<!-- Start About area -->
+<div id="about" class="about-area area-padding" translate="yes">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="section-headline text-center">
+          <h2><%= aboutData.title[lang] %></h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- single-well start-->
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="well-left">
+          <div class="single-well">
+            <a href="#">
+              <img src="<%= aboutData.images[0] %>" alt="">
+            </a>
+          </div>
+          <div class="image-container1">
+            <div class="video-box">
+              <a class="venobox play-btn mb-4" data-autoplay="true" data-vbtype="video" href="<%= aboutData.videos[0] %>"></a>
+              <img src="<%= aboutData.images[1] %>" class="img-fluid" alt="">
+            </div>
+          </div>
+          <div class="image-container">
+            <a href="#">
+              <img src="<%= aboutData.images[2] %>" alt="">
+            </a>
+          </div>
+          <div class="single-well">
+            <a href="#">
+              <img src="<%= aboutData.images[3] %>" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- single-well end-->
+      <div class="col-md-6 col-sm-6 col-xs-12" translate="yes">
+        <div class="well-middle">
+          <div class="single-well">
+            <a href="#">
+              <h4 class="sec-head"><%= aboutData.title[lang] %></h4>
+            </a>
+            <p><%= aboutData.content[lang] %></p>
+            <p><%= aboutData.text[lang] %></p>
+            <ul>
+              <% for (let i = 0; i < 3 && i < aboutData.additionalContent[lang].length; i++) { %>
+                <li><i class="fa fa-check"></i> <%= aboutData.additionalContent[lang][i] %></li>
+              <% } %>
+            </ul>
+            <a href="#">
+              <h4 class="sec-head"><%= __('VERITAL est chargée notamment :')%></h4>
+            </a>
+            <ul>
+              <li><i class="fa fa-check"></i> <%= aboutData.additionalContent[lang][4] %></li>
+            </ul>
+            
+            <a href="#">
+              <h4 class="sec-head"><%= __('VERITAL assure à ses clients:')%></h4>
+            </a>
+            <ul>
+              <li><i class="fa fa-check"></i> <%= aboutData.additionalContent[lang][5] %></li>
+            </ul>
+            
+            <a href="#">
+              <h4 class="sec-head"><%= __('VERITAL est présente sur tout le territoire national:')%></h4>
+            </a>
+            <ul>
+              <li><i class="fa fa-check" ></i><%= __('Direction Générale : Alger ') %></li>
+              <li><i class="fa fa-check" ></i><%= __('Division : Oran ') %></li>
+              <li><i class="fa fa-check" ></i><%= __('Division : Béjaia ') %></li>
+              <li><i class="fa fa-check" ></i><%= __('Division : Hassi Messaoud ') %></li>
+              <li><i class="fa fa-check" ></i><%= __('Division : Annaba ') %></li>
+              
+            </ul>
+            <!-- <ul>
+              <% 
+                const lastItemIndex = aboutData.additionalContent[lang].length - 1;
+                const lastItem = aboutData.additionalContent[lang][lastItemIndex];
+              %>
+              <li><i class="fa fa-check"></i> <%= lastItem %></li>
+            </ul> -->
+            
+              
+            
+          </div>
+        </div>
+      </div>
+      <!-- End col-->
+    </div>
+  </div>
+</div>
+<!-- End About area -->

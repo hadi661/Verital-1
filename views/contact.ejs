@@ -1,0 +1,163 @@
+<%- include('partials/header.ejs', { currentRoute: '/contact' }) %>
+
+<!-- Start Google Map -->
+<div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21888.55382199453!2d3.0606491!3d36.7146951!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fad0afd9463ab%3A0xa88e2f6cd6697730!2sVERITAL%20-%20Direction%20G%C3%A9n%C3%A9rale!5e1!3m2!1sen!2sdz!4v1714042568588!5m2!1sen!2sdz" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div> <br>
+<!-- End Google Map -->
+
+<!-- Start Content -->
+<div class="container">
+    <div class="contact-area">
+        <% contact1.forEach(contact => { %>
+            <div class="contact-item">
+                <div class="contact-icon text-center">
+                    <div class="single-icon">
+                        <i class="fa fa-globe"></i>
+                        <b><h5><u><%= contact.name %></u></h5></b>
+                        <a href="https://www.google.com/maps/search/<%= encodeURIComponent(contact.address) %>" target="_blank">
+                            <p><%= contact.address.replace(/, /g, '') %></p>
+                        </a>
+                        <a href="tel:<%= contact.phone.join('').replace(/\s/g, '') %>">Appelez-nous au <%= contact.phone.join(' / ') %></a>
+                        <a href="mailto:<%= contact.email %>"><%= contact.email %></a>
+                        <% if (contact.website) { %>
+                            <a href="<%= contact.website %>" target="_blank">Web: <%= contact.website %></a>
+                        <% } %>
+                        <% if (Array.isArray(contact.fax)) { %>
+                            <p>Fax: <%= contact.fax.join(', ') %></p>
+                        <% } else if (contact.fax) { %>
+                            <p>Fax: <%= contact.fax %></p>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+<!-- End Content -->
+ <!-- Start Suscrive Area -->
+ <div id="Suscrive" class="section-headline text-center">
+    <h2>Approuvé par les plus grandes marques</h2>
+  </div>
+  <div class="slider-container">
+  <div class="slider">
+  <div class="slide">
+    <img src="/public/img/1/1.png" alt="" />
+    <img src="/public/img/1/2.png" alt="" />
+    <img src="/public/img/1/24-225x202.png" alt="" />
+    <img src="/public/img/1/25-240x202.png" alt="" />
+    <img src="/public/img/1/27-231x202.png" alt="" />
+    <img src="/public/img/1/29-225x202.png" alt="" />
+    <img src="/public/img/1/30-320x202.png" alt="" />
+    <img src="/public/img/client/1.png" alt="" />
+    <img src="/public/img/client/3.png" alt="" />
+    <img src="/public/img/client/26.png" alt="" />
+    <img src="/public/img/client/4.png" alt="" /> <!-- Duplicate the first image to create a loop -->
+    <img src="img/1/1.png" alt="" />
+  </div>
+  </div>
+  </div>
+  
+  
+  <!-- End Suscrive Area -->
+  <!-- Start contact Area -->
+  <div id="contact" class="contact-area">
+  <div class="contact-inner area-padding">
+  <div class="contact-overly"></div>
+  <div class="container ">
+  <div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+  <div class="section-headline text-center">
+    <h2>Contactez-nous</h2>
+  </div>
+  </div>
+  </div>
+  <div class="row">
+  <!-- Start contact icon column -->
+  <div class="col-md-4 col-sm-4 col-xs-12">
+  <div class="contact-icon text-center">
+    <div class="single-icon">
+      <i class="fa fa-mobile"></i>
+      <a href="tel:+21323701727"><P>Appelez-nous au +213 (0) 23 70 17 27</P></a>
+      <p>
+        Fax: +213 (0) 23 70 17 28<br>
+        <span>Dimanche-jeudi (8h-16h)</span>
+      </p>
+    </div>
+  </div>
+  </div>
+  <!-- Start contact icon column -->
+  <div class="col-md-4 col-sm-4 col-xs-12">
+  <div class="contact-icon text-center">
+    <div class="single-icon">
+      <i class="fa fa-envelope-o"></i>
+      <a href="mailto:dg@verital.dz"> <p>dg@verital.dz</p></a>
+      <p>
+        <a href="https://www.verital.dz " target="_blank"><p> Web:  www.verital.dz </p></a>
+       
+      
+    </div>
+  </div>
+  </div>
+  <!-- Start contact icon column -->
+  <div class="col-md-4 col-sm-4 col-xs-12">
+  <div class="contact-icon text-center">
+    <div class="single-icon">
+      <i class="fa fa-map-marker"></i>
+      <a href="https://www.google.com/maps/search/38,+Lotissement+Pons+Kouba,+Alger" target="_blank"><p>
+        38, Lotissement Pons<br>
+        <span>Kouba – Alger</span>
+      </p></a>
+  
+      
+    </div>
+  </div>
+  </div>
+  </div>
+  <div class="row">
+  
+  <!-- Start Google Map -->
+  <div class="col-md-6 col-sm-6 col-xs-12">
+  <!-- Start Map -->
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21888.55382199453!2d3.0606491!3d36.7146951!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fad0afd9463ab%3A0xa88e2f6cd6697730!2sVERITAL%20-%20Direction%20G%C3%A9n%C3%A9rale!5e1!3m2!1sen!2sdz!4v1714042568588!5m2!1sen!2sdz" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <!-- End Map -->
+  </div>
+  <!-- End Google Map -->
+  
+  <!-- Start  contact -->
+  <div class="col-md-6 col-sm-6 col-xs-12">
+  <div class="form contact-form">
+    <div id="sendmessage">Votre message a été envoyé. Merci!</div>
+    <div id="errormessage"></div>
+    <form action="" method="post" role="form" class="contactForm">
+      <div class="form-group">
+        <input type="text" name="name" class="form-control" id="name" placeholder="votre nom" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+        <div class="validation"></div>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" name="email" id="email" placeholder="votre Email" data-rule="email" data-msg="Please enter a valid email" />
+        <div class="validation"></div>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" name="subject" id="subject" placeholder="Sujet" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+        <div class="validation"></div>
+      </div>
+      <div class="form-group">
+        <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="S'il te plaît, écris quelque chose pour nous" placeholder="Message"></textarea>
+        <div class="validation"></div>
+      </div>
+      <div class="text-center"><button type="submit">Envoyer message</button></div>
+    </form>
+  </div>
+  </div>
+  <!-- End Left contact -->
+  </div>
+  </div>
+  </div>
+  </div>
+  <!-- End Contact Area -->
+  <%- include ('partials/footer.ejs')%>
+  
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  
+<%- include ('partials/lib.ejs')%>

@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+<h1>Manage Slides</h1>
+<form action="/admin/slides" method="POST">
+    <input type="text" name="src" placeholder="Image Source" required>
+    <input type="text" name="alt" placeholder="Alt Text">
+    <input type="text" name="title" placeholder="Title" required>
+    <button type="submit">Add Slide</button>
+</form>
+<ul>
+    <% slides.forEach(slide => { %>
+        <li>
+            <img src="<%= slide.src %>" alt="<%= slide.alt %>">
+            <form action="/admin/slides/<%= slide._id %>?_method=PUT" method="POST">
+                <input type="text" name="src" value="<%= slide.src %>" required>
+                <input type="text" name="alt" value="<%= slide.alt %>">
+                <input type="text" name="title" value="<%= slide.title %>" required>
+                <button type="submit">Update</button>
+            </form>
+            <form action="/admin/slides/<%= slide._id %>?_method=DELETE" method="POST">
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+    <% }) %>
+</ul>
+<%- include('../partials/footer') %>

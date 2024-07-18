@@ -1,0 +1,52 @@
+[{
+  "_id": {
+    "$oid": "6641e7a65e2f2d6acbd8934b"
+  },
+  "name": "Mr. Mohammed Nbil Hamo",
+  "position": "PDG",
+  "image": "img/team/1.png",
+  "socialMedia": {
+    "facebook": "#",
+    "twitter": "#",
+    "instagram": "#"
+  }
+},
+{
+  "_id": {
+    "$oid": "6641e7a65e2f2d6acbd8934c"
+  },
+  "name": "Mr. Mohammed Nbil Hamo",
+  "position": "PDG",
+  "image": "img/team/1.png",
+  "socialMedia": {
+    "facebook": "#",
+    "twitter": "#",
+    "instagram": "#"
+  }
+},
+{
+  "_id": {
+    "$oid": "6641e7a65e2f2d6acbd8934d"
+  },
+  "name": "Mr. Mohammed Nbil Hamo",
+  "position": "CEO",
+  "image": "img/team/1.png",
+  "socialMedia": {
+    "facebook": "#",
+    "twitter": "#",
+    "instagram": "#"
+  }
+},
+{
+  "_id": {
+    "$oid": "6641e7a65e2f2d6acbd8934e"
+  },
+  "name": "Mr. Mohammed Nbil Hamo",
+  "position": "CEO",
+  "image": "img/team/1.png",
+  "socialMedia": {
+    "facebook": "#",
+    "twitter": "#",
+    "instagram": "#"
+  }
+}]

@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "66573b25c4e7024d237f42d7"
+  },
+  "CEO": {
+    "title": {
+      "en": "CEO Title English",
+      "fr": "MOT DU PDG",
+      "ar": "عنوان المدير التنفيذي بالعربية"
+    },
+    "content": {
+      "en": "CEO Content English",
+      "fr": "VERITAL est de plus en plus sollicité pour contribuer aux débats sur la « sécurité » et « analyse de problèmes potentiels ». J’y vois un signe de changement dans le regard des responsables sur cette entreprise et le début d’une reconnaissance des efforts engagés et des responsabilités courageusement assumées dans ces domaines.",
+      "ar": "محتوى المدير التنفيذي بالعربية"
+    },
+    "quotes": [
+      {
+        "en": "Quote in English",
+        "fr": "VERITAL, n’est pas tout à fait comme les autres, ses missions de service public, sa culture de la gestion du risque et la standardisation au plan international de ses métiers sont une réalité que nul ne doit ignorer dans l’ intérêt bien compris de la sécurité et du confort du citoyen et du suivi des engagements conventionnels de notre pays au plan international. ",
+        "ar": "اقتباس باللغة العربية"
+      },
+      {
+        "fr": "VERITAL, s’est résolument engagée dans la voie du développement, sans doute au bon moment et certainement à la satisfaction du citoyen qu’elle sert sans qu’ il le sache et des pouvoirs publics qu’elle représente et assiste au plan opérationnel pour assurer leurs responsabilités légales et réglementaires voire constitutionnelles, puisque l’État est responsable vis-à-vis de ses citoyens. "
+      },
+      {
+        "fr": " Somme toute, VERITAL apporte sa contribution précieuse à la sécurité des personnes et des biens"
+      }
+    ],
+    "text": {
+      "en": "Additional text in English",
+      "fr": "\nJe suis convaincu que, forte de ce nouveau regard porté sur elle,VERITAL saura relever le défi, ambitieux certes mais réaliste, d’ être l’entreprise publique de référence en Algérie dans le domaine de la supervision de la sécurité tant en termes d’expertises techniques que de conseils et analyse de problèmes potentiels.\n\nElle continuera de développer sa capacité à promouvoir, en les faisant cohabiter, la sécurité et la protection de l’environnement dans les activités spécifiques de l’aéronautique, des transports maritimes, guidés et de l’ industrie.\n\nC’est en fait pour VERITAL, modeste par sa taille mais stratégique par ses missions et responsabilités et la conscience de son rôle d’entreprise citoyenne, un défi majeur car en dépend sa capacité à mener dans la durée sa politique de croissance par le partenariat et affermir son rôle de représentant exclusif des pouvoirs publics en gagnant leur confiance et en veillant au respect de leurs engagements conventionnels au plan international.",
+      "ar": "نص إضافي باللغة العربية"
+    },
+    "additionalContent": {
+      "en": "Additional content in English",
+      "fr": "Les responsabilités, la diversité de ses relations et services avec et pour le compte des pouvoirs publics font partie de ses spécificités.",
+      "ar": "محتوى إضافي بالعربية"
+    },
+    "images": [
+      "/public/img/about/3.png",
+      "/public/img/about/4.png"
+    ],
+    "_id": {
+      "$oid": "66573b25c4e7024d237f42d8"
+    }
+  },
+  "__v": 0
+}]

@@ -1,0 +1,104 @@
+[{
+  "_id": {
+      "$oid": "665f1bb477b2994e6c3a0d55"
+  },
+  "title": {
+      "en": "Sample News Article",
+      "fr": "Article de presse d'échantillon",
+      "ar": "مقالة أخبار عينية"
+  },
+  "category": {
+      "en": "Sample Category",
+      "fr": "Catégorie d'échantillon",
+      "ar": "فئة عينية"
+  },
+  "content": {
+    "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies malesuada erat, vel lacinia sapien sodales et. Sed rhoncus dolor in tortor efficitur, sed gravida sapien varius. Duis nec lectus vel urna congue auctor. Nam ut tempor neque. Vivamus vel gravida eros. Morbi ultricies pharetra convallis. Cras dapibus felis et ipsum cursus luctus. Integer eget posuere eros. In hac habitasse platea dictumst. Sed vel eros ut turpis hendrerit finibus. Ut vel vehicula mi. Fusce id justo quis dolor gravida facilisis.",
+      "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies malesuada erat, vel lacinia sapien sodales et. Sed rhoncus dolor in tortor efficitur, sed gravida sapien varius. Duis nec lectus vel urna congue auctor. Nam ut tempor neque. Vivamus vel gravida eros. Morbi ultricies pharetra convallis. Cras dapibus felis et ipsum cursus luctus. Integer eget posuere eros. In hac habitasse platea dictumst. Sed vel eros ut turpis hendrerit finibus. Ut vel vehicula mi. Fusce id justo quis dolor gravida facilisis.",
+      "ar": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies malesuada erat, vel lacinia sapien sodales et. Sed rhoncus dolor in tortor efficitur, sed gravida sapien varius. Duis nec lectus vel urna congue auctor. Nam ut tempor neque. Vivamus vel gravida eros. Morbi ultricies pharetra convallis. Cras dapibus felis et ipsum cursus luctus. Integer eget posuere eros. In hac habitasse platea dictumst. Sed vel eros ut turpis hendrerit finibus. Ut vel vehicula mi. Fusce id justo quis dolor gravida facilisis."
+  },
+  "date": {
+      "$date": "2024-06-04T13:50:44.787Z"
+  },
+  "pictures": "/public/img/blog/566.jpg",
+  "comments": [
+      {
+          "user": "User1",
+          "text": "Great article!QDFDDFSDFSDF",
+          "date": {
+              "$date": "2024-06-04T13:50:44.788Z"
+          },
+          "reactions": {
+              "likes": 0,
+              "dislikes": 0
+          },
+          "replies": [
+              {
+                  "user": "ReplyUser1",
+                  "text": "This is a reply.",
+                  "date": {
+                      "$date": "2024-06-09T13:02:37.638Z"
+                  }
+              },
+              {
+                  "user": "ReplyUser2",
+                  "text": "Another reply.",
+                  "date": {
+                      "$date": "2024-06-09T13:02:37.638Z"
+                  }
+              }
+          ]
+      }
+  ],
+  "reactions": {
+      "likes": 10,
+      "dislikes": 2
+  },
+  "videos": [
+      "https://fb.watch/sCG3_qTRBi/",
+      "https://www.facebook.com/verital.officiel/videos/828764498993258/",
+      "https://www.facebook.com/verital.officiel/videos/1280376879181608/"
+  ]
+},
+
+{
+  "_id": { "$oid": "665f1bb477b2994e6c3a0d55" },
+  "title": { "en": "Sample News Article", "fr": "Article de presse d'échantillon", "ar": "مقالة أخبار عينية" },
+  "category": { "en": "Sample Category", "fr": "Catégorie d'échantillon", "ar": "فئة عينية" },
+  "content": {
+    "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies malesuada erat, vel lacinia sapien sodales et. Sed rhoncus dolor in tortor efficitur, sed gravida sapien varius. Duis nec lectus vel urna congue auctor. Nam ut tempor neque. Vivamus vel gravida eros. Morbi ultricies pharetra convallis. Cras dapibus felis et ipsum cursus luctus. Integer eget posuere eros. In hac habitasse platea dictumst. Sed vel eros ut turpis hendrerit finibus. Ut vel vehicula mi. Fusce id justo quis dolor gravida facilisis.",
+    "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies malesuada erat, vel lacinia sapien sodales et. Sed rhoncus dolor in tortor efficitur, sed gravida sapien varius. Duis nec lectus vel urna congue auctor. Nam ut tempor neque. Vivamus vel gravida eros. Morbi ultricies pharetra convallis. Cras dapibus felis et ipsum cursus luctus. Integer eget posuere eros. In hac habitasse platea dictumst. Sed vel eros ut turpis hendrerit finibus. Ut vel vehicula mi. Fusce id justo quis dolor gravida facilisis.",
+    "ar": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies malesuada erat, vel lacinia sapien sodales et. Sed rhoncus dolor in tortor efficitur, sed gravida sapien varius. Duis nec lectus vel urna congue auctor. Nam ut tempor neque. Vivamus vel gravida eros. Morbi ultricies pharetra convallis. Cras dapibus felis et ipsum cursus luctus. Integer eget posuere eros. In hac habitasse platea dictumst. Sed vel eros ut turpis hendrerit finibus. Ut vel vehicula mi. Fusce id justo quis dolor gravida facilisis."
+  },
+  "date": { "$date": "2024-06-04T13:50:44.787Z" },
+  "pictures": "/public/img/blog/566.jpg",
+  "comments": [
+    {
+      "user": "User1",
+      "text": "Great article!QDFDDFSDFSDF",
+      "date": { "$date": "2024-06-04T13:50:44.788Z" },
+      "reactions": { "likes": 0, "dislikes": 0 },
+      "replies": [
+        { "user": "ReplyUser1", "text": "This is a reply.", "date": { "$date": "2024-06-09T13:02:37.638Z" } },
+        { "user": "ReplyUser2", "text": "Another reply.", "date": { "$date": "2024-06-09T13:02:37.638Z" } }
+      ]
+    },
+    {
+      "user": "User2",
+      "text": "Interesting topic.qdqdsdqDEQRRRRRRRbf<f",
+      "date": { "$date": "2024-06-04T13:50:44.788Z" },
+      "reactions": { "likes": 0, "dislikes": 0 },
+      "replies": [
+        { "user": "ReplyUser1", "text": "This is a reply.", "date": { "$date": "2024-06-09T13:02:37.638Z" } },
+        { "user": "ReplyUser2", "text": "Another reply.", "date": { "$date": "2024-06-09T13:02:37.638Z" } }
+      ]
+    }
+  ],
+  "reactions": { "likes": 10, "dislikes": 2 },
+  "videos": [
+    "https://fb.watch/sCG3_qTRBi/",
+    "https://www.facebook.com/verital.officiel/videos/828764498993258/",
+    "https://www.facebook.com/verital.officiel/videos/1280376879181608/"
+  ]
+}
+]

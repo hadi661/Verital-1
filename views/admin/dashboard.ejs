@@ -1,0 +1,89 @@
+<%- include('../partials/header') %>
+<h1>Admin Dashboard</h1>
+<a href="/admin/slides">Manage Slides</a>
+<a href="/admin/profile">Manage Profiles</a>
+<a href="/admin/about">Manage About</a>
+<a href="/admin/team">Manage Teams</a>
+<a href="/admin/division">Manage Divisions</a>
+<a href="/admin/contact">Manage Contacts</a>
+<%- include('../partials/footer') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/admin.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Admin Dashboard</h1>
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Blogs</h5>
+                        <p class="card-text">Total: <%= blogCount %></p>
+                        <a href="/admin/blogs" class="btn btn-primary">Manage Blogs</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Services</h5>
+                        <p class="card-text">Total: <%= serviceCount %></p>
+                        <a href="/admin/services" class="btn btn-primary">Manage Services</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Testimonials</h5>
+                        <p class="card-text">Total: <%= testimonialCount %></p>
+                        <a href="/admin/testimonials" class="btn btn-primary">Manage Testimonials</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Contacts</h5>
+                        <p class="card-text">Total: <%= contactCount %></p>
+                        <a href="/admin/contacts" class="btn btn-primary">Manage Contacts</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Divisions</h5>
+                        <p class="card-text">Total: <%= divisionCount %></p>
+                        <a href="/admin/divisions" class="btn btn-primary">Manage Divisions</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Team Members</h5>
+                        <p class="card-text">Total: <%= teamMemberCount %></p>
+                        <a href="/admin/team-members" class="btn btn-primary">Manage Team Members</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Slides</h5>
+                        <p class="card-text">Total: <%= slideCount %></p>
+                        <a href="/admin/slides" class="btn btn-primary">Manage Slides</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

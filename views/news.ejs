@@ -1,0 +1,163 @@
+<%- include('partials/header.ejs', { currentRoute: '/news', newsData: newsData }) %>
+
+<!-- Start Bottom Header -->
+<div class="header-bg page-area">
+    <div class="home-overly"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="slider-content text-center">
+                    <div class="header-bottom">
+                        <div class="layer2 wow zoomIn" data-wow-duration="1s" data-wow-delay=".4s">
+                            <h1 class="title2">Verital ACTUALITÉS</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Header -->
+<div class="blog-page area-padding">
+    <div class="container">
+        <div class="row">
+           <!-- Sidebar -->
+           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <div class="page-head-blog">
+                <div class="single-blog-page">
+                    <!-- search option start -->
+                    <form action="/search" method="get">
+                        <div class="search-option">
+                            <input type="text" name="q" placeholder="Search...">
+                            <button class="button" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <!-- search option end -->
+                </div>
+                <div class="single-blog-page">
+                    <!-- recent start -->
+                    <div class="left-blog">
+                        <h4>Recent Post</h4>
+                        <div class="recent-post">
+                            <% newsData.forEach(news => { %>
+                                <div class="recent-single-post">
+                                    <div class="post-img">
+                                        <a href="/blog/<%= news._id %>">
+                                            <img src="<%= news.pictures %>" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="pst-content">
+                                        <p><a href="/blog/<%= news._id %>"> <%= news.title.en %> </a></p>
+                                    </div>
+                                </div>
+                            <% }); %>
+                        </div>
+                    </div>
+                    <!-- recent end -->
+                </div>
+                <div class="single-blog-page">
+                    <div class="left-blog">
+                        <h4>Categories</h4>
+                        <ul>
+                            <% newsData.forEach(news => { %>
+                                <li><a href="#"> <%= news.category.en %> </a></li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+                <div class="single-blog-page">
+                    <div class="left-blog">
+                        <h4>Archive</h4>
+                        <ul>
+                            <% newsData.forEach(news => { %>
+                                <li><a href="#"><%= new Date(news.date).toDateString() %></a></li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+                <div class="single-blog-page">
+                    <div class="left-tags blog-tags">
+                        <div class="popular-tag left-side-tags left-blog">
+                            <h4>Popular Tags</h4>
+                            <ul>
+                                <li><a href="#">Portfolio</a></li>
+                                <li><a href="#">Project</a></li>
+                                <li><a href="#">Design</a></li>
+                                <li><a href="#">wordpress</a></li>
+                                <li><a href="#">Joomla</a></li>
+                                <li><a href="#">Html</a></li>
+                                <li><a href="#">Masonry</a></li>
+                                <li><a href="#">Website</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Sidebar -->
+<!-- Main Content -->
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+    <div class="row">
+        <% newsData.forEach(news => { %>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="single-blog">
+                    <div class="article-container">
+                    <div class="single-blog-img">
+                        <a href="/blog/<%= news._id %>">
+                            <img src="<%= news.pictures %>" alt="">
+                        </a>
+                    </div>
+                    <div class="blog-meta">
+                        <span class="comments-type">
+                            <i class="fa fa-comment-o"></i>
+                            <a href="/blog/<%= news._id %>"><%= news.comments.length %></a>
+                            <i class="fa fa-thumbs-up"></i>
+                            <a href="/blog/<%= news._id %>"><%= news.reactions.likes %></a>
+                            <i class="fa fa-thumbs-down"></i>
+                            <a href="/blog/<%= news._id %>"><%= news.reactions.dislikes %></a> 
+                        </span>
+                        <span class="date-type">
+                            <i class="fa fa-calendar"></i> <%= new Date(news.date).toDateString() %>
+                        </span>
+                    </div>
+                    <div class="blog-text">
+                        <h4>
+                            <a href="/blog/<%= news._id %>"><%= news.title.en %></a>
+                        </h4>
+                            <% newsData.forEach(news => { %>
+                                <div class="news-item">
+                                    <p><%= news.shortContent %></p>
+                                </div>
+                            <% }); %>
+                        <span>
+                            <a href="/blog/<%= news._id %>" class="ready-btn">Read more</a>
+                        </span>
+                   
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+    <div class="blog-pagination">
+        <ul class="pagination">
+            <li><a href="?page=<%= Math.max(currentPage - 1, 1) %>">&lt;</a></li>
+            <% for (let i = 1; i <= totalPages; i++) { %>
+                <li class="<%= currentPage === i ? 'active' : '' %>">
+                    <a href="?page=<%= i %>"><%= i %></a>
+                </li>
+            <% } %>
+            <li><a href="?page=<%= Math.min(currentPage + 1, totalPages) %>">&gt;</a></li>
+        </ul>
+    </div>
+</div>
+<!-- End Main Content -->
+</div>
+</div>
+</div>
+</div>
+<%- include('partials/footer.ejs') %>
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+<!-- JavaScript Libraries -->
+<%- include('partials/lib.ejs') %>
