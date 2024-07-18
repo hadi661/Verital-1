@@ -27,6 +27,7 @@ All content, including text, images, and other media, featured on this website i
 For inquiries or assistance regarding this website, please contact:
 
 - Website Administrator: Mr. DJEMEL El-hadi
+-  "email": "hadidjemel2@gmail.com"
 - VERITAL SPA Headquarters:      "38, Lotissement Pons Kouba – Alger"
 - phone: "+213 (0) 23 70 17 27"
       "email": "dg@verital.dz"
