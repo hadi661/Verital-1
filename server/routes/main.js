@@ -7,6 +7,7 @@ const TeamMember = require('../models/teams');
 const Contact = require('../models/contact');
 const About = require('../models/about');
 const Service = require('../models/services');
+const Services =require('../models/services');
 const Slide = require('../models/slide');
 const Testimonial = require('../models/testimonials');
 const News = require('../models/news');

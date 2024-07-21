@@ -387,3 +387,22 @@ var swiper = new Swiper(".swiper", {
 });
 
 })(jQuery);
+document.addEventListener('DOMContentLoaded', (event) => {
+  const playBtn = document.querySelector('.play-btn');
+  const overlay = document.getElementById('video-overlay');
+  const videoPlayer = document.getElementById('video-player');
+
+  playBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const videoUrl = playBtn.getAttribute('href');
+      videoPlayer.src = videoUrl + "?autoplay=1";
+      overlay.style.display = 'flex';
+  });
+
+  overlay.addEventListener('click', (e) => {
+      if (e.target !== videoPlayer) {
+          overlay.style.display = 'none';
+          videoPlayer.src = '';
+      }
+  });
+});

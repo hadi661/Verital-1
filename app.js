@@ -36,6 +36,9 @@ i18n.configure({
     directory: path.join(__dirname, 'locales'),
     defaultLocale: 'fr',
     cookie: 'lang',
+    autoReload: true,
+  syncFiles: true,
+  objectNotation: true
 });
 
 // Middleware to use i18n

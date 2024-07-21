@@ -19,7 +19,9 @@
           </div>
           <div class="image-container1">
             <div class="video-box">
-              <a class="venobox play-btn mb-4" data-autoplay="true" data-vbtype="video" href="<%= aboutData.videos[0] %>"></a>
+              <a class="venobox play-btn mb-4 video-link-small " data-autoplay="true" data-vbtype="video" href="<%= aboutData.videos[0] %>"></a>
+              <a class="venobox play-btn mb-4 video-link-big " data-autoplay="true" data-vbtype="video" href="<%= aboutData.videos[0] %>"></a>
+
               <img src="<%= aboutData.images[1] %>" class="img-fluid" alt="">
             </div>
           </div>
@@ -50,7 +52,7 @@
               <% } %>
             </ul>
             <a href="#">
-              <h4 class="sec-head"><%= __('VERITAL est chargée notamment :')%></h4>
+              <h4 class="sec-head"><%= __( 'فريطال مسؤولة بشكل خاص عن' )%></h4>
             </a>
             <ul>
               <li><i class="fa fa-check"></i> <%= aboutData.additionalContent[lang][4] %></li>
@@ -67,11 +69,11 @@
               <h4 class="sec-head"><%= __('VERITAL est présente sur tout le territoire national:')%></h4>
             </a>
             <ul>
-              <li><i class="fa fa-check" ></i><%= __('Direction Générale : Alger ') %></li>
-              <li><i class="fa fa-check" ></i><%= __('Division : Oran ') %></li>
-              <li><i class="fa fa-check" ></i><%= __('Division : Béjaia ') %></li>
-              <li><i class="fa fa-check" ></i><%= __('Division : Hassi Messaoud ') %></li>
-              <li><i class="fa fa-check" ></i><%= __('Division : Annaba ') %></li>
+              <li><i class="fa fa-check" ></i><%= __('الادارة العامة : الجزائر العاصمة') %></li>
+              <li><i class="fa fa-check" ></i><%= __('شعبة : وهران') %></li>
+              <li><i class="fa fa-check" ></i><%= __('شعبة: بجاية ') %></li>
+              <li><i class="fa fa-check" ></i><%= __('شعبة : حاسي مسعود') %></li>
+              <li><i class="fa fa-check" ></i><%= __('شعبة: عنابة ') %></li>
               
             </ul>
             <!-- <ul>

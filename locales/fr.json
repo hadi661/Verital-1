@@ -1,4 +1,5 @@
 {
+	"direction": "ltr",
 	"home": "ACCUEIL",
 	"profile": "PROFIL",
 	"services": "SERVICES",
@@ -75,18 +76,35 @@
 	"Nos services": "Our services",
 	"Qui sommes nous": "Qui sommes nous",
 	"Service name not available": "Nom du service non disponible",
+	" فريطال مسؤولة بشكل خاص عن": " VERITAL est chargée notamment ",
 	"VERITAL assure à ses clients:": "VERITAL assure à ses clients:",
 	"VERITAL est présente sur tout le territoire national:": "VERITAL est présente sur tout le territoire national:",
-	"Direction Générale : Alger": "Direction Générale: Algiers",
-	"Division : Oran": "Division : Oran",
-	"Division : Béjaia": "Division : Béjaia",
-	"Division : Hassi Messaoud": "Division : Hassi Messaoud",
-	"Division : Annaba": "Division : Annaba",
-	"our Services": "Nos Services",
-	"VERITAL est chargée notamment :": "VERITAL est chargée notamment :",
-	"Direction Générale : Alger ": "Direction Générale : Alger ",
-	"Division : Oran ": "Division : Oran ",
-	"Division : Béjaia ": "Division : Béjaia ",
-	"Division : Hassi Messaoud ": "Division : Hassi Messaoud ",
-	"Division : Annaba ": "Division : Annaba "
+	" الادارة العامة : الجزائر العاصمة": "Direction Générale : Alger",
+	" شعبة : وهران": "Division : Oran",
+	" شعبة: بجاية": "Division : Béjaia",
+	" شعبة : حاسي مسعود": "Division : Hassi Messaoud",
+	"شعبة: عنابة": "Division : Annaba",
+	"our Services": "our Services",
+	"Learn More": "Learn More",
+	"فريطال مسؤولة بشكل خاص عن": "VERITAL est chargée notamment",
+	"الادارة العامة : الجزائر العاصمة": "Direction Générale : Alger",
+	"شعبة : وهران": "Division : Oran",
+	"شعبة: بجاية ": "Division : Béjaia ",
+	"شعبة : حاسي مسعود": "Division : Hassi Messaoud",
+	"شعبة: عنابة ": "Division : Annaba",
+	"VERITAL assure à ses clients": "VERITAL assure à ses clients",
+	"VERITAL est présente sur tout le territoire national": "VERITAL est présente sur tout le territoire national",
+	"الادارة العامة ": " الجزائر العاصمة",
+	"شعبة ": " وهران",
+	"شعبة": " بجاية ",
+	"Fax": " +213 (0) 23 70 17 28",
+	"dg@verital": {
+		"dz": "dg@verital.dz"
+	},
+	"Web": "  www.verital.dz",
+	"Votre message a été envoyé": {
+		" Merci!": "Votre message a été envoyé. Merci!"
+	},
+	"Tel": "Tel",
+	"Opening Hours": "Opening Hours"
 }

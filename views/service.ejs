@@ -15,7 +15,10 @@ function isActiveRoute(route, currentRoute) {
         <div class="slider-content text-center">
           <div class="header-bottom">
             <div class="layer2 wow zoomIn" data-wow-duration="1s" data-wow-delay=".4s">
-              <h1 class="title2"><%= service.title.en %></h1> 
+              <!-- Display title in selected language -->
+              <p>Current Language: <%= lang %></p>
+<h1 class="title2"><%= service.title[lang] %></h1>
+ 
             </div>
           </div>
         </div>
@@ -32,47 +35,50 @@ function isActiveRoute(route, currentRoute) {
           <div class="single-blog-page">
             <form action="/search" method="get">
               <div class="search-option">
-                <input type="text" name="q" placeholder="Search...">
-                <button type="submit"><%= __('Search')%></button>
+                <input type="text" name="q" placeholder="<%= __('Search') %>">
+                <button type="submit"><%= __('Search') %></button>
               </div>
             </form>
           </div>
           <div class="single-blog-page">
             <div class="left-blog">
-              <h4><%= __('our Services')%></h4>
+              <h4><%= __('Our Services') %></h4>
               <div class="recent-post">
                 <% allServices.forEach(service => { %> 
                   <div class="recent-single-post">
                     <div class="post-img">
-                      <a href="/services/<%= service.name %>"> 
-                        <img src="<%= service.image[0] %>" alt="<%= service.name %>"> 
+                      <a href="/services/<%= service.name[lang] %>"> 
+                        <img src="<%= service.image[0] %>" alt="<%= service.name[lang] %>"> 
                       </a>
                     </div> 
                     <div class="pst-content">
-                      <p><a href="/services/<%= service.name %>"><%= service.title.en %></a></p> 
+                      <p><a href="/services/<%= service.name %>"><%= service.title[lang] %></a></p> 
                     </div>
                   </div>
                 <% }) %>
               </div>
             </div>
           </div>
-          <!-- <div class="single-blog-page">
+          <!-- Uncomment if you have tags functionality -->
+          <!--
+          <div class="single-blog-page">
             <div class="left-tags blog-tags">
-                <div class="popular-tag left-side-tags left-blog">
-                    <h4><%= __('Popular Tags')%></h4>
-                    <ul>
-                        <li><a href="#">dfg</a></li>
-                        <li><a href="#">dfsfs</a></li>
-                        <li><a href="#">sdfsdf</a></li>
-                        <li><a href="#">sgdhfjg</a></li>
-                        <li><a href="#">f</a></li>
-                        <li><a href="#">dfsqfd</a></li>
-                        <li><a href="#">sqfdfqs</a></li>
-                        <li><a href="#">sqdffsqd</a></li>
-                    </ul>
-                </div>
+              <div class="popular-tag left-side-tags left-blog">
+                <h4><%= __('Popular Tags') %></h4>
+                <ul>
+                  <li><a href="#">dfg</a></li>
+                  <li><a href="#">dfsfs</a></li>
+                  <li><a href="#">sdfsdf</a></li>
+                  <li><a href="#">sgdhfjg</a></li>
+                  <li><a href="#">f</a></li>
+                  <li><a href="#">dfsqfd</a></li>
+                  <li><a href="#">sqfdfqs</a></li>
+                  <li><a href="#">sqdffsqd</a></li>
+                </ul>
+              </div>
             </div>
-        </div> -->
+          </div>
+          -->
         </div>
       </div>
 
@@ -82,18 +88,19 @@ function isActiveRoute(route, currentRoute) {
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="single-blog">
               <div class="single-blog-img">
-                <img src="<%= service.image[0] %>" alt="<%= service.name %>"> 
+                <img src="<%= service.image[0] %>" alt="<%= service.name[lang] %>"> 
               </div>
               <div class="blog-meta">
               </div>
               <div class="blog-text">
                 <h4>
-                  <a href="#"><%= service.title.en %></a> 
+                  <a href="#"><%= service.title[lang] %></a> 
                 </h4>
-                <p><%= service.description.en %></p> 
+                <p><%= service.description[lang] %></p> 
+                <p><b><%= service.adddescription[lang] %></b></p>
               </div>
               <span>
-                <a href="/" class="ready-btn"><%= __('En savoir plus')%></a>
+                <a href="/" class="ready-btn"><%= __('Learn More') %></a>
               </span>
             </div>
           </div>
@@ -105,6 +112,6 @@ function isActiveRoute(route, currentRoute) {
 </div>
 <div class="clearfix"></div>
 
-<%- include ('partials/footer.ejs')%>
+<%- include('partials/footer.ejs') %>
 <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-<%- include ('partials/lib.ejs')%>
+<%- include('partials/lib.ejs') %>

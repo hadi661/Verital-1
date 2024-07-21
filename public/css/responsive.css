@@ -4,7 +4,7 @@
     padding: 150px 150px;
   }
 }
-
+ 
 @media (min-width: 992px) and (max-width: 1169px) {
   .main-menu ul.navbar-nav li {
     display: grid;

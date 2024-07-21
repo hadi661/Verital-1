@@ -6,12 +6,12 @@
   "title": {
     "en": "AUDIT",
     "fr": "AUDIT",
-    "ar": "AUDIT"
+    "ar": "التدقيق"
   },
   "description": {
-    "en": "Real-time management of any situation and Propose improvement areas with sustainability and adaptability assessment of your installations Regulatory compliance...",
-    "fr": "Gestion en temps réel de toute situation et Proposer des axes de progrès avec le Évaluation de la durabilité et de l'adaptabilité de vos installations Conformité réglementaire...",
-    "ar": "إدارة الوقت الفعلي لأي موقف واقتراح مجالات التحسين مع تقييم الاستدامة وقابلية التكيف لتركيباتك الامتثال التنظيمي..."
+    "en": "The development of the audit function depends on the effectiveness of controls. Indeed, it is in the notion of quality of audit activities that VERITAL experts offer you a relevant and clear analysis, an in-depth diagnosis in order to validate the operations intended to verify the operability of the different installations and measure compliance. and the effectiveness of your activities, namely:",
+    "fr": "Le développement de la fonction d’audit dépend de l’efficacité des contrôles. En effet, c’est dans la notion de qualité des activités d’audit que les experts de VERITAL vous proposent une analyse pertinente et claire, un diagnostic approfondi afin de valider les opérations destinées à vérifier l’exploitabilité des différentes installations et mesurer la conformité et l’efficacité de vos activités à savoir:",
+    "ar": "يعتمد تطوير وظيفة المراجعة على فعالية الضوابط. في الواقع، في ما يتعلق بمفهوم جودة أنشطة التدقيق، يقدم لك خبراء فريطال تحليلًا مناسبًا وواضحًا وتشخيصًا متعمقًا من أجل التحقق من صحة العمليات التي تهدف إلى التحقق من قابلية تشغيل المنشآت المختلفة وقياس الامتثال والفعالية من أنشطتك، وهي:"
   },
   "image": [
     "\\public\\img\\blog\\1.jpg"
@@ -21,7 +21,12 @@
   ],
   "backgroundimages": [
     "\\public\\img\\about\\audit.png"
-  ]
+  ],
+  "adddescription": {
+    "ar": "ى",
+    "en": "discription english",
+    "fr": "Dresser un état de la situation réelle.\n Proposer des axes de progrès.\n Evaluation de la durabilité et de l’adaptabilité de vos installations.\n Conformité réglementaire (énergie, sécurité …)"
+  }
 },
 {
   "_id": {
@@ -46,7 +51,12 @@
   ],
   "backgroundimages": [
     "\\public\\img\\about\\certification.jpg"
-  ]
+  ],
+  "adddescription": {
+    "ar": "",
+    "en": "",
+    "fr": ""
+  }
 },
 {
   "_id": {
@@ -71,7 +81,12 @@
   ],
   "backgroundimages": [
     "\\public\\img\\about\\leadspace.png"
-  ]
+  ],
+  "adddescription": {
+    "ar": "",
+    "en": "",
+    "fr": ""
+  }
 },
 {
   "_id": {
@@ -96,7 +111,12 @@
   ],
   "backgroundimages": [
     "\\public\\img\\about\\consul.jpeg"
-  ]
+  ],
+  "adddescription": {
+    "ar": "",
+    "en": "",
+    "fr": ""
+  }
 },
 {
   "_id": {
@@ -121,5 +141,10 @@
   ],
   "backgroundimages": [
     "\\public\\img\\about\\Support-technique.png"
-  ]
+  ],
+  "adddescription": {
+    "ar": "",
+    "en": "",
+    "fr": ""
+  }
 }]

@@ -1,4 +1,3 @@
-/* Updated CSS for centering and styling the login form */
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 
@@ -198,7 +197,6 @@ body {
 	font-weight: 400;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
 	.screen {
 		width: 300px;
