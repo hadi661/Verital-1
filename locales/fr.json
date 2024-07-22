@@ -94,9 +94,9 @@
 	"شعبة: عنابة ": "Division : Annaba",
 	"VERITAL assure à ses clients": "VERITAL assure à ses clients",
 	"VERITAL est présente sur tout le territoire national": "VERITAL est présente sur tout le territoire national",
-	"الادارة العامة ": " الجزائر العاصمة",
-	"شعبة ": " وهران",
-	"شعبة": " بجاية ",
+	"الادارة العامة ": " Direction Générale : Alger",
+	"شعبة ": " Division : Oran",
+	"شعبة": " Division : Béjaia ",
 	"Fax": " +213 (0) 23 70 17 28",
 	"dg@verital": {
 		"dz": "dg@verital.dz"
@@ -106,5 +106,6 @@
 		" Merci!": "Votre message a été envoyé. Merci!"
 	},
 	"Tel": "Tel",
-	"Opening Hours": "Opening Hours"
+	"Opening Hours": "Opening Hours",
+	"Our Services": "Our Services"
 }

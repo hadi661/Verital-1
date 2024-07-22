@@ -23,8 +23,13 @@ const servicesSchema = new mongoose.Schema({
   image: { type: [String], required: false },
   backgroundimages: { type: [String], required: true },
   icon: { type: [String], required: false },
-  adddescription: { type: localizedStringSchema, required: true }
+  adddescription: { type: localizedStringSchema, required: true },
+  content: {
+    text: { type: localizedStringSchema, required: true },
+    images: { type: [String], required: false },
+    tables: { type: [mongoose.Schema.Types.Mixed], required: false }
+  }
 });
 
-const Services = mongoose.model('Services', servicesSchema);
+const Services = mongoose.model('service', servicesSchema);
 module.exports = Services;

@@ -2,7 +2,7 @@
   "_id": {
     "$oid": "665c6bc478b0ceb94322429f"
   },
-  "name": "audit",
+  "name": "AUDIT",
   "title": {
     "en": "AUDIT",
     "fr": "AUDIT",
@@ -23,88 +23,115 @@
     "\\public\\img\\about\\audit.png"
   ],
   "adddescription": {
-    "ar": "ى",
-    "en": "discription english",
+    "ar": "قم بتقييم الوضع الحقيقي.\n اقتراح مجالات للتقدم.\n تقييم متانة وقابلية التكيف للمنشآت الخاصة بك.\n الامتثال التنظيمي (الطاقة والأمن وما إلى ذلك)ى",
+    "en": "Take stock of the real situation.\n Propose areas for progress.\n Assessment of the durability and adaptability of your installations.\n Regulatory compliance (energy, security, etc.)",
     "fr": "Dresser un état de la situation réelle.\n Proposer des axes de progrès.\n Evaluation de la durabilité et de l’adaptabilité de vos installations.\n Conformité réglementaire (énergie, sécurité …)"
+  },
+  "content": {
+    "text": {
+      "en": "",
+      "ar": "",
+      "fr": ""
+    },
+    "images": [],
+    "tables": []
   }
 },
 {
   "_id": {
     "$oid": "665c6bc478b0ceb9432242a0"
   },
-  "name": "certification",
+  "name": "CERTIFICATION",
   "title": {
     "en": "CERTIFICATION",
     "fr": "CERTIFICATION",
-    "ar": "CERTIFICATION"
+    "ar": "شهادة"
   },
   "description": {
-    "en": "Certification is at the heart of the excellence of our services rendered in terms of expertise in order to maintain trusted, close relationships with our clients, manage risks and drive performance...",
-    "fr": "La certification est à la base de l'excellence de nos services rendus en termes d'expertise afin d'entretenir des relations de confiance, de proximité avec nos clients, gérer les risques et stimuler la performance...",
-    "ar": "الشهادة هي في قلب تميز خدماتنا التي نقدمها من حيث الخبرة من أجل الحفاظ على علاقات وثيقة وثقة مع عملائنا، وإدارة المخاطر وتحفيز الأداء..."
+    "en": "Certification is the basis of the excellence of our services provided in terms of expertise in order to maintain relationships of trust, proximity with our clients, manage risks and stimulate performance. Indeed, the certification process which generally consists of on-site audit, tests and inspections as well as the issuance of certificates maintained by regular audits, the certification of equipment and products in all industries and all sectors according to the national or international regulations as well as the development of certification systems for new technologies by:",
+    "fr": "La certification est la base de l’excellence de nos services rendus en matière d’expertise afin de conserver des relations de confiance, de proximité avec nos clients, de gérer les risques et stimuler les performances. En effet, Le processus de certification qui consiste généralement à l’audit sur site , tests et inspections ainsi que la délivrance de certificat maintenu par des audits réguliers, la certification d’équipements et de produits dans toutes les industries et tous les secteurs selon les réglementations nationales ou internationales ainsi que le développement des systèmes de certification pour les nouvelles technologies par:",
+    "ar": "الاعتماد هو أساس تميز خدماتنا المقدمة من حيث الخبرة من أجل الحفاظ على علاقات الثقة والقرب من عملائنا وإدارة المخاطر وتحفيز الأداء. في الواقع، فإن عملية إصدار الشهادات التي تتكون بشكل عام من التدقيق والاختبارات والتفتيش في الموقع بالإضافة إلى إصدار الشهادات التي يتم الحفاظ عليها من خلال عمليات التدقيق المنتظمة، وإصدار الشهادات للمعدات والمنتجات في جميع الصناعات وجميع القطاعات وفقًا للوائح الوطنية أو الدولية أيضًا كتطوير أنظمة إصدار الشهادات للتكنولوجيات الجديدة من خلال:"
   },
   "image": [
-    "path/to/certification-image.jpg"
+    "\\public\\img\\blog\\cer.jpg"
   ],
   "icon": [
     "fa-certificate"
   ],
   "backgroundimages": [
-    "\\public\\img\\about\\certification.jpg"
+    "\\public\\img\\blog\\cer.jpg"
   ],
   "adddescription": {
-    "ar": "",
-    "en": "",
-    "fr": ""
+    "ar": "السيطرة على الأنشطة والمخاطر وخفض التكاليف.\n تحسين أدائك.\n اغتنم فرص تنمية الصادرات الجديدة بفضل شهادة معترف بها.\n تعزيز والاعتراف بالتزام الجودة الخاص بك",
+    "en": "Control activities and risks, and reduce costs.\n Improve your performance.\n Seize new export development opportunities thanks to a recognized certificate.\n Promote and have your quality commitment recognized",
+    "fr": "Maîtriser les activités et les risques, et réduire les coûts.\n Améliorer vos performances.\n Saisir de nouvelles opportunités de développement à l’export grâce à un certificat reconnu.\n Valoriser et faire reconnaître votre engagement qualité "
+  },
+  "content": {
+    "text": {
+      "en": "A KNOW-HOW\nVERITAL is a nationally leading company in conformity assessment and certification. We are a trusted partner to our customers, providing services and developing innovative solutions to reduce risk, improve performance and promote sustainability.\n\nTHE STRENGTH OF PROXIMITY\nIn Algeria, VERITAL has more than 280 employees spread across the entire country. They help companies and organizations on a daily basis to manage the regulatory compliance of their installations and equipment and, more broadly, to control their risks.",
+      "ar": "خبرة\nفريطال هي شركة رائدة على المستوى الوطني في مجال تقييم المطابقة وإصدار الشهادات. نحن شريك موثوق لعملائنا، حيث نقدم الخدمات ونطور الحلول المبتكرة لتقليل المخاطر وتحسين الأداء وتعزيز الاستدامة.\n\nقوة القرب\nفي الجزائر، لدى فريطال أكثر من 280 موظفًا منتشرين في جميع أنحاء البلاد. فهي تساعد الشركات والمؤسسات بشكل يومي على إدارة الامتثال التنظيمي لمنشآتها ومعداتها، وعلى نطاق أوسع، للتحكم في مخاطرها.",
+      "fr": "UN SAVOIR-FAIRE\nVERITAL est une entreprise leader au niveau national dans l'évaluation de la conformité et la certification. Nous sommes un partenaire de confiance pour nos clients, offrant des services et développant des solutions innovantes pour réduire les risques, améliorer les performances et promouvoir le développement durable.\n\nLA FORCE DE LA PROXIMITÉ\nEn Algerie, VERITAL, c'est plus de 280 collaborateurs répartis sur l’ensemble du territoire. Ils aident quotidiennement les entreprises et les organisations, à gérer la conformité réglementaire de leurs installations et de leurs équipements et plus largement à maîtriser leurs risques."
+    },
+    "images": [],
+    "tables": []
   }
 },
 {
   "_id": {
     "$oid": "665c6bc478b0ceb9432242a1"
   },
-  "name": "inspection",
+  "name": "INSPECTION",
   "title": {
     "en": "INSPECTION",
     "fr": "INSPECTION",
-    "ar": "INSPECTION"
+    "ar": "المراقبة"
   },
   "description": {
-    "en": "Inspection involves on-site verification that a product, asset, or system meets specified criteria...",
-    "fr": "L'inspection consiste à vérifier sur place qu'un produit, un actif ou un système répond aux critères spécifiés...",
-    "ar": "التفتيش ينطوي على التحقق في الموقع من أن منتجًا أو أصلًا أو نظامًا يتوافق مع المعايير المحددة..."
+    "en": "Inspection involves verifying on-site that a product, asset or system meets specified criteria. It covers a wide range of services designed to reduce risks thanks to VERITAL experts who provide our customers with confidence that their products, processes and installations comply with the requirements of your quality framework and the objectives of your company and national and international regulations. On the other hand, that our inspections of construction facilities, industrial facilities and infrastructure are periodic and compliant by:",
+    "fr": "L’inspection consiste à vérifier sur place qu’un produit, un actif ou un système répond aux critères spécifiés. Elle couvre un large éventail de services conçu pour réduire les risques gràce aux experts de VERITAL qui fournissent à nos clients la confiance d’une part, que leurs produits, processus et installations soient conformes aux exigences de votre référentiel qualité et aux objectifs de votre entreprise et aux réglementations nationales et internationales. D’autre part, que nos inspections des installations de construction, des installations industrielles et des infrastructures soient périodiques et conformes par:",
+    "ar": "يتضمن التفتيش التحقق في الموقع من أن المنتج أو الأصول أو النظام يفي بالمعايير المحددة. وهو يغطي مجموعة واسعة من الخدمات المصممة لتقليل المخاطر بفضل خبراء فريطال الذين يزودون عملائنا بالثقة بأن منتجاتهم وعملياتهم وتركيباتهم تتوافق مع متطلبات إطار الجودة الخاص بك وأهداف شركتك واللوائح الوطنية والدولية. ومن ناحية أخرى، فإن عمليات التفتيش التي نقوم بها على مرافق البناء والمنشآت الصناعية والبنية التحتية تكون دورية ومتوافقة مع:"
   },
   "image": [
-    "path/to/inspection-image.jpg"
+    "\\public\\img\\about\\leadspace.png"
   ],
   "icon": [
     "fa-search"
   ],
   "backgroundimages": [
-    "\\public\\img\\about\\leadspace.png"
+    "\\public\\img\\about\\v4.jpg"
   ],
   "adddescription": {
-    "ar": "",
-    "en": "",
-    "fr": ""
+    "ar": "التحقق من صحة عملية مراقبة مطابقة المنتجات والمعدات المتعلقة بمتطلبات معايير الجودة الخاصة بك وأهداف شركتك والتحقق من تقدير أوجه عدم اليقين في القياس بشكل صحيح؛\n التحقق من أن وسائل القياس تتكيف مع التفاوتات المسموح بها للمنتجات المصنعة؛\n تعريف استراتيجية تحسين جودة المنتج.",
+    "en": "Validation of the conformity control process of products and equipment relating to the requirements of your quality standards and the objectives of your company and verify that measurement uncertainties are correctly estimated;\n Validation that the measuring means are adapted to the tolerances of the products manufactured;.\n The definition of a strategy to optimize product quality.",
+    "fr": "La validation du processus de contrôle de conformité des produits et équipements relatifs aux exigences de votre référentiel qualité et aux objectifs de votre entreprise et vérifier que les incertitudes de mesure soient correctement estimées;\n La validation que les moyens de mesure soient adaptés aux tolérances des produits fabriqués;.\n La définition d’une stratégie permettant d’optimiser la qualité des produits.\n"
+  },
+  "content": {
+    "text": {
+      "en": "",
+      "ar": "",
+      "fr": ""
+    },
+    "images": [],
+    "tables": []
   }
 },
 {
   "_id": {
     "$oid": "665c6bc478b0ceb9432242a2"
   },
-  "name": "consultation",
+  "name": "CONSULTATION",
   "title": {
     "en": "CONSULTATION",
     "fr": "CONSULTATION",
-    "ar": "CONSULTATION"
+    "ar": "الاستشارة"
   },
   "description": {
-    "en": "Personalized consultation and recommendations from an organization composed of highly qualified experts to help businesses meet regulatory requirements.",
-    "fr": "Consultation personnalisée et recommandations d'une organisation composée d'experts hautement qualifiés pour aider les entreprises à répondre aux exigences réglementaires.",
-    "ar": "الاستشارة الشخصية والتوصيات من مؤسسة تتألف من خبراء مؤهلين تأهيلاً عاليًا لمساعدة الشركات في تلبية المتطلبات التنظيمية."
+    "en": "Personalized advice and recommendations from an organization staffed with highly qualified experts help companies meet regulatory requirements. Indeed, the VERITAL team offers in-depth expertise in a large number of very specific areas across different sectors and industries . We share this expertise with our clients through our consulting services. As well as providing advice on one-off projects, we also provide clients with ongoing advice on regulatory requirements and best practice in quality, health, safety and the environment. Our main objective is to ensure compliance with regulations by our customers and to support them in improving performance.",
+    "fr": "Les conseils et les recommandations personnalisés d’un organisme doté d’experts hautement qualifiés aident les entreprises à respecter les exigences réglementaires .En effet, l’équipe de VERITAL offre une expertise approfondie dans un grand nombre de domaines très spécifiques dans différents secteurs et industries. Nous partageons cette expertise avec nos clients via nos services de conseil. En plus de fournir des conseils sur des projets ponctuels, nous fournissons également aux clients des conseils continus sur les exigences réglementaires et les meilleures pratiques en matière de qualité, santé, sécurité et d’environnement. Notre principal objectif est d’assurer le respect de la réglementation par nos clients et de les accompagner dans l’amélioration des performances.",
+    "ar": "تساعد النصائح والتوصيات الشخصية المقدمة من منظمة تضم خبراء مؤهلين تأهيلاً عاليًا الشركات على تلبية المتطلبات التنظيمية. وفي الواقع، يقدم فريق فريطال خبرة متعمقة في عدد كبير من المجالات المحددة للغاية عبر مختلف القطاعات والصناعات. نحن نشارك هذه الخبرة مع عملائنا من خلال خدماتنا الاستشارية. بالإضافة إلى تقديم المشورة بشأن المشاريع لمرة واحدة، فإننا نقدم أيضًا للعملاء نصائح مستمرة بشأن المتطلبات التنظيمية وأفضل الممارسات في الجودة والصحة والسلامة والبيئة. هدفنا الرئيسي هو ضمان امتثال عملائنا للوائح ودعمهم في تحسين الأداء."
   },
   "image": [
-    "path/to/consultation-image.jpg"
+    "\\public\\img\\about\\consul.jpeg"
   ],
   "icon": [
     "fa-user"
@@ -116,25 +143,34 @@
     "ar": "",
     "en": "",
     "fr": ""
+  },
+  "content": {
+    "text": {
+      "en": "",
+      "ar": "",
+      "fr": ""
+    },
+    "images": [],
+    "tables": []
   }
 },
 {
   "_id": {
     "$oid": "665c6bc478b0ceb9432242a3"
   },
-  "name": "assistance",
+  "name": "24/7 ASSISTANCE",
   "title": {
     "en": "24/7 ASSISTANCE",
     "fr": "ASSISTANCE 24/7",
     "ar": "المساعدة على مدار الساعة 24/7"
   },
   "description": {
-    "en": "Customers can get help and find answers to their questions as soon as they arise, 24/7 and in real time.",
-    "fr": "Les clients peuvent obtenir de l'aide et trouver des réponses à leurs questions dès qu'elles se présentent, 24h/24 et 7j/7 et en temps réel.",
-    "ar": "يمكن للعملاء الحصول على المساعدة والعثور على الإجابات على أسئلتهم بمجرد ظهورها، على مدار الساعة 24/7 وفي الوقت الفعلي."
+    "en": "At VERITAL Spa, we are committed to providing unparalleled support to our clients around the clock, no matter where they are in the world. Our 24/7 Global Client Assistance Service ensures that you receive expert help and guidance whenever you need it. Whether it's troubleshooting technical issues, providing urgent information, or offering professional advice, our dedicated team is always ready to assist you. Our service is designed to give you peace of mind, knowing that VERITAL is just a call or click away, ensuring your operations run smoothly without interruption.",
+    "fr": "Chez VERITAL Spa, nous nous engageons à fournir un soutien inégalé à nos clients 24 heures sur 24, où qu'ils se trouvent dans le monde. Notre service d'assistance client mondial 24h/24 et 7j/7 garantit que vous recevez l'aide et les conseils d'experts chaque fois que vous en avez besoin. Qu'il s'agisse de résoudre des problèmes techniques, de fournir des informations urgentes ou de proposer des conseils professionnels, notre équipe dédiée est toujours prête à vous aider. Notre service est conçu pour vous offrir une tranquillité d'esprit, sachant que VERITAL n'est qu'à un appel ou à un clic, garantissant le bon déroulement de vos opérations sans interruption.",
+    "ar": "في فريطال ، نحن ملتزمون بتقديم دعم لا مثيل له لعملائنا على مدار الساعة، بغض النظر عن مكان وجودهم في العالم. تضمن خدمة مساعدة العملاء العالمية التي نقدمها على مدار 24 ساعة طوال أيام الأسبوع حصولك على مساعدة الخبراء وتوجيهاتهم متى احتجت إليها. سواء كان الأمر يتعلق باستكشاف المشكلات الفنية وإصلاحها، أو تقديم معلومات عاجلة، أو تقديم مشورة احترافية، فإن فريقنا المخصص جاهز دائمًا لمساعدتك. تم تصميم خدمتنا لتمنحك راحة البال، مع العلم أن فريطال هو مجرد مكالمة أو نقرة بعيدًا، مما يضمن سير عملياتك بسلاسة دون انقطاع"
   },
   "image": [
-    "path/to/assistance-image.jpg"
+    "\\public\\img\\about\\Support-technique.png"
   ],
   "icon": [
     "fa-ticket"
@@ -146,5 +182,14 @@
     "ar": "",
     "en": "",
     "fr": ""
+  },
+  "content": {
+    "text": {
+      "en": "",
+      "ar": "",
+      "fr": ""
+    },
+    "images": [],
+    "tables": []
   }
 }]

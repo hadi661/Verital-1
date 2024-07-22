@@ -33,6 +33,7 @@ router.get('/', async (req, res) => {
       const allServices = await Service.find();
       const topTeamMembers = await TeamMember.find().sort({ position: 1 }).limit(4);
       const brands = await Brand.find();
+      const newsData = await News.find().sort({ date: -1 });
       if (!profileData) {
         return res.status(404).send('Profile data not found');
       }
@@ -47,6 +48,7 @@ router.get('/', async (req, res) => {
         brands,
         contact1, 
         profileData, 
+        newsData,
         aboutData, 
         testimonials,
         slides, 
@@ -253,13 +255,6 @@ router.get('/profile', async (req, res) => {
         const contact1 = await Contact.find();
         const services = await Service.find();
         const aboutData = await About.findOne();
- // Log the fetched data for debugging
- console.log('Divisions:', divisions);
- console.log('Profile Data:', profileData);
- console.log('Teams:', teams);
- console.log('Contact1:', contact1);
- console.log('Services:', services);
- console.log('About Data:', aboutData);
         if (!profileData) {
             return res.status(404).send('Profile data not found');
         }
@@ -457,15 +452,15 @@ router.get('/search', async (req, res) => {
 // Route to create a new service
 router.post('/service', async (req, res) => {
     try {
-        console.log('Incoming POST data:', req.body);
-        const newService = new Service(req.body);
-        await newService.save();
-        res.redirect('/services');
-    } catch (err) {
-        console.error(err);
-        res.status(500).send('Server Error');
-    }
-});
+        const serviceData = req.body; // Ensure this matches the schema
+        const service = new Services(serviceData);
+        await service.save();
+        res.status(201).send(service);
+      } catch (error) {
+        console.error('Error adding service:', error);
+        res.status(400).send({ error: error.message });
+      }
+    });
 
 // Route to update a service
 router.put('/service/:id', async (req, res) => {
@@ -494,8 +489,8 @@ router.get('/services', async (req, res) => {
     try {
         const allServices = await Services.find(); // Fetch all services
         const divisions = await Division.find();
-
-        res.render('services', { services: allServices, divisions: divisions, currentRoute: '/'});
+        const newsData = await News.find().sort({ date: -1 });
+        res.render('services', { services: allServices, divisions: divisions,newsData, currentRoute: '/'});
     } catch (err) {
         console.error(err);
         res.status(500).send('Server Error');
@@ -509,9 +504,10 @@ router.get('/services/:serviceName', async (req, res) => {
         const service = await Services.findOne({ name: serviceName });
         const allServices = await Services.find(); // Fetch all services
         const divisions = await Division.find();
+        const newsData = await News.find().sort({ date: -1 });
 
         if (service) {
-            res.render('service', { service: service, allServices: allServices, divisions: divisions });
+            res.render('service', { service: service, allServices: allServices, divisions: divisions,newsData });
         } else {
             res.status(404).send('Service not found');
         }
